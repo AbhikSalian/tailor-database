@@ -1,29 +1,3 @@
-<?php error_reporting(0); ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartStitch-Sign In</title>
-    <!-- <link rel="stylesheet" href="SignIn.css"> -->
-</head>
-<body>
-    <form action="sign_in.php" method="post">
-        <div class="conatiner">
-            <span>Login</span>
-            <div class="username">
-                <input type="text" placeholder="Username" name="email_id" required>
-            </div>
-            <div class="password">
-                <input type="password" placeholder="Password" name="password" required>
-            </div>
-            <button type="submit" class="Signin">Sign In</a></button>
-            <div class="new">Don't have an account?<a href="sign_up.php">SignUp</a></div>
-        </div>
-    </form>
-    
-</body>
-</html>
 <?php
     @include 'config.php';
     session_start();
@@ -36,7 +10,7 @@
         //echo "Successful";
         $query="select * from client where email_id='$email_id' limit 1";
         $result = mysqli_query($conn,$query);
-        if($result) 
+        if($result)
         {
             if($result && mysqli_num_rows($result) > 0)
             {
@@ -72,3 +46,28 @@
         
     }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStitch-Sign In</title>
+    <!-- <link rel="stylesheet" href="SignIn.css"> -->
+</head>
+<body>
+    <form action="sign_in.php" method="post">
+        <div class="conatiner">
+            <span>Login</span>
+            <div class="username">
+                <input type="text" placeholder="Username" name="email_id" required>
+            </div>
+            <div class="password">
+                <input type="password" placeholder="Password" name="password" required>
+            </div>
+            <button type="submit" class="Signin">Sign In</a></button>
+            <div class="new">Don't have an account?<a href="sign_up.php">SignUp</a></div>
+        </div>
+    </form>
+    
+</body>
+</html>
