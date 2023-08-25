@@ -1,0 +1,87 @@
+ session_start(); 
+    $host="localhost";
+        $dbusername="root";
+        $dbpassword="";
+        $dbname="tailor";
+        $conn=mysqli_connect($host, $dbusername, $dbpassword, $dbname);
+    
+    if (isset($_POST['email_id']) && isset($_POST['password'])) {
+    
+        function validate($data){
+           $data = trim($data);
+           $data = stripslashes($data);
+           $data = htmlspecialchars($data);
+           return $data;
+        }
+    
+        $email_id = validate($_POST['email_id']);
+        $password = validate($_POST['password']);
+    
+        if (empty($email_id)) {
+            header("Location: SignIn.html?error=Email ID is required");
+            exit();
+        }else if(empty($pass)){
+           // header("Location: SignIn.html?error=Password is required");
+            exit();
+        }else{
+            $sql = "SELECT * FROM client WHERE email_id='$email_id' AND password='$password'";
+    
+            $result = mysqli_query($conn, $sql);
+    
+            if (mysqli_num_rows($result) == 1) {
+                $row = mysqli_fetch_assoc($result);
+                if ($row['email_id'] === $email_id && $row['password'] === $password) {
+                    $_SESSION['email_id'] = $row['email_id'];
+                    $_SESSION['client_name'] = $row['client_name'];
+                    $_SESSION['client_id'] = $row['client_id'];
+                    header("Location: home.php");
+                    //echo"Login successful";
+                    exit();
+                }else{
+                    header("Location: home.php?error=Incorect User name or password");
+                    exit();
+                }
+            }else{
+                header("Location: home.php?error=Incorect User name or password");
+                exit();
+            }
+        }
+        
+    }else{
+        header("Location: home.php");
+        exit();
+    }
+    /*$email_id=$_POST["email_id"];
+    $password=$_POST["password"];
+    if (!empty($email_id) And !empty($password))
+    {
+        $host="localhost";
+        $dbusername="root";
+        $dbpassword="";
+        $dbname="tailor";
+        $conn=mysqli_connect($host, $dbusername, $dbpassword, $dbname);
+        if(mysqli_connect_errno())
+        {
+            die('Connect Error : '.mysqli_connect_error());
+        }
+        //echo "Successful";
+    }
+    else
+    {
+        $stmt=$conn->prepare("SELECT * FROM client WHERE email_id = ?");
+        $stmt->bind_param("s",$email_id);
+        $stmt->execute();
+        $stmt_result = $stmt->get_result();
+        if($stmt_result->num_rows > 0)
+        {
+            $data = $stmt_result->fetch_assoc();
+            if($data["password"] === $password)
+            {
+                echo "Login successful";
+            }      
+        }
+        else
+        {
+            echo "Invalid email or password";
+        }
+    }*/
