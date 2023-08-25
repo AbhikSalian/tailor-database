@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartStitch-SignUp</title>
+    <link rel="stylesheet" href="SignUp.css" />
+  </head>
+  <body>
+    <form action="sign_up.php" method="post">
+    <div class="container">
+      <span>SIGN UP</span>
+      <div class="Credential">
+        <input type="text" placeholder="Enter your Name" name="client_name" required>
+
+
+        <input type="number" placeholder="Enter your Age" min="0" max="150" name="age" required>
+        <div class="gender">Gender: 
+          <input type="radio" name="gender" checked="checked" value="male" >Male
+          <input type="radio" name="gender" value="female" >Female
+      </div>
+
+      <input type="text" placeholder="Enter your Address" name = "address" required>
+
+      <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="Enter your mobile number" required>
+
+      <input type="email" placeholder="Enter your Email ID" name = "email_id" required>
+
+      <input type="password" placeholder="Password" id="p1" name="p1" required>
+
+      <input type="password" placeholder="Password" id="p2" name="p2" required>
+
+        <a href="sign_in.php">
+          <button type="submit" class="Signup">Sign Up</button></a>
+          
+        <div class="Noac">
+          Already have an account?<a href="SignIn.html"> Sign in</a>
+        </div>
+      </form>
+      </div>
+    </div>
+  </body>
+</html>
