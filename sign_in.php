@@ -27,7 +27,7 @@
                     $_SESSION['address'] = $client_data['address'];
                     $_SESSION['ph_no'] = $client_data['ph_no'];
                     $_SESSION['email_id'] = $client_data['email_id'];
-                    header("Location: client_details.php");
+                    header("Location: Hom.php");
                     echo"<script type='text/javascript'>alert('Login successful')</script>";
                     
                 }

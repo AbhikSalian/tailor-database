@@ -121,32 +121,7 @@
                 header('Location: Hom.php'); 
                 
             }
-            $cid=$_SESSION['client_id'];
-            $query1="select * from shirt where shirt_id in(select shirt_id from link where client_id='$cid')";
-            $query2="select * from pant where pant_id in(select pant_id from link where client_id='$cid')";
-            $result1 = mysqli_query($conn,$query1);
-            if($result1)
-            {
-                if($result && mysqli_num_rows($result) > 0)
-                {
-                    $client_shirt_data = mysqli_fetch_assoc($result);
-                    //$row=mysqli_fetch_array($result);
-                    if($client_data['password'] == $password)
-                    {
-                        
-                        $_SESSION['client_id'] = $client_data['client_id'];
-                        $_SESSION['client_name'] = $client_data['client_name'];
-                        $_SESSION['age'] = $client_data['age'];
-                        $_SESSION['gender'] = $client_data['gender'];
-                        $_SESSION['address'] = $client_data['address'];
-                        $_SESSION['ph_no'] = $client_data['ph_no'];
-                        $_SESSION['email_id'] = $client_data['email_id'];
-                        header("Location: client_details.php");
-                        echo"<script type='text/javascript'>alert('Login successful')</script>";
-                        
-                    }
-                }
-            }
+            
         
     
 
