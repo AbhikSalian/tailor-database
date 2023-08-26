@@ -13,7 +13,7 @@
             <div class="logo"><a href="Home.html"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
             <ul>
             <li class="home"><a href="#">Home</a></li>
-            <li><a href="#">Men</a></li>
+            <li><a href="measurement.php">Men</a></li>
             <li><a href="#">Women</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">About</a></li>

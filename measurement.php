@@ -128,10 +128,14 @@
                 {
                     die(mysqli_error($conn));
                 }
-                mysqli_stmt_bind_param($stmt1,"dddddddd",$client_name,$age,$gender,$address,$ph_no,$email_id,$password);
-                mysqli_stmt_execute($stmt);
-                echo"<script type='text/javascript'>alert('Record saved\nGo back to sign in page and enter your credentials')</script>";
-                header('Location: sign_in.php');
+                mysqli_stmt_bind_param($stmt1,"dddddddd",$collar,$neck_to_shoulder,$sleeve_length,
+                $shoulder_to_shoulder,$chest,$front_length,$sleeve_cuff,$hem);
+                mysqli_stmt_execute($stmt1);
+                mysqli_stmt_bind_param($stmt2,"dddddddd",$waist,$front_rise,$hip,
+                $thigh,$length,$knee,$inseam,$leg_opening);
+                mysqli_stmt_execute($stmt2);
+                echo"<script type='text/javascript'>alert('Record saved')</script>";
+                header('Location: Hom.php'); 
                 
             }
         
