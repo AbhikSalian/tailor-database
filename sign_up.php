@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartStitch-Sign Up</title>
-    <!-- <link rel="stylesheet" href="SignUp.css"> -->
+    <link rel="stylesheet" href="SignUp.css">
 </head>
 <body>
     <form action="sign_up.php" method="post">
