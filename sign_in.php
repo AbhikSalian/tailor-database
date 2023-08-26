@@ -53,27 +53,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartStitch-Sign In</title>
-    <link rel="stylesheet" href="SignIn.css">
+    <!-- <link rel="stylesheet" href="SignIn.css"> -->
 </head>
 <body>
     <form action="sign_in.php" method="post">
-      <div class="container">
-        <span>SIGN IN</span>
-        <div class="Credential">
-          <input type="text" placeholder="Username" name="email_id" required />
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            required
-          />
-          <div class="button">
-          <a href="../Home.html"><button type="submit">Sign In</button></a></div>
-          <div class="Noac">
-            Don't have an account/<a href="SignUp.html"> Sign up</a>
-          </div>
+        <div class="conatiner">
+            <span>Login</span>
+            <div class="username">
+                <input type="text" placeholder="Username" name="email_id" required>
+            </div>
+            <div class="password">
+                <input type="password" placeholder="Password" name="password" required>
+            </div>
+            <button type="submit" class="Signin">Sign In</a></button>
+            <div class="new">Don't have an account?<a href="sign_up.php">SignUp</a></div>
         </div>
-      </div>
     </form>
   </body>
 </html>

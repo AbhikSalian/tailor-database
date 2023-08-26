@@ -83,7 +83,7 @@
                 </tr>
             </table>
         </div>
-        <div><h4>pant measurements:</h4>
+        <div><h4>Pant measurements:</h4>
             <table>
                 <tr>
                     <th>Pant ID</th>
