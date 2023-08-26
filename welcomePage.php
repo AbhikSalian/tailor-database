@@ -14,7 +14,7 @@
       <nav class="navbar">
         <div class="navdiv">
           <div class="logo">
-            <a href="welcomePage.html"
+            <a href="welcomePage.php"
               ><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"
             /></a>
           </div>

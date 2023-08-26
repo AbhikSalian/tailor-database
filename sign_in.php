@@ -69,7 +69,7 @@
             required
           />
           <div class="button">
-          <a href="../Home.html"><button type="submit">Sign In</button></a></div>
+          <a href="Hom.php"><button type="submit">Sign In</button></a></div>
           <div class="Noac">
             Don't have an account/<a href="sign_up.php"> Sign up</a>
           </div>

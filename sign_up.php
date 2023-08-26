@@ -8,40 +8,94 @@
     <link rel="stylesheet" href="SignUp.css">
 </head>
 <body>
-    <form action="sign_up.php" method="post">
-        <div class="container">
-            <span>Sign Up</span>
-            <div class="name">Name: 
-                <input type="text" placeholder="Enter your Name" name="client_name"  required>
-            </div>
-            <div class="age">Age: 
-                <input type="number" placeholder="Enter your Age" min="0" max="150" name="age" value = " " required>
-            </div>
-            <div class="gender">Gender: 
-                <input type="radio" name="gender"  value="male" >Male
-                <input type="radio" name="gender"  value="female" >Female
-            </div>
-            <div class="address">Address: 
-                <input type="text" placeholder="Enter your Address" name = "address"  required>
-            </div>
-            <div class="mobileNo">Mobile Number: 
-                <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="Enter your mobile number"  required>
-            </div>
-            <div class="email">Email ID: 
-                <input type="email" placeholder="Enter your Email ID" name = "email_id"  required>
-            </div>
-            <div class="password">Enter New Password:
-                <input type="password" placeholder="Password" id="p1" name="p1" required><br>
-                Re-Enter Password:
-                <input type="password" placeholder="Password" id="p2" name="p2" required>
-            </div>
-            <a href="SignIn.html">
-            <button type="submit" class="Signup">Sign Up</button></a>
+    <form onSubmit="return checkPassword(this)" action="sign_up.php" method="post">
+      <div class="container">
+        <span>SIGN UP</span>
+        <div class="Credential">
+          <input
+            type="text"
+            placeholder="Enter your Name"
+            name="client_name"
+            required
+          />
+
+          <input
+            type="number"
+            placeholder="Enter your Age"
+            min="0"
+            max="150"
+            name="age"
+            required
+          />
+          <div class="gender">
+            <input
+              type="radio"
+              name="gender"
+              checked="checked"
+              value="male"
+            />Male <input type="radio" name="gender" value="female" />Female
+          </div>
+
+          <input
+            type="text"
+            placeholder="Enter your Address"
+            name="address"
+            required
+          />
+
+          <input
+            type="tel"
+            name="mobile"
+            pattern="[0-9]{10}"
+            placeholder="Enter your mobile number"
+            required
+          />
+
+          <input
+            type="email"
+            placeholder="Enter your Email ID"
+            name="email_id"
+            required
+          />
+
+          <input
+            type="password"
+            placeholder="New Password"
+            id="p1"
+            name="p1"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Re-Enter Password"
+            id="p2"
+            name="p2"
+            required
+          />
+
+          <div class="button">
+          <a href="sign_in.php"><button type="submit" value="Submit">Sign Up</button></a></div>
+
+          <div class="Noac">
+            Already have an account?<a href="sign_in.php"> Sign in</a>
+          </div>
         </div>
+      </div>
     </form>
-    Already have an account?<a href="sign_in.php">Sign in</a>
-    
-</body>
+    <script>
+      function checkPassword(form) {
+        const p1 = form.p1.value;
+        const p2 = form.p2.value;
+
+        if (p1 != p2) {
+          alert("Error! Password did not match.");
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
+  </body>
 </html>
 
 <?php
