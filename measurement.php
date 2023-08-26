@@ -80,7 +80,7 @@
         <img src="Images/Blazer.png" height="200px" alt="" />
       </div>
       <div>
-        <button type="submit" class="Signup">Sign Up</button>
+        <button type="submit">Submit</button>
       </div>
     </form>
   </body>
