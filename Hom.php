@@ -17,8 +17,8 @@
             <li><a href="#">Women</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Profile</a></li>
-            <a href="welcomePage.html"><button class="signout">Sign Out</button></a>
+            <li><a href="client_details.php">Profile</a></li>
+            <a href="logout.php"><button class="signout">Sign Out</button></a>
         </ul>
     </div>
         </nav>

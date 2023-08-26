@@ -16,5 +16,6 @@
         Address : <span><?php echo $_SESSION['address']; ?></span><br>
         Mobile No. : <span><?php echo $_SESSION['ph_no']; ?></span><br>
         Email ID : <span><?php echo $_SESSION['email_id']; ?></span><br>
+        <a href="logout.php"><button class="signout">Sign Out</button></a>
     </body>
 </html>
