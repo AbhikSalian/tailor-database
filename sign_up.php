@@ -77,7 +77,7 @@
           <a href="SignIn.html"><button type="submit" value="Submit">Sign Up</button></a></div>
 
           <div class="Noac">
-            Already have an account?<a href="sign_in.html"> Sign in</a>
+            Already have an account?<a href="sign_in.php"> Sign in</a>
           </div>
         </div>
       </div>
