@@ -9,6 +9,7 @@
 ?>
 <html>
     <body>
+        <h3>Personal Details:</h3>
         ID :  <span><?php echo $_SESSION['client_id']; ?></span><br>
         Name :  <span><?php echo $_SESSION['client_name'] ;?></span><br>
         Age :   <span><?php echo $_SESSION['age'] ;?></span><br>
