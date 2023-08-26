@@ -61,24 +61,7 @@
         </ol>
         <img src="Images/Pant.png" height="200px" alt="" />
       </div>
-      <div class="blazer">
-        <h4>Blazer Jacket</h4>
-        <ol>
-          <li><input type="number" placeholder="Collar to shoulder" id="" /></li>
-          <li><input type="number" placeholder="Shoulder to sleeve" id="" /></li>
-          <li>
-            <input type="number" placeholder="Shoulder to shoulder" id="" />
-          </li>
-          <li><input type="number" placeholder="Upper arm width" id="" /></li>
-          <li><input type="number" placeholder="Forearm width" id="" /></li>
-          <li><input type="number" placeholder="Chest width" id="" /></li>
-          <li><input type="number" placeholder="Waist width" id="" /></li>
-          <li><input type="number" placeholder="Front length" id="" /></li>
-          <li><input type="number" placeholder="Hip width" id="" /></li>
-          <li><input type="number" placeholder="Sleeve hole width" id="" /></li>
-        </ol>
-        <img src="Images/Blazer.png" height="200px" alt="" />
-      </div>
+
       <div>
         <button type="submit">Submit</button>
       </div>
@@ -137,6 +120,32 @@
                 echo"<script type='text/javascript'>alert('Record saved')</script>";
                 header('Location: Hom.php'); 
                 
+            }
+            $cid=$_SESSION['client_id'];
+            $query1="select * from shirt where shirt_id in(select shirt_id from link where client_id='$cid')";
+            $query2="select * from pant where pant_id in(select pant_id from link where client_id='$cid')";
+            $result1 = mysqli_query($conn,$query1);
+            if($result1)
+            {
+                if($result && mysqli_num_rows($result) > 0)
+                {
+                    $client_shirt_data = mysqli_fetch_assoc($result);
+                    //$row=mysqli_fetch_array($result);
+                    if($client_data['password'] == $password)
+                    {
+                        
+                        $_SESSION['client_id'] = $client_data['client_id'];
+                        $_SESSION['client_name'] = $client_data['client_name'];
+                        $_SESSION['age'] = $client_data['age'];
+                        $_SESSION['gender'] = $client_data['gender'];
+                        $_SESSION['address'] = $client_data['address'];
+                        $_SESSION['ph_no'] = $client_data['ph_no'];
+                        $_SESSION['email_id'] = $client_data['email_id'];
+                        header("Location: client_details.php");
+                        echo"<script type='text/javascript'>alert('Login successful')</script>";
+                        
+                    }
+                }
             }
         
     
