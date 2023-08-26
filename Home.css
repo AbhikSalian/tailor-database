@@ -8,14 +8,14 @@ body{
     margin-left:20px ;
     margin-top: 4px;
 }
-ul{
+.list{
     overflow: auto;
 }
-li{
+.list li{
     list-style: none;
     display: inline-block;
 }
-li a{
+.list li a{
     font-size: 20px;
     margin-right: 25px;
     color:#42707f;
@@ -49,16 +49,67 @@ li a{
 .signout:hover{
   color: #fff6e5;
 }
-li a:hover{
+.list li a:hover{
     color: #fff6e5;
 }
 .logo:hover {
     opacity: 0.5;
   }
-.home a{
+.list .home a{
     color: #fff6e5;
   }
-.home a:hover{
+.list .home a:hover{
     color: #42707f;
   }
 
+  /* footer */
+  footer{
+
+      margin: 0   ;
+      background-color: #062f3d;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      color: #fff6e5;
+      line-height: 20px;
+      align-items: center;
+  }
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
+.contact ,.business{
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
+
+}
+.footer li{
+    list-style: none;
+    width: fit-content;
+
+}
+hr{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #fff6e5 ;
+
+}
+.copyright{
+    padding:-5px;
+    margin: 0px;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: lighter;
+
+}
+a{
+    color: #fff6e5;
+    
+}
+.fa-solid{
+    font-size: small;
+
+}
