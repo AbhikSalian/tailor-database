@@ -9,15 +9,18 @@
   <body>
     <header>
       <nav class="navbar">
-        <ul>
-          <li class="logo">
-            <a href="welcomePage.php"><img src="final_logo.png" alt="SmartStitch"></a>
-          </li>
-          <a href="sign_up.php"><button>Sign Up</button></a>
-          <a href="sign_in.php"><button>Sign In</button></a>
-        </ul>
+        <div class="navdiv">
+          <div class="logo">
+            <a href="welcomePage.php"
+              ><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"
+            /></a>
+          </div>
+          <div class="sign">
+          <a href="sign_up.php"><button class="b1" >Sign Up</button></a>
+          <a href="sign_in.php"><button class="b2">Sign In</button></a>
+        </div>
+        </div>
       </nav>
     </header>
-
   </body>
 </html>
