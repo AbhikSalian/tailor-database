@@ -10,6 +10,12 @@ body {
   margin-left: 20px;
   margin-top: 4px;
 }
+header{
+  /* margin: auto;
+  display: block;
+  width: 100%; */
+  position: sticky;
+}
 .navbar {
   /* border: 1px solid #fff6e5; */
   padding-left: 15px;
@@ -66,7 +72,7 @@ footer {
 }
 
 .footer {
-  display: flex;
+  display: inline-block;
   justify-content: center;
 }
 .contact,

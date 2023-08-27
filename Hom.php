@@ -17,10 +17,9 @@
                 <div class="logo"><a href="Home.html"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
                 <ul class="list">
                     <li class="home"><a href="Hom.php">Home</a></li>
-                    <li><a href="measurement.php">Men</a></li>
-                    <li><a href="#">Women</a></li>
+                    <li><a href="measurement.php">Shirts</a></li>
+                    <li><a href="#">Pants</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li>
                     <li><a href="client_details.php">Profile</a></li>
                     <a href="logout.php"><button class="signout">Sign Out</button></a>
                 </ul>
