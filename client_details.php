@@ -117,7 +117,7 @@
                 </tr>
             </table>
         </div>
-        <a href="Hom.php"><button class="signout">Sign Out</button></a>
+        <a href="Hom.php"><button>Home</button></a>
     </body>
 
 </html>
