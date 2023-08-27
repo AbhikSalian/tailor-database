@@ -24,7 +24,6 @@ body{
     font-weight: bold;
 }
 .navbar {
-  border: 1px solid #fff6e5;
 
     padding-left: 15px;
     padding-right: 35px;
@@ -100,7 +99,6 @@ body{
   }
   
   .copyright {
-    border-top: 1px solid #42707f;
     padding: -5px;
     margin: 0px;
     margin-top: 0px;

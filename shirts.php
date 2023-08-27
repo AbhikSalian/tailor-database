@@ -16,7 +16,7 @@
                 <ul class="list">
                     <li><a href="Hom.php">Home</a></li>
                     <li class="home"><a href="shirts.php">Shirts</a></li>
-                    <li><a href="#">Pants</a></li>
+                    <li><a href="pants.php">Pants</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="client_details.php">Profile</a></li>
                     <a href="logout.php"><button class="signout">Sign Out</button></a>
@@ -126,7 +126,6 @@
           </ul>
         </div>
       </div>
-      <!-- <hr /> -->
       <h5 class="copyright">
         @copyright 2023 SmartStitch - All Rigths Reserved
       </h5>
