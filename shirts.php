@@ -12,12 +12,12 @@
     <header>
         <nav class="navbar">
             <div class="navdiv">
-                <div class="logo"><a href="Home.html"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
+                <div class="logo"><a href="Hom.php"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
                 <ul class="list">
                     <li><a href="Hom.php">Home</a></li>
                     <li class="home"><a href="shirts.php">Shirts</a></li>
                     <li><a href="#">Pants</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
                     <li><a href="client_details.php">Profile</a></li>
                     <a href="logout.php"><button class="signout">Sign Out</button></a>
                 </ul>
@@ -29,7 +29,7 @@
     <main>
       <div class="fabric">
           <div class="shirt">
-              <img class="shirtimg" src="/Images/shirtFabric1.jpg" alt="" height="250px">           
+              <img class="shirtimg" src="Images/shirtFabric1.jpg" alt="" height="250px">           
               <p>Cotton Colour Plain Shirt Fabric Green</p>
               <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>360.00</p>
               <div class="placeorder">
@@ -39,7 +39,7 @@
   
           </div>
           <div class="shirt">
-              <img class="shirtimg" src="/Images/shirtFabric2.jpg" alt="" height="250px">           
+              <img class="shirtimg" src="Images/shirtFabric2.jpg" alt="" height="250px">           
               <p>Cotton Grey Colour Plain Shirt Fabric Candy Colour</p>
               <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>415.00</p>
               <div class="placeorder">
@@ -48,7 +48,7 @@
   
           </div>
           <div class="shirt">
-              <img class="shirtimg" src="/Images/shirtFabric3.jpg" alt="" height="250px">           
+              <img class="shirtimg" src="Images/shirtFabric3.jpg" alt="" height="250px">           
               <p>Cotton Striped Shirt Fabric Blue Candy Colour</p>
               <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>415.00</p>
               <div class="placeorder">
@@ -57,7 +57,7 @@
   
           </div>
           <div class="shirt">
-              <img class="shirtimg" src="/Images/shirtFabric4.jpg" alt="" height="250px">           
+              <img class="shirtimg" src="Images/shirtFabric4.jpg" alt="" height="250px">           
               <p>Cotton Mixed Plain Shirt Fabric Black Flat</p>
               <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>425.00</p>
               <div class="placeorder">
@@ -66,16 +66,16 @@
   
           </div>
           <div class="shirt">
-              <img class="shirtimg" src="/Images/shirtFabric5.jpg" alt="" height="250px">           
+              <img class="shirtimg" src="Images/shirtFabric5.jpg" alt="" height="250px">           
               <p>Cotton Colour Checked Shirt Fabric Sky Blue Galaxy Art</p>
               <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>445.00</p>
               <div class="placeorder">
-                <a href="#"><button>Place Order</button></a>
+                <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
               </div>
   
           </div>
           <div class="shirt">
-              <img class="shirtimg" src="/Images/shirtFabric6.jpg" alt="" height="250px">           
+              <img class="shirtimg" src="Images/shirtFabric6.jpg" alt="" height="250px">           
               <p>Cotton Colour Plain Shirt Fabric Grey Galaxy Art</p>
               <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>445.00</p>
               <div class="placeorder">
@@ -84,7 +84,7 @@
   
           </div>
           <div class="shirt">
-              <img class="shirtimg" src="/Images/shirtFabric7.jpg" alt="" height="250px">           
+              <img class="shirtimg" src="Images/shirtFabric7.jpg" alt="" height="250px">           
               <p>Cotton Grey with White Checked Shirt Fabric Galaxy </p>
               <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>445.00</p>
               <div class="placeorder">
@@ -93,9 +93,9 @@
   
           </div>
           <div class="shirt">
-              <img class="shirtimg" src="/Images/shirtFabric8.jpg" alt="" height="250px">           
+              <img class="shirtimg" src="Images/shirtFabric8.jpg" alt="" height="250px">           
               <p>Cotton White Checked Shirt Fabric Galaxy Art</p>
-              <p>MRP <Rs class="money"></Rs>445.00</p>
+              <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>445.00</p>
               <div class="placeorder">
                 <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
               </div>
