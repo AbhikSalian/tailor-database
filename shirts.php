@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartSticth-Shirts</title>
     <link rel="stylesheet" href="shirts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
 </head>
 <body>
     <header>
@@ -29,9 +31,9 @@
           <div class="shirt">
               <img class="shirtimg" src="/Images/shirtFabric1.jpg" alt="" height="250px">           
               <p>Cotton Colour Plain Shirt Fabric Green</p>
-              <p>MRP <Rs class="money"></Rs>360.00</p>
+              <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>360.00</p>
               <div class="placeorder">
-                <a href="#"><button>Place Order</button></a>
+                <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
               </div>
           
   
@@ -39,34 +41,34 @@
           <div class="shirt">
               <img class="shirtimg" src="/Images/shirtFabric2.jpg" alt="" height="250px">           
               <p>Cotton Grey Colour Plain Shirt Fabric Candy Colour</p>
-              <p>MRP <Rs class="money"></Rs>415.00</p>
+              <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>415.00</p>
               <div class="placeorder">
-                <a href="#"><button>Place Order</button></a>
+                <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
               </div>
   
           </div>
           <div class="shirt">
               <img class="shirtimg" src="/Images/shirtFabric3.jpg" alt="" height="250px">           
               <p>Cotton Striped Shirt Fabric Blue Candy Colour</p>
-              <p>MRP <Rs class="money"></Rs>415.00</p>
+              <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>415.00</p>
               <div class="placeorder">
-                <a href="#"><button>Place Order</button></a>
+                <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
               </div>
   
           </div>
           <div class="shirt">
               <img class="shirtimg" src="/Images/shirtFabric4.jpg" alt="" height="250px">           
               <p>Cotton Mixed Plain Shirt Fabric Black Flat</p>
-              <p>MRP <Rs class="money"></Rs>425.00</p>
+              <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>425.00</p>
               <div class="placeorder">
-                <a href="#"><button>Place Order</button></a>
+                <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
               </div>
   
           </div>
           <div class="shirt">
               <img class="shirtimg" src="/Images/shirtFabric5.jpg" alt="" height="250px">           
               <p>Cotton Colour Checked Shirt Fabric Sky Blue Galaxy Art</p>
-              <p>MRP <Rs class="money"></Rs>445.00</p>
+              <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>445.00</p>
               <div class="placeorder">
                 <a href="#"><button>Place Order</button></a>
               </div>
@@ -75,18 +77,18 @@
           <div class="shirt">
               <img class="shirtimg" src="/Images/shirtFabric6.jpg" alt="" height="250px">           
               <p>Cotton Colour Plain Shirt Fabric Grey Galaxy Art</p>
-              <p>MRP <Rs class="money"></Rs>445.00</p>
+              <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>445.00</p>
               <div class="placeorder">
-                <a href="#"><button>Place Order</button></a>
+                <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
               </div>
   
           </div>
           <div class="shirt">
               <img class="shirtimg" src="/Images/shirtFabric7.jpg" alt="" height="250px">           
               <p>Cotton Grey with White Checked Shirt Fabric Galaxy </p>
-              <p>MRP <Rs class="money"></Rs>445.00</p>
+              <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i> <Rs class="money"></Rs>445.00</p>
               <div class="placeorder">
-                <a href="#"><button>Place Order</button></a>
+                <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
               </div>
   
           </div>
@@ -95,7 +97,7 @@
               <p>Cotton White Checked Shirt Fabric Galaxy Art</p>
               <p>MRP <Rs class="money"></Rs>445.00</p>
               <div class="placeorder">
-                <a href="#"><button>Place Order</button></a>
+                <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
               </div>
   
           </div>
