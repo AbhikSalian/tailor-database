@@ -65,8 +65,8 @@
                 </tr>
                 <tr>
                     <?php
-                        while($client_shirt_data = mysqli_fetch_assoc($result1))
-                        {
+                        $client_shirt_data = mysqli_fetch_assoc($result1);
+                        
                     ?>
                     <td><?php echo $client_shirt_data['shirt_id'];?></td>
                     <td><?php echo $client_shirt_data['collar'];?></td>
@@ -78,7 +78,7 @@
                     <td><?php echo $client_shirt_data['sleeve_cuff'];?></td>
                     <td><?php echo $client_shirt_data['hem'];?></td>
                     <?php
-                        }
+                        
                     ?>
                 </tr>
             </table>
@@ -98,8 +98,8 @@
                 </tr>
                 <tr>
                     <?php
-                        while($client_pant_data = mysqli_fetch_assoc($result2))
-                        {
+                        $client_pant_data = mysqli_fetch_assoc($result2);
+                        
                     ?>
                     <td><?php echo $client_pant_data['pant_id'];?></td>
                     <td><?php echo $client_pant_data['waist'];?></td>
@@ -112,11 +112,12 @@
                     <td><?php echo $client_pant_data['leg_opening'];?></td>
                     
                     <?php
-                        }
+                        
                     ?>
                 </tr>
             </table>
         </div>
+        <a href="measurement.php"><button>Edit measurements</button></a>
         <a href="Hom.php"><button>Home</button></a>
     </body>
 
