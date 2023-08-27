@@ -31,11 +31,10 @@
             <input
               type="radio"
               name="gender"
-              checked="checked"
               value="male"
             />Male <input type="radio" name="gender" value="female" />Female
           </div>
-
+          
           <input
             type="text"
             placeholder="Enter your Address"
