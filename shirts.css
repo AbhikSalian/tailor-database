@@ -144,7 +144,8 @@ main {
   padding: 20px;
   border-radius: 25px;
   text-align: center;
-  box-shadow: 0px 0px 15px 0px #062f3d;
+  /* box-shadow: 0px 0px 15px 0px #062f3d; */
+  transition: 0.1s;
 }
 .fabric {
   margin: auto;
@@ -167,6 +168,6 @@ main {
   color: #fff6e5;
   box-shadow: 0px 0px 5px 0px #42707f;
 }
-.fabric .shirt:hover{
-  box-shadow: 0px 0px 50px 0px #062f3d;
+.fabric .shirt:hover {
+  box-shadow: 0px 0px 2px 2px #062f3d;
 }
