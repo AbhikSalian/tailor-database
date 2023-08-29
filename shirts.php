@@ -36,7 +36,9 @@
           <Rs class="money"></Rs>360.00
         </p>
         <div class="placeorder">
-          <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <form action="s1.php" method="post">
+          <a href="s1.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          </form>
         </div>
 
 
