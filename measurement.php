@@ -1,4 +1,72 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartSticth-Measurement</title>
+  </head>
+  <body>
+    <form action="measurement.php" method="post">
+        <div class="shirt">
+        <h4>Shirt</h4>
+        <ol>
+            <li>
+            <label for="">Collar: </label
+            ><input type="number" placeholder="" id="" name="collar"/>
+            </li>
+            <li>
+            <label for="">Neck to Shoulder: </label
+            ><input type="number" placeholder="" id="" name="neck_to_shoulder"/>
+            </li>
+            <li>
+            <label for="">Sleeve Length: </label
+            ><input type="number" placeholder="" id="" name="sleeve_length"/>
+            </li>
+            <li>
+            <label for="">Shoulder to Shoulder: </label
+            ><input type="number" placeholder="" id="" name="shoulder_to_shoulder"/>
+            </li>
+            <li>
+            <label for="">Chest: </label
+            ><input type="number" placeholder="" id="" name="chest"/>
+            </li>
+            <li>
+            <label for="">Front Length: </label
+            ><input type="number" placeholder="" id="" name="front_length"/>
+            </li>
+            <li>
+            <label for="">Sleeve cuff: </label
+            ><input type="number" placeholder="" id="" name="sleeve_cuff"/>
+            </li>
+            <li>
+            <label for="">Hem: </label
+            ><input type="number" placeholder="" id="" name="hem"/>
+            </li>
+        </ol>
+        <img src="Images/Shirt.png" height="200px" alt=""/>
+        </div>
+    
+      <div class="pant">
+        <h4>Pant</h4>
+        <ol>
+          <li><input type="number" placeholder="Waist" id="" name="waist"/></li>
+          <li><input type="number" placeholder="Front Rise" id="" name="front_rise"/></li>
+          <li><input type="number" placeholder="Hip" id="" name="hip"/></li>
+          <li><input type="number" placeholder="Thigh" id="" name="thigh"/></li>
+          <li><input type="number" placeholder="Length" id="" name="length"/></li>
+          <li><input type="number" placeholder="Knee" id="" name="knee"/></li>
+          <li><input type="number" placeholder="Inseam" id="" name="inseam"/></li>
+          <li><input type="number" placeholder="Leg Opening" id="" name="leg_opening" /></li>
+        </ol>
+        <img src="Images/Pant.png" height="200px" alt="" />
+      </div>
+
+      <div>
+        <a href="client_details.php"><button type="submit">Submit</button></a>
+      </div>
+    </form>
+  </body>
+</html><?php
 // Start the output buffering to capture any output before it's sent
 ob_start();
 
@@ -92,72 +160,3 @@ if (ob_get_length() > 0) {
     exit; // Make sure to exit the script
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SmartSticth-Measurement</title>
-  </head>
-  <body>
-    <form action="measurement.php" method="post">
-        <div class="shirt">
-        <h4>Shirt</h4>
-        <ol>
-            <li>
-            <label for="">Collar: </label
-            ><input type="number" placeholder="" id="" name="collar"/>
-            </li>
-            <li>
-            <label for="">Neck to Shoulder: </label
-            ><input type="number" placeholder="" id="" name="neck_to_shoulder"/>
-            </li>
-            <li>
-            <label for="">Sleeve Length: </label
-            ><input type="number" placeholder="" id="" name="sleeve_length"/>
-            </li>
-            <li>
-            <label for="">Shoulder to Shoulder: </label
-            ><input type="number" placeholder="" id="" name="shoulder_to_shoulder"/>
-            </li>
-            <li>
-            <label for="">Chest: </label
-            ><input type="number" placeholder="" id="" name="chest"/>
-            </li>
-            <li>
-            <label for="">Front Length: </label
-            ><input type="number" placeholder="" id="" name="front_length"/>
-            </li>
-            <li>
-            <label for="">Sleeve cuff: </label
-            ><input type="number" placeholder="" id="" name="sleeve_cuff"/>
-            </li>
-            <li>
-            <label for="">Hem: </label
-            ><input type="number" placeholder="" id="" name="hem"/>
-            </li>
-        </ol>
-        <img src="Images/Shirt.png" height="200px" alt=""/>
-        </div>
-    
-      <div class="pant">
-        <h4>Pant</h4>
-        <ol>
-          <li><input type="number" placeholder="Waist" id="" name="waist"/></li>
-          <li><input type="number" placeholder="Front Rise" id="" name="front_rise"/></li>
-          <li><input type="number" placeholder="Hip" id="" name="hip"/></li>
-          <li><input type="number" placeholder="Thigh" id="" name="thigh"/></li>
-          <li><input type="number" placeholder="Length" id="" name="length"/></li>
-          <li><input type="number" placeholder="Knee" id="" name="knee"/></li>
-          <li><input type="number" placeholder="Inseam" id="" name="inseam"/></li>
-          <li><input type="number" placeholder="Leg Opening" id="" name="leg_opening" /></li>
-        </ol>
-        <img src="Images/Pant.png" height="200px" alt="" />
-      </div>
-
-      <div>
-        <a href="client_details.php"><button type="submit">Submit</button></a>
-      </div>
-    </form>
-  </body>
-</html>
