@@ -1,7 +1,7 @@
 body {
   background-color: #42707f;
   background-size: cover;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,8 +33,7 @@ span {
   justify-content: center;
   color: #42707f;
 }
-.button{
-
+.button {
   margin: 30px;
 }
 .Credential button {
@@ -70,7 +69,6 @@ span {
   text-decoration: none;
   color: #fff6e5;
   cursor: pointer;
-
 }
 .Noac {
   color: #42707f;

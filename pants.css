@@ -1,5 +1,6 @@
 * {
   text-decoration: none;
+  box-sizing: border-box;
 }
 body {
   margin: 0px 0px 0px 0px;
@@ -24,6 +25,8 @@ body {
   font-weight: bold;
 }
 .navbar {
+  /* border: 1px solid #fff6e5; */
+
   padding-left: 15px;
   padding-right: 35px;
   background-color: #062f3d;
@@ -66,6 +69,9 @@ body {
 
 /* footer */
 footer {
+  box-sizing: border-box;
+  /* border: 1px solid #fff6e5; */
+
   min-height: 20vh;
   margin: 0px 0px 0px 0px;
   background-color: #062f3d;
@@ -78,6 +84,7 @@ footer {
   line-height: 20px;
   align-items: center;
   text-align: center;
+  margin-top: 50px;
 }
 
 .footer {
@@ -116,4 +123,51 @@ h3 {
 .welcomeimg {
   margin: 0px 0px -5px 0px;
   padding: 0%;
+}
+
+/* maim */
+main {
+  position: relative;
+}
+.shirt {
+  background-color: #062f3d;
+  margin: 4px;
+  padding: 10px;
+  display: inline-block;
+  width: 32%;
+  /* box-sizing: border-box; */
+  width: min-content;
+  margin-left: 65px;
+  margin-top: 60px;
+  /* margin-bottom: 25px; */
+  color: #fff6e5;
+  padding: 20px;
+  border-radius: 25px;
+  text-align: center;
+  /* box-shadow: 0px 0px 15px 0px #062f3d; */
+  transition: 0.1s;
+}
+.shirtimg {
+  border-radius: 20px;
+}
+.placeorder button {
+  font-weight: bold;
+  padding: 8px 18px;
+  border: none;
+  outline: none;
+  border-radius: 21px;
+  background-color: #42707f;
+  color: #062f3d;
+  cursor: pointer;
+  font-size: 15px;
+}
+.placeorder button:hover {
+  color: #fff6e5;
+  box-shadow: 0px 0px 5px 0px #42707f;
+}
+.fabric .shirt:hover {
+  box-shadow: 0px 0px 2px 2px #062f3d;
+}
+.fabric {
+  margin: auto;
 }
