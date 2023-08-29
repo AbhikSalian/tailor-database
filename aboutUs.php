@@ -54,10 +54,10 @@
       <h3>Contact Us</h3>
       <p>Have questions or want to schedule a consultation? We're just a phone call or email away. Reach out to us anytime, and we'll be delighted to assist you. <br><br>
 
-        <i class="fa-solid fa-phone" style="color: black;"></i> 7760447896 <br>
-        <i class="fa-solid fa-envelope" style="color: black;"></i> akashacharya2003@gmail.com <br><br>
+        <i class="fa-solid fa-phone" style="color: black;"></i> 7411328238 <br>
+        <i class="fa-solid fa-envelope" style="color: black;"></i> abhiksalian0728@gmail.com <br><br>
 
-        Thank you for choosing [Your Tailoring Business Name]. We look forward to being your trusted partner in creating exceptional clothing that reflects your style and personality.
+        Thank you for choosing SmartStitch. We look forward to being your trusted partner in creating exceptional clothing that reflects your style and personality.
       </p>
     </div>
   </main>
@@ -69,8 +69,8 @@
         <ul>
           <h4>CONTACT</h4>
 
-          <li><i class="fa-solid fa-phone" style="color: #42707f;"></i> 7760447896</li>
-          <li><a href="mailto: akashacharya2003@gmail.com"><i class="fa-solid fa-envelope" style="color: #42707f;"></i> akashacharya2003@gmail.com</li></a>
+          <li><i class="fa-solid fa-phone" style="color: #42707f;"></i> 7411328238</li>
+          <li><a href="mailto: abhiksalian0728@gmail.com"><i class="fa-solid fa-envelope" style="color: #42707f;"></i> abhiksalian0728@gmail.com</li></a>
         </ul>
       </div>
       <div class="business">

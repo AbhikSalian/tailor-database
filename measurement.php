@@ -4,66 +4,115 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SmartSticth-Measurement</title>
+    <link rel="stylesheet" href="measurements.css" />
   </head>
   <body>
-    <form action="measurement.php" method="post">
-        <div class="shirt">
-        <h4>Shirt</h4>
-        <ol>
-            <li>
-            <label for="">Collar: </label
-            ><input type="number" placeholder="" id="" name="collar"/>
-            </li>
-            <li>
-            <label for="">Neck to Shoulder: </label
-            ><input type="number" placeholder="" id="" name="neck_to_shoulder"/>
-            </li>
-            <li>
-            <label for="">Sleeve Length: </label
-            ><input type="number" placeholder="" id="" name="sleeve_length"/>
-            </li>
-            <li>
-            <label for="">Shoulder to Shoulder: </label
-            ><input type="number" placeholder="" id="" name="shoulder_to_shoulder"/>
-            </li>
-            <li>
-            <label for="">Chest: </label
-            ><input type="number" placeholder="" id="" name="chest"/>
-            </li>
-            <li>
-            <label for="">Front Length: </label
-            ><input type="number" placeholder="" id="" name="front_length"/>
-            </li>
-            <li>
-            <label for="">Sleeve cuff: </label
-            ><input type="number" placeholder="" id="" name="sleeve_cuff"/>
-            </li>
-            <li>
-            <label for="">Hem: </label
-            ><input type="number" placeholder="" id="" name="hem"/>
-            </li>
-        </ol>
-        <img src="Images/Shirt.png" height="200px" alt=""/>
+    <header>
+      <nav class="navbar">
+        <div class="navdiv">
+          <p class="home">Measurements</p>
         </div>
-    
-      <div class="pant">
-        <h4>Pant</h4>
-        <ol>
-          <li><input type="number" placeholder="Waist" id="" name="waist"/></li>
-          <li><input type="number" placeholder="Front Rise" id="" name="front_rise"/></li>
-          <li><input type="number" placeholder="Hip" id="" name="hip"/></li>
-          <li><input type="number" placeholder="Thigh" id="" name="thigh"/></li>
-          <li><input type="number" placeholder="Length" id="" name="length"/></li>
-          <li><input type="number" placeholder="Knee" id="" name="knee"/></li>
-          <li><input type="number" placeholder="Inseam" id="" name="inseam"/></li>
-          <li><input type="number" placeholder="Leg Opening" id="" name="leg_opening" /></li>
-        </ol>
-        <img src="Images/Pant.png" height="200px" alt="" />
+      </nav>
+    </header>
+
+    <form action="measurement.php" method="post">
+      <div class="measurement">
+
+        <div class="shirt">
+          <h3>Shirt</h3>
+          <ol>
+            <li>
+              <label for="">Collar: </label
+              ><input type="number" placeholder="" id="" name="collar" value="<?php echo $_SESSION['collar'] ?>"/>
+            </li>
+            <li>
+              <label for="">Neck to Shoulder: </label
+              ><input
+                type="number"
+                placeholder=""
+                id=""
+                name="neck_to_shoulder"
+                
+              />
+            </li>
+            <li>
+              <label for="">Sleeve Length: </label
+              ><input type="number" placeholder="" id="" name="sleeve_length" />
+            </li>
+            <li>
+              <label for="">Shoulder to Shoulder: </label
+              ><input
+                type="number"
+                placeholder=""
+                id=""
+                name="shoulder_to_shoulder"
+              />
+            </li>
+            <li>
+              <label for="">Chest: </label
+              ><input type="number" placeholder="" id="" name="chest" />
+            </li>
+            <li>
+              <label for="">Front Length: </label
+              ><input type="number" placeholder="" id="" name="front_length" />
+            </li>
+            <li>
+              <label for="">Sleeve cuff: </label
+              ><input type="number" placeholder="" id="" name="sleeve_cuff" />
+            </li>
+            <li>
+              <label for="">Hem: </label
+              ><input type="number" placeholder="" id="" name="hem" />
+            </li>
+          </ol>
+          <img src="Images/Shirt.png" height="200px" alt="" />
+        </div>
+  
+        <div class="pant">
+          <h3>Pant</h3>
+          <ol>
+            <li>
+              <label for="">Waist: </label
+              ><input type="number" placeholder="" id="" name="waist" />
+            </li>
+            <li>
+              <label for="">Front Rise: </label
+              ><input type="number" placeholder="" id="" name="front_rise" />
+            </li>
+            <li>
+              <label for="">Hip: </label
+              ><input type="number" placeholder="" id="" name="hip" />
+            </li>
+            <li>
+              <label for="">Thigh: </label
+              ><input type="number" placeholder="" id="" name="thigh" />
+            </li>
+            <li>
+              <label for="">Length: </label
+              ><input type="number" placeholder="" id="" name="length" />
+            </li>
+            <li>
+              <label for="">Knee: </label
+              ><input type="number" placeholder="" id="" name="knee" />
+            </li>
+            <li>
+              <label for="">Inseam: </label
+              ><input type="number" placeholder="" id="" name="inseam" />
+            </li>
+            <li>
+              <label for="">Leg Opening: </label
+              ><input type="number" placeholder="" id="" name="leg_opening" />
+            </li>
+          </ol>
+          <img src="Images/Pant.png" height="200px" alt="" />
+        </div>
       </div>
+
 
       <div>
         <a href="client_details.php"><button type="submit">Submit</button></a>
       </div>
+      
     </form>
   </body>
 </html><?php
@@ -100,7 +149,7 @@ ob_start();
         
             else
             {
-              $cid=$_SESSION['client_id'];
+                $cid=$_SESSION['client_id'];
                 $shirt_insert="UPDATE shirt SET 
                 collar='$collar',
                 neck_to_shoulder='$neck_to_shoulder',
