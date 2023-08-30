@@ -9,8 +9,10 @@ if (!isset($_SESSION['client_name'])) {
 $cid = $_SESSION['client_id'];
 $query1 = "select * from shirt where shirt_id in(select shirt_id from link where client_id='$cid')";
 $query2 = "select * from pant where pant_id in(select pant_id from link where client_id='$cid')";
+$order_query="select * from orders where client_id='$cid'";
 $result1 = mysqli_query($conn, $query1);
 $result2 = mysqli_query($conn, $query2);
+$order_result=mysqli_query($conn,$order_query);
 if ($result1) {
     if ($result1 && mysqli_num_rows($result1) > 0) {
         $client_shirt_data = mysqli_fetch_assoc($result1);
@@ -95,7 +97,7 @@ if ($result2) {
 
         <div class="details">
             <h3>Personal Details:</h3>
-            <p>ID : <span><?php echo $_SESSION['client_id']; ?></span></p>
+            <p>Client ID : <span><?php echo $_SESSION['client_id']; ?></span></p>
             <p>Name : <span><?php echo $_SESSION['client_name']; ?></span></p>
             <p>Age : <span><?php echo $_SESSION['age']; ?></span></p>
             <p>Gender : <span><?php echo $_SESSION['gender']; ?></span></p>
@@ -173,6 +175,33 @@ if ($result2) {
                     ?>
                 </tr>
             </table>
+            <h4>Orders database:</h4>
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Shirt type</th>
+                <th>Pant type</th>
+                <th>Order date</th>
+                <th>Delivery date</th>
+                <th>Order Total</th>
+            </tr>
+            <tr>
+                <?php
+                    while($row=mysqli_fetch_assoc($order_result))
+                    {
+                ?>
+                <td><?php echo $row['order_id'];?></td>
+                <td><?php echo $row['shirt_type'];?></td>
+                <td><?php echo $row['pant_type'];?></td>
+                <td><?php echo $row['order_date'];?></td>
+                <td><?php echo $row['delivery_date'];?></td>
+                <td><?php echo $row['order_total'];?></td>
+            </tr>
+                <?php
+                    }
+                ?>
+            
+        </table>
         </div>
     <!-- }
 
