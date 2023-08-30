@@ -15,32 +15,31 @@
       </nav>
     </header>
 
-    <form action=" " method="post">
+    <form action="measurement.php" method="post">
       <div class="measurement">
 
         <div class="shirt">
           <h3>Shirt</h3>
           <ol>
             <li>
-              <label for="">Collar: </label
-              ><input type="number" placeholder="" id="" name="collar" value="<?php echo $_SESSION['collar'] ?>"/>
+              <label for="">Collar : </label
+              ><input type="number" placeholder="" id="" name="collar" />
             </li>
             <li>
-              <label for="">Neck to Shoulder: </label
+              <label for="">Neck to Shoulder : </label
               ><input
                 type="number"
                 placeholder=""
                 id=""
                 name="neck_to_shoulder"
-                
               />
             </li>
             <li>
-              <label for="">Sleeve Length: </label
+              <label for="">Sleeve Length : </label
               ><input type="number" placeholder="" id="" name="sleeve_length" />
             </li>
             <li>
-              <label for="">Shoulder to Shoulder: </label
+              <label for="">Shoulder to Shoulder : </label
               ><input
                 type="number"
                 placeholder=""
@@ -49,70 +48,69 @@
               />
             </li>
             <li>
-              <label for="">Chest: </label
+              <label for="">Chest : </label
               ><input type="number" placeholder="" id="" name="chest" />
             </li>
             <li>
-              <label for="">Front Length: </label
+              <label for="">Front Length : </label
               ><input type="number" placeholder="" id="" name="front_length" />
             </li>
             <li>
-              <label for="">Sleeve cuff: </label
+              <label for="">Sleeve cuff : </label
               ><input type="number" placeholder="" id="" name="sleeve_cuff" />
             </li>
             <li>
-              <label for="">Hem: </label
+              <label for="">Hem : </label
               ><input type="number" placeholder="" id="" name="hem" />
             </li>
           </ol>
-          <img src="Images/Shirt.png" height="200px" alt="" />
+          <img class="measureimg" src="Images/shirtmeasure.png" height="300px" alt="" />
         </div>
   
         <div class="pant">
           <h3>Pant</h3>
           <ol>
             <li>
-              <label for="">Waist: </label
+              <label for="">Waist : </label
               ><input type="number" placeholder="" id="" name="waist" />
             </li>
             <li>
-              <label for="">Front Rise: </label
+              <label for="">Front Rise : </label
               ><input type="number" placeholder="" id="" name="front_rise" />
             </li>
             <li>
-              <label for="">Hip: </label
+              <label for="">Hip : </label
               ><input type="number" placeholder="" id="" name="hip" />
             </li>
             <li>
-              <label for="">Thigh: </label
+              <label for="">Thigh : </label
               ><input type="number" placeholder="" id="" name="thigh" />
             </li>
             <li>
-              <label for="">Length: </label
+              <label for="">Length : </label
               ><input type="number" placeholder="" id="" name="length" />
             </li>
             <li>
-              <label for="">Knee: </label
+              <label for="">Knee : </label
               ><input type="number" placeholder="" id="" name="knee" />
             </li>
             <li>
-              <label for="">Inseam: </label
+              <label for="">Inseam : </label
               ><input type="number" placeholder="" id="" name="inseam" />
             </li>
             <li>
-              <label for="">Leg Opening: </label
+              <label for="">Leg Opening : </label
               ><input type="number" placeholder="" id="" name="leg_opening" />
             </li>
           </ol>
-          <img src="Images/Pant.png" height="200px" alt="" />
+          <img class="measureimg" src="Images/pantmeasure.png" height="300px" alt="" />
         </div>
       </div>
 
 
-      <div>
-        <a href="client_details.php"><button type="submit">Submit</button></a>
+      <div class="submit">
+        <a href="client_details.php"><button type="submit">Update</button></a>
       </div>
-      
     </form>
   </body>
 </html><?php
