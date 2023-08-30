@@ -78,9 +78,8 @@
 
   }
   .submit{
-    text-align: right;
+    text-align: center;
     margin-bottom: 40px;
-    margin-right: 100px;
   }
   .submit button{
     font-weight: bold;
@@ -90,6 +89,7 @@
     padding: 15px 30px 15px 30px;
     border-radius: 30px;
     cursor: pointer;
+    font-size: 15px;
     
   }
   .submit button:hover{

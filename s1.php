@@ -65,6 +65,9 @@
         {
             if(delivery_date.value.length!=0)
             alert ("Order placed Successfully");
+        
+            if(delivery_date.value.length == 0)
+            alert ("Please enter Date");
         }
     </script>
 

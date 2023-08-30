@@ -7,13 +7,6 @@
     <link rel="stylesheet" href="measurements.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="navdiv">
-          <p class="home">Measurements</p>
-        </div>
-      </nav>
-    </header>
 
     <form action="measurement.php" method="post">
       <div class="measurement">
@@ -23,45 +16,45 @@
           <ol>
             <li>
               <label for="">Collar : </label
-              ><input type="number" placeholder="" id="" name="collar" />
+              ><input type="number" placeholder="in inches" id="" name="collar" />
             </li>
             <li>
               <label for="">Neck to Shoulder : </label
               ><input
                 type="number"
-                placeholder=""
+                placeholder="in inches"
                 id=""
                 name="neck_to_shoulder"
               />
             </li>
             <li>
               <label for="">Sleeve Length : </label
-              ><input type="number" placeholder="" id="" name="sleeve_length" />
+              ><input type="number" placeholder="in inches" id="" name="sleeve_length" />
             </li>
             <li>
-              <label for="">Shoulder to Shoulder : </label
+              <label for="">Shoulder : </label
               ><input
                 type="number"
-                placeholder=""
+                placeholder="in inches"
                 id=""
                 name="shoulder_to_shoulder"
               />
             </li>
             <li>
               <label for="">Chest : </label
-              ><input type="number" placeholder="" id="" name="chest" />
+              ><input type="number" placeholder="in inches" id="" name="chest" />
             </li>
             <li>
               <label for="">Front Length : </label
-              ><input type="number" placeholder="" id="" name="front_length" />
+              ><input type="number" placeholder="in inches" id="" name="front_length" />
             </li>
             <li>
               <label for="">Sleeve cuff : </label
-              ><input type="number" placeholder="" id="" name="sleeve_cuff" />
+              ><input type="number" placeholder="in inches" id="" name="sleeve_cuff" />
             </li>
             <li>
               <label for="">Hem : </label
-              ><input type="number" placeholder="" id="" name="hem" />
+              ><input type="number" placeholder="in inches" id="" name="hem" />
             </li>
           </ol>
           <img class="measureimg" src="Images/shirtmeasure.png" height="300px" alt="" />
@@ -72,35 +65,35 @@
           <ol>
             <li>
               <label for="">Waist : </label
-              ><input type="number" placeholder="" id="" name="waist" />
+              ><input type="number" placeholder="in inches" id="" name="waist" />
             </li>
             <li>
               <label for="">Front Rise : </label
-              ><input type="number" placeholder="" id="" name="front_rise" />
+              ><input type="number" placeholder="in inches" id="" name="front_rise" />
             </li>
             <li>
               <label for="">Hip : </label
-              ><input type="number" placeholder="" id="" name="hip" />
+              ><input type="number" placeholder="in inches" id="" name="hip" />
             </li>
             <li>
               <label for="">Thigh : </label
-              ><input type="number" placeholder="" id="" name="thigh" />
+              ><input type="number" placeholder="in inches" id="" name="thigh" />
             </li>
             <li>
               <label for="">Length : </label
-              ><input type="number" placeholder="" id="" name="length" />
+              ><input type="number" placeholder="in inches" id="" name="length" />
             </li>
             <li>
               <label for="">Knee : </label
-              ><input type="number" placeholder="" id="" name="knee" />
+              ><input type="number" placeholder="in inches" id="" name="knee" />
             </li>
             <li>
               <label for="">Inseam : </label
-              ><input type="number" placeholder="" id="" name="inseam" />
+              ><input type="number" placeholder="in inches" id="" name="inseam" />
             </li>
             <li>
               <label for="">Leg Opening : </label
-              ><input type="number" placeholder="" id="" name="leg_opening" />
+              ><input type="number" placeholder="in inches" id="" name="leg_opening" />
             </li>
           </ol>
           <img class="measureimg" src="Images/pantmeasure.png" height="300px" alt="" />
