@@ -36,7 +36,9 @@
           <Rs class="money"></Rs>545.00
         </p>
         <div class="placeorder">
-          <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+        <form action="p1.php" method="post">
+          <a href="p1.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          </form>
         </div>
 
 
@@ -48,7 +50,9 @@
           <Rs class="money"></Rs>655.00
         </p>
         <div class="placeorder">
-          <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+        <form action="p2.php" method="post">
+          <a href="p2.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          </form>
         </div>
 
       </div>
@@ -59,7 +63,9 @@
           <Rs class="money"></Rs>545.00
         </p>
         <div class="placeorder">
-          <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+        <form action="p3.php" method="post">
+          <a href="p3.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          </form>
         </div>
 
       </div>
@@ -70,7 +76,9 @@
           <Rs class="money"></Rs>625.00
         </p>
         <div class="placeorder">
-          <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+        <form action="p4.php" method="post">
+          <a href="p4.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          </form>
         </div>
 
       </div>
@@ -81,7 +89,9 @@
           <Rs class="money"></Rs>660.00
         </p>
         <div class="placeorder">
-          <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+        <form action="p5.php" method="post">
+          <a href="p5.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          </form>
         </div>
 
       </div>
@@ -92,7 +102,9 @@
           <Rs class="money"></Rs>670.00
         </p>
         <div class="placeorder">
-          <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+        <form action="p6.php" method="post">
+          <a href="p6.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          </form>
         </div>
 
       </div>
@@ -103,7 +115,9 @@
           <Rs class="money"></Rs>695.00
         </p>
         <div class="placeorder">
-          <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+        <form action="p7.php" method="post">
+          <a href="p7.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          </form>
         </div>
 
       </div>
@@ -114,7 +128,9 @@
           <Rs class="money"></Rs>740.00
         </p>
         <div class="placeorder">
-          <a href="#"><button><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+        <form action="p8.php" method="post">
+          <a href="p8.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          </form>
         </div>
 
       </div>
