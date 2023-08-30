@@ -175,7 +175,7 @@ if ($result2) {
                     ?>
                 </tr>
             </table>
-            <h4>Orders database:</h4>
+            <h4>Orders:</h4>
         <table>
             <tr>
                 <th>Order ID</th>
