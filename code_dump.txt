@@ -87,3 +87,22 @@
     }*/
     akash
     abhik
+
+
+    /*if(!mysqli_stmt_prepare($stmt1, $shirt_insert))
+                {
+                    die(mysqli_error($conn));
+                }
+                if(!mysqli_stmt_prepare($stmt2, $pant_insert))
+                {
+                    die(mysqli_error($conn));
+                }*/
+                //mysqli_stmt_bind_param($stmt1,"dddddddd",$collar,$neck_to_shoulder,$sleeve_length,
+                //$shoulder_to_shoulder,$chest,$front_length,$sleeve_cuff,$hem);
+                //mysqli_stmt_execute($stmt1);
+                //mysqli_stmt_bind_param($stmt2,"dddddddd",$waist,$front_rise,$hip,
+                //$thigh,$length,$knee,$inseam,$leg_opening);
+                //mysqli_stmt_execute($stmt2);
+               //echo"Hello";
+               //header('Location: client_details.php'); 
+                

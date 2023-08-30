@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+//error_reporting(0);
+?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +10,7 @@
   </head>
   <body>
 
-    <form action="measurement.php" method="post">
+    <form action="" method="post">
       <div class="measurement">
 
         <div class="shirt">
@@ -111,82 +113,61 @@
 ob_start();
 
 // Your existing PHP code
-
+//error_reporting(0);
 @include 'config.php';
     session_start();
-   $collar=$_POST["collar"];
-   $neck_to_shoulder=$_POST["neck_to_shoulder"];
-   $sleeve_length=$_POST["sleeve_length"];
-   $shoulder_to_shoulder=$_POST["shoulder_to_shoulder"];
-   $chest=$_POST["chest"];
-   $front_length=$_POST["front_length"];
-   $sleeve_cuff=$_POST["sleeve_cuff"];
-   $hem=$_POST["hem"];
-   $waist=$_POST["waist"];
-   $front_rise=$_POST["front_rise"];
-   $hip=$_POST["hip"];
-   $thigh=$_POST["thigh"];
-   $length=$_POST["length"];
-   $knee=$_POST["knee"];
-   $inseam=$_POST["inseam"];
-   $leg_opening=$_POST["leg_opening"];
-    //var_dump($name);
-            
-            if(mysqli_connect_errno())
-            {
-                die('Connect Error : '.mysqli_connect_error());
-            }
-            //echo "Successful";
-        
-            else
-            {
-                $cid=$_SESSION['client_id'];
-                $shirt_insert="UPDATE shirt SET 
-                collar='$collar',
-                neck_to_shoulder='$neck_to_shoulder',
-                sleeve_length='$sleeve_length',
-                shoulder_to_shoulder='$shoulder_to_shoulder',
-                chest='$chest',
-                front_length='$front_length',
-                sleeve_cuff='$sleeve_cuff',
-                hem='$hem' 
-                WHERE
-                client_id='$cid'";
 
-                $pant_insert="UPDATE pant SET
-                waist='$waist',
-                front_rise='$front_rise',
-                hip='$hip',
-                thigh='$thigh',
-                length='$length',
-                knee='$knee',
-                inseam='$inseam',
-                leg_opening='$leg_opening'
-                WHERE
-                client_id='$cid'";
+   
+      $collar=$_POST["collar"];
+    $neck_to_shoulder=$_POST["neck_to_shoulder"];
+    $sleeve_length=$_POST["sleeve_length"];
+    $shoulder_to_shoulder=$_POST["shoulder_to_shoulder"];
+    $chest=$_POST["chest"];
+    $front_length=$_POST["front_length"];
+    $sleeve_cuff=$_POST["sleeve_cuff"];
+    $hem=$_POST["hem"];
+    $waist=$_POST["waist"];
+    $front_rise=$_POST["front_rise"];
+    $hip=$_POST["hip"];
+    $thigh=$_POST["thigh"];
+    $length=$_POST["length"];
+    $knee=$_POST["knee"];
+    $inseam=$_POST["inseam"];
+    $leg_opening=$_POST["leg_opening"];
+      
+              
+                  $cid=$_SESSION['client_id'];
+                  $shirt_insert="UPDATE shirt SET 
+                  collar='$collar',
+                  neck_to_shoulder='$neck_to_shoulder',
+                  sleeve_length='$sleeve_length',
+                  shoulder_to_shoulder='$shoulder_to_shoulder',
+                  chest='$chest',
+                  front_length='$front_length',
+                  sleeve_cuff='$sleeve_cuff',
+                  hem='$hem' 
+                  WHERE
+                  client_id='$cid'";
+
+                  $pant_insert="UPDATE pant SET
+                  waist='$waist',
+                  front_rise='$front_rise',
+                  hip='$hip',
+                  thigh='$thigh',
+                  length='$length',
+                  knee='$knee',
+                  inseam='$inseam',
+                  leg_opening='$leg_opening'
+                  WHERE
+                  client_id='$cid'";
+                  
+                  $stmt1 = mysqli_query($conn,$shirt_insert);
+                  $stmt2 = mysqli_query($conn,$pant_insert);
                 
-                $stmt1 = mysqli_query($conn,$shirt_insert);
-                $stmt2 = mysqli_query($conn,$pant_insert);
-                /*if(!mysqli_stmt_prepare($stmt1, $shirt_insert))
-                {
-                    die(mysqli_error($conn));
-                }
-                if(!mysqli_stmt_prepare($stmt2, $pant_insert))
-                {
-                    die(mysqli_error($conn));
-                }*/
-                //mysqli_stmt_bind_param($stmt1,"dddddddd",$collar,$neck_to_shoulder,$sleeve_length,
-                //$shoulder_to_shoulder,$chest,$front_length,$sleeve_cuff,$hem);
-                //mysqli_stmt_execute($stmt1);
-                //mysqli_stmt_bind_param($stmt2,"dddddddd",$waist,$front_rise,$hip,
-                //$thigh,$length,$knee,$inseam,$leg_opening);
-                //mysqli_stmt_execute($stmt2);
-               //echo"Hello";
-               //header('Location: client_details.php'); 
-                
+   
             
                 
-            }
+            
             
            
     
