@@ -59,6 +59,11 @@
             }
 ?>
 <html>
+    <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+    </style>
     <body>
         <div>
             <h3>Personal Details:</h3>
