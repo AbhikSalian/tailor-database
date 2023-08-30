@@ -6,8 +6,8 @@
 session_start();
 
 $cid=$_SESSION['client_id'];
-$shirt_type="Cotton Colour Plain Shirt Fabric Green";
-$order_total=360;
+$shirt_type="Cotton Grey with White Checked Shirt Fabric Galaxy";
+$order_total=445;
 $delivery_date=$_POST['delivery_date'];
 if(!empty($cid) and !empty($delivery_date))
 {
@@ -33,8 +33,8 @@ if(!empty($cid) and !empty($delivery_date))
     <h4>Order Details:</h4>
     Client ID: <?php echo $_SESSION['client_id']; ?><br>
     Client name: <?php echo $_SESSION['client_name']; ?><br>
-    Shirt type : Cotton Colour Plain Shirt Fabric Green<br>
-    Order value : Rs. 360.00<br>
+    Shirt type : Cotton Grey with White Checked Shirt Fabric Galaxy<br>
+    Order value : Rs. 445.00<br>
     <form action="" method="post">
     <label for="delivery_date">Expected delivery date:</label>
 <input type="date" id="delivery_date" name="delivery_date">
