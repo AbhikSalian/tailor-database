@@ -18,6 +18,7 @@
           <a href="welcomePage.php"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px" /></a>
         </div>
         <div class="sign">
+          <a href="tailor_login.php"><button class="b1">Tailor Login</button></a>
           <a href="sign_up.php"><button class="b1">Sign Up</button></a>
           <a href="sign_in.php"><button class="b2">Sign In</button></a>
         </div>
