@@ -73,10 +73,13 @@ table, th, td {
     border: 1px solid #42707f;
     border-collapse: collapse;
     text-align: center;
-
+    padding: 5px;  
 }
 td{
     width: 120px;
+}
+.order td{
+  width: 200px ;
 }
 .details{
     margin: 30px;
@@ -133,6 +136,22 @@ td{
     color: #fff6e5;
 
   }
+  .order{
+    
+    background-color: #062f3d;
+    width: 1100px;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+
+    position: relative;
+    left: 60px;
+    margin-bottom: 30px;
+    color: #42707f;
+    
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
 
 /* footer */
 footer {
@@ -182,6 +201,7 @@ footer {
   }
   h3 {
     text-transform: uppercase;
+    text-align: center;
   }
   .welcomeimg {
     margin: 0px 0px -5px 0px;

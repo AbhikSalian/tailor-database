@@ -29,15 +29,53 @@ if(!empty($cid) and !empty($delivery_date))
     }
 }
 ?>
-<html>
-    <h4>Order Details:</h4>
-    Client ID: <?php echo $_SESSION['client_id']; ?><br>
-    Client name: <?php echo $_SESSION['client_name']; ?><br>
-    Pant type : Cotton Colour Checked Pant Fabric Sandal Chronicle<br>
-    Order value : Rs. 625.00<br>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStitch-Orders</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+
+<body>
+<header>
+      <nav class="navbar">
+        <div class="navdiv">
+          <p class="home">Orders</p>
+        </div>
+      </nav>
+    </header>
+    <main>
+    <div class="order">
+
+    <h3>Order Details:</h3>
+    <p>Client ID : <?php echo $_SESSION['client_id']; ?></p>
+    <p>Client name : <?php echo $_SESSION['client_name']; ?></p>
+    <p>Pant type : Cotton Colour Checked Pant Fabric Sandal Chronicle</p>
+    <p>Order value : Rs. 625.00<br>
     <form action="" method="post">
-    <label for="delivery_date">Expected delivery date:</label>
-<input type="date" id="delivery_date" name="delivery_date">
-        <button type="submit">Place order</button>
+        <label for="delivery_date">Expected delivery date:</label>
+        <input class="date" type="date" id="delivery_date" name="delivery_date"><br>
+        <div class="submit">
+        <button type="submit" onclick="message()">Place order</button>
+        </div>
     </form>
+    </div>
+    </main>
+    <script>
+        function message()
+        {
+            if(delivery_date.value.length!=0)
+            alert ("Order placed Successfully");
+        
+            if(delivery_date.value.length == 0)
+            alert ("Please enter Date");
+        }
+    </script>
+
+</body>
+
 </html>

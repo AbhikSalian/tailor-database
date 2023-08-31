@@ -30,6 +30,7 @@ if(!empty($cid) and !empty($delivery_date))
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,34 +42,36 @@ if(!empty($cid) and !empty($delivery_date))
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navdiv">
-                <p class="home">Orders</p>
-            </div>
-        </nav>
+<header>
+      <nav class="navbar">
+        <div class="navdiv">
+          <p class="home">Orders</p>
+        </div>
+      </nav>
     </header>
     <main>
-        <div class="order">
+    <div class="order">
 
-            <h3>Order Details:</h3>
-            <p>Client ID : <?php echo $_SESSION['client_id']; ?></p>
-            <p>Client name : <?php echo $_SESSION['client_name']; ?></p>
-            <p>Shirt type : Cotton Striped Shirt Fabric Blue Candy Colour</p>
-            <p>Order value : Rs. 415.00<br>
-            <form action="" method="post">
-                <label for="delivery_date">Expected delivery date:</label>
-                <input class="date" type="date" id="delivery_date" name="delivery_date"/>
-                <div class="submit">
-                    <button type="submit" onclick="message()">Place order</button>
-                </div>
-            </form>
+    <h3>Order Details:</h3>
+    <p>Client ID : <?php echo $_SESSION['client_id']; ?></p>
+    <p>Client name : <?php echo $_SESSION['client_name']; ?></p>
+    <p>Shirt type : Cotton Striped Shirt Fabric Blue Candy Colour</p>
+    <p>Order value : Rs. 415.00<br>
+    <form action="" method="post">
+        <label for="delivery_date">Expected delivery date:</label>
+        <input class="date" type="date" id="delivery_date" name="delivery_date"><br>
+        <div class="submit">
+        <button type="submit" onclick="message()">Place order</button>
         </div>
+    </form>
+    </div>
     </main>
     <script>
-        function message() {
-            if (delivery_date.value.length != 0)
-                alert("Order placed Successfully");
+        function message()
+        {
+            if(delivery_date.value.length!=0)
+            alert ("Order placed Successfully");
+        
             if(delivery_date.value.length == 0)
             alert ("Please enter Date");
         }
