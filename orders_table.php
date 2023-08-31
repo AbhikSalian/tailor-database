@@ -5,14 +5,19 @@
    $query="SELECT * FROM orders";
    $result=mysqli_query($conn,$query);
 ?>
-<html>
-<style>
-            table, th, td {
-                border: 1px solid black;
-            }
-    </style>
-    <body>
-        <h4>Orders database:</h4>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStitch-tailor-OrdersDatabase</title>
+    
+    <link rel="stylesheet" href="tailordatabase.css">
+    
+</head>
+<body>
+    <div class="details">
+        <h3>Orders database:</h3>
         <table>
             <tr>
                 <th>Order ID</th>
@@ -41,6 +46,6 @@
                 ?>
             
         </table>
-        <a href="tailor_interface.php"><button>Home</button></a>
+        </div>
     </body>
 </html>

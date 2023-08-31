@@ -5,14 +5,19 @@
    $query="SELECT * FROM pant";
    $result=mysqli_query($conn,$query);
 ?>
-<html>
-<style>
-            table, th, td {
-                border: 1px solid black;
-            }
-    </style>
-    <body>
-        <h4>Pants database:</h4>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStitch-tailor-PantDatabase</title>
+    
+    <link rel="stylesheet" href="tailordatabase.css">
+</head>
+<body>
+    <div class="details">
+        <h3>Pants database</h3>
         <table>
             <tr>
                 <th>Pant ID</th>
@@ -34,20 +39,20 @@
                 ?>
                 <td><?php echo $row['pant_id'];?></td>
                 <td><?php echo $row['client_id'];?></td>
-                <td><?php echo $row['waist'];?></td>
-                <td><?php echo $row['front_rise'];?></td>
-                <td><?php echo $row['hip'];?></td>
-                <td><?php echo $row['thigh'];?></td>
-                <td><?php echo $row['length'];?></td>
-                <td><?php echo $row['knee'];?></td>
-                <td><?php echo $row['inseam'];?></td>
-                <td><?php echo $row['leg_opening'];?></td>
+                <td><?php echo $row['waist'];?> inches</td>
+                <td><?php echo $row['front_rise'];?> inches</td>
+                <td><?php echo $row['hip'];?> inches</td>
+                <td><?php echo $row['thigh'];?> inches</td>
+                <td><?php echo $row['length'];?> inches</td>
+                <td><?php echo $row['knee'];?> inches</td>
+                <td><?php echo $row['inseam'];?> inches</td>
+                <td><?php echo $row['leg_opening'];?> inches</td>
             </tr>
                 <?php
                     }
                 ?>
             
         </table>
-        <a href="tailor_interface.php"><button>Home</button></a>
+        </div>
     </body>
 </html>

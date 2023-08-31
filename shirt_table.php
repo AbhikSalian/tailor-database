@@ -5,14 +5,20 @@
    $query="SELECT * FROM shirt";
    $result=mysqli_query($conn,$query);
 ?>
-<html>
-<style>
-            table, th, td {
-                border: 1px solid black;
-            }
-    </style>
-    <body>
-        <h4>Shirts database:</h4>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartStitch-Tailor-ShirtDatabase</title>
+    
+    <link rel="stylesheet" href="tailordatabase.css">
+    
+</head>
+<body>
+    <div class="details">
+        <h3>Shirts database</h3>
         <table>
             <tr>
                 <th>Shirt ID</th>
@@ -34,20 +40,20 @@
                 ?>
                 <td><?php echo $row['shirt_id'];?></td>
                 <td><?php echo $row['client_id'];?></td>
-                <td><?php echo $row['collar'];?></td>
-                <td><?php echo $row['neck_to_shoulder'];?></td>
-                <td><?php echo $row['sleeve_length'];?></td>
-                <td><?php echo $row['shoulder_to_shoulder'];?></td>
-                <td><?php echo $row['chest'];?></td>
-                <td><?php echo $row['front_length'];?></td>
-                <td><?php echo $row['sleeve_cuff'];?></td>
-                <td><?php echo $row['hem'];?></td>
+                <td><?php echo $row['collar'];?> inches</td>
+                <td><?php echo $row['neck_to_shoulder'];?> inches</td>
+                <td><?php echo $row['sleeve_length'];?> inches</td>
+                <td><?php echo $row['shoulder_to_shoulder'];?> inches</td>
+                <td><?php echo $row['chest'];?> inches</td>
+                <td><?php echo $row['front_length'];?> inches</td>
+                <td><?php echo $row['sleeve_cuff'];?> inches</td>
+                <td><?php echo $row['hem'];?> inches</td>
             </tr>
                 <?php
                     }
                 ?>
             
         </table>
-        <a href="tailor_interface.php"><button>Home</button></a>
+        </div>
     </body>
 </html>
