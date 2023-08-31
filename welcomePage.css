@@ -108,3 +108,19 @@ h3 {
   margin: 0px 0px -5px 0px;
   padding: 0%;
 }
+
+.quote{
+  width: 800px;
+  position: absolute;
+  top:300px;
+  right: 0px;
+  text-transform: uppercase;
+  background-color: #062f3d;
+  color: #dbcfb8;
+  font-size: 30px;
+  /* left: 40px; */
+  text-align: left;
+  padding-right: 30px;
+  border-top-left-radius: 40px;
+  text-align: right;
+}
