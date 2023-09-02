@@ -112,6 +112,7 @@ h3 {
 .quote{
   width: 800px;
   position: absolute;
+  
   top:300px;
   right: 0px;
   text-transform: uppercase;
