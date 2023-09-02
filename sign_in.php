@@ -62,7 +62,7 @@ if (!empty($email_id) and !empty($password)) {
       //header("Location : SignIn.html");
     }
   } else {
-    echo "<script type='text/javascript'>alert('Invalid username')</script>";
+    echo "<script type='text/javascript'>alert('Invalid email ID')</script>";
     //header("Location : tailor_database/SignIn.html");
   }
 }

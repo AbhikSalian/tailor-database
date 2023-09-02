@@ -19,7 +19,7 @@
 
         <input type="number" placeholder="Enter your Age" min="0" max="150" name="age" required />
         <div class="gender">
-          <input type="radio" name="gender" value="male" />Male <input type="radio" name="gender" value="female" />Female
+          <input type="radio" name="gender" value="Male" />Male <input type="radio" name="gender" value="Female" />Female
         </div>
 
         <input type="text" placeholder="Enter your Address" name="address" required />
