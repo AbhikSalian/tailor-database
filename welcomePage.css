@@ -2,27 +2,27 @@
   text-decoration: none;
 }
 body {
-  margin: 0px 0px 0px 0px;
+  margin: auto;
   position: relative;
-  background-color: #42707f;
+  background-color: #e0e3ce;
 }
 .logo {
   margin-left: 20px;
   margin-top: 4px;
+  transition: 0.2s;
 }
 header {
-  /* margin: auto;
+  margin: auto;
   display: block;
-  width: 100%; */
-  position: sticky;
+  width: 100%;
+  position: fixed;
+  border-bottom: 8px solid #2b300d;
+  box-sizing: border-box;
 }
 .navbar {
-  /* border: 1px solid #fff6e5; */
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #062f3d;
-  /* border-radius: 50px;
-  margin: 10px; */
+  background-color: #7e876d;
 }
 .navdiv {
   display: flex;
@@ -36,21 +36,22 @@ header {
 .b1,
 .b2 {
   justify-content: space-between;
-  color: #062f3d;
+  color: #e0e3ce;
   padding: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 20px;
   border: none;
-  background-color: #42707f;
-  color: #062f3d;
+  background-color: #2b300d;
+  width: max-content;
   cursor: pointer;
   font-weight: bold;
   font-size: 15px;
+  transition: 0.2s;
 }
 .b1:hover,
 .b2:hover {
-  color: #fff6e5;
+  box-shadow: 0px 0px 0px 1px #2b300d;
 }
 .logo:hover {
   opacity: 0.5;
@@ -59,21 +60,23 @@ header {
 footer {
   min-height: 20vh;
   margin: 0px 0px 0px 0px;
-  background-color: #062f3d;
+  background-color: #7e876d;
   width: 100%;
   position: relative;
   left: 0;
   bottom: 0;
   right: 0;
-  color: #42707f;
+  color: #2b300d;
   line-height: 20px;
   align-items: center;
   text-align: center;
+  border-top: 8px solid #2b300d;
 }
 
 .footer {
   display: flex;
   justify-content: center;
+  margin: auto;
 }
 .contact,
 .business {
@@ -87,7 +90,7 @@ footer {
   width: fit-content;
 }
 
-.copyright {
+.Copyright {
   padding: -5px;
   margin: 0px;
   margin-top: 0px;
@@ -95,11 +98,11 @@ footer {
   font-weight: lighter;
 }
 a {
-  color: #42707f;
+  color: #2b300d;
 }
 .fa-solid {
   font-size: small;
-  color: #42707f;
+  color: #2b300d;
 }
 h3 {
   text-transform: uppercase;
@@ -107,4 +110,11 @@ h3 {
 .welcomeimg {
   margin: 0px 0px -5px 0px;
   padding: 0%;
+}
+.flogo .fimg {
+  margin: auto;
+}
+.flogo {
+  margin-top: auto;
+  margin-bottom: auto;
 }

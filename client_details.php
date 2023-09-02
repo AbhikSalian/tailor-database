@@ -66,6 +66,8 @@ if ($result2) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartStitch-Profile</title>
     <link rel="stylesheet" href="client_details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
 </head>
 <!-- <script>
     function check()
@@ -211,18 +213,20 @@ if ($result2) {
         <!-- }
 
 </script> -->
-        
+
     </main>
 
     <footer>
         <div class="footer">
-            <img src="logo bg.png" alt="" height="120px">
-            <div class="contact">
+
+        <div class="flogo">
+      <img class="fimg" src="SmartStitchLogo.png" alt="" height="40px">
+      </div>             <div class="contact">
                 <ul>
                     <h4>CONTACT</h4>
 
-                    <li><i class="fa-solid fa-phone" style="color: #42707f;"></i> 7411328238</li>
-                    <li><a href="mailto: abhiksalian0728@gmail.com"><i class="fa-solid fa-envelope" style="color: #42707f;"></i> akashacharya2003@gmail.com</li></a>
+                    <li><i class="fa-solid fa-phone" style="color: #2b300d;"></i> 7760447896</li>
+                    <li><a href="mailto: akashacharya2003@gmail.com"><i class="fa-solid fa-envelope" style="color: #2b300d;"></i> akashacharya2003@gmail.com</li></a>
                 </ul>
             </div>
             <div class="business">
@@ -235,8 +239,8 @@ if ($result2) {
             </div>
         </div>
         <!-- <hr /> -->
-        <h5 class="copyright">
-            @copyright 2023 SmartStitch - All Rigths Reserved
+        <h5 class="Copyright">
+            @Copyright 2023 SmartStitch - All Rigths Reserved
         </h5>
     </footer>
 </body>

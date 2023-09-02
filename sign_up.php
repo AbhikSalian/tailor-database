@@ -120,7 +120,6 @@ if (mysqli_num_rows($result) > 0) {
           }
           mysqli_stmt_execute($shirt_stmt);
 
-
           $pant_sql = "INSERT INTO pant (waist,front_rise,hip,thigh,length,knee,inseam,leg_opening,client_id)
                 VALUES(0,0,0,0,0,0,0,0,'$cid')";
           $pant_stmt = mysqli_stmt_init($conn);

@@ -1,5 +1,5 @@
 body {
-  background-color: #42707f;
+  background-color: #e0e3ce;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -8,17 +8,20 @@ body {
 }
 .container {
   justify-content: center;
-  background-color: #062f3d;
+  background-color: #7e876d;
   width: 250px;
   height: 200px;
   display: flex;
   flex-direction: column;
-  border-radius: 30px;
   align-items: center;
-  box-shadow: 0px 0px 10px 0px #062f3d;
   text-align: center;
-  color:#42707f;
+  color:#2b300d;
   padding-bottom: 15px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-left:  20px solid #2b300d;
+  box-shadow: 0px 0px 12px 2px #2b300d;
+  box-sizing: border-box;
 }
 .container button {
   font-weight: bold;
@@ -26,12 +29,13 @@ body {
   border: none;
   outline: none;
   border-radius: 60px;
-  background-color: #42707f;
-  color: #062f3d;
+  background-color: #2b300d;
+  color: #e0e3ce;
   cursor: pointer;
   font-size: 15px;
   padding: 8px;
   width: 180px;
+  transition: 0.2s;
 }
 .container input {
   text-align: left;
@@ -41,8 +45,8 @@ body {
   padding: 10px;
   margin: 15px;
   margin-bottom: 25px;
-  background-color: #fff6e5;
-  color: #42707f;
+  background-color: #e0e3ce;
+  color: #2b300d;
   letter-spacing: 1px;
   border-radius: 60px;
 
@@ -52,8 +56,9 @@ body {
 .container input::placeholder {
   text-align: left;
   font-size: 14px;
+  color: #2b300d;
+
 }
 .container button:hover {
-  color: #fff6e5;
-  box-shadow: 0px 0px 5px 0px #42707f;
+  box-shadow: 0px 0px 0px 1px #2b300d;
 }

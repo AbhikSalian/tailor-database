@@ -24,12 +24,6 @@ if (!empty($email_id) and !empty($password)) {
       $_SESSION['ph_no'] = $client_data['ph_no'];
       $_SESSION['email_id'] = $client_data['email_id'];
       $cid = $_SESSION['client_id'];
-
-
-
-
-
-
       $query_shirt = "SELECT shirt_id FROM shirt WHERE client_id='$cid' LIMIT 1";
       $result1 = mysqli_query($conn, $query_shirt);
 
@@ -95,7 +89,7 @@ if (!empty($email_id) and !empty($password)) {
           <a href="Hom.php"><button type="submit">Sign In</button></a>
         </div>
         <div class="Noac">
-          Don't have an account/<a href="sign_up.php"> Sign up</a>
+          Don't have an account?/ <a href="sign_up.php"> Sign up</a>
         </div>
       </div>
     </div>

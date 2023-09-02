@@ -36,12 +36,12 @@ session_start();
       <div class="shirt">
         <img class="shirtimg" src="Images/shirtFabric1.jpg" alt="" height="250px">
         <p>Cotton Colour Plain Shirt Fabric Green</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>360.00
         </p>
         <div class="placeorder">
           <form action="s1.php" method="post">
-          <a href="s1.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="s1.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -50,12 +50,12 @@ session_start();
       <div class="shirt">
         <img class="shirtimg" src="Images/shirtFabric2.jpg" alt="" height="250px">
         <p>Cotton Grey Colour Plain Shirt Fabric Candy Colour</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>415.00
         </p>
         <div class="placeorder">
         <form action="s2.php" method="post">
-          <a href="s2.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="s2.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -63,12 +63,12 @@ session_start();
       <div class="shirt">
         <img class="shirtimg" src="Images/shirtFabric3.jpg" alt="" height="250px">
         <p>Cotton Striped Shirt Fabric Blue Candy Colour</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>415.00
         </p>
         <div class="placeorder">
         <form action="s3.php" method="post">
-          <a href="s3.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="s3.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -76,12 +76,12 @@ session_start();
       <div class="shirt">
         <img class="shirtimg" src="Images/shirtFabric4.jpg" alt="" height="250px">
         <p>Cotton Mixed Plain Shirt Fabric Black Flat</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>425.00
         </p>
         <div class="placeorder">
         <form action="s4.php" method="post">
-          <a href="s4.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="s4.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -89,12 +89,12 @@ session_start();
       <div class="shirt">
         <img class="shirtimg" src="Images/shirtFabric5.jpg" alt="" height="250px">
         <p>Cotton Colour Checked Shirt Fabric Sky Blue Galaxy Art</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>445.00
         </p>
         <div class="placeorder">
         <form action="s5.php" method="post">
-          <a href="s5.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="s5.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -102,12 +102,12 @@ session_start();
       <div class="shirt">
         <img class="shirtimg" src="Images/shirtFabric6.jpg" alt="" height="250px">
         <p>Cotton Colour Plain Shirt Fabric Grey Galaxy Art</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>445.00
         </p>
         <div class="placeorder">
         <form action="s6.php" method="post">
-          <a href="s6.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="s6.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -115,12 +115,12 @@ session_start();
       <div class="shirt">
         <img class="shirtimg" src="Images/shirtFabric7.jpg" alt="" height="250px">
         <p>Cotton Grey with White Checked Shirt Fabric Galaxy </p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>445.00
         </p>
         <div class="placeorder">
         <form action="s7.php" method="post">
-          <a href="s7.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="s7.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -128,12 +128,12 @@ session_start();
       <div class="shirt">
         <img class="shirtimg" src="Images/shirtFabric8.jpg" alt="" height="250px">
         <p>Cotton White Checked Shirt Fabric Galaxy Art</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>445.00
         </p>
         <div class="placeorder">
         <form action="s8.php" method="post">
-          <a href="s8.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="s8.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -145,13 +145,14 @@ session_start();
 
   <footer>
     <div class="footer">
-      <img src="logo bg.png" alt="" height="120px">
-      <div class="contact">
+    <div class="flogo">
+      <img class="fimg" src="SmartStitchLogo.png" alt="" height="40px">
+      </div>      <div class="contact">
         <ul>
           <h4>CONTACT</h4>
 
-          <li><i class="fa-solid fa-phone" style="color: #42707f;"></i> 7411328238</li>
-          <li><a href="mailto: abhiksalian0728@gmail.com"><i class="fa-solid fa-envelope" style="color: #42707f;"></i> abhiksalian0728@gmail.com</li></a>
+          <li><i class="fa-solid fa-phone" style="color: #2b300d;"></i> 7760447896</li>
+          <li><a href="mailto: akashacharya2003@gmail.com"><i class="fa-solid fa-envelope" style="color: #2b300d;"></i> akashacharya2003@gmail.com</li></a>
         </ul>
       </div>
       <div class="business">
@@ -163,8 +164,8 @@ session_start();
         </ul>
       </div>
     </div>
-    <h5 class="copyright">
-      @copyright 2023 SmartStitch - All Rigths Reserved
+    <h5 class="Copyright">
+      @Copyright 2023 SmartStitch - All Rigths Reserved
     </h5>
   </footer>
 
