@@ -21,7 +21,7 @@
 </head>
 <body>
     <div class="container">
-       <h3>Tailor Login</h3>
+       <h3>TAILOR LOGIN</h3>
             <input type="password" id="pass" placeholder="Password">
             <button onclick="verify()" >Login</button>
 

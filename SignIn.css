@@ -1,5 +1,5 @@
 body {
-  background-color: #42707f;
+  background-color: #e0e3ce;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -8,22 +8,24 @@ body {
 }
 .container {
   justify-content: center;
-  background-color: #062f3d;
+  background-color: #7e876d;
   width: 300px;
-  height: 400px;
+  height: 350px;
   display: flex;
   flex-direction: column;
-  border-radius: 30px;
   align-items: center;
-  box-shadow: 0px 0px 10px 0px #062f3d;
   text-align: center;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  border-left:  20px solid #2b300d;
+  box-shadow: 0px 0px 12px 2px #2b300d;
+  box-sizing: border-box;
 }
 span {
-  color: #42707f;
+  color: #2b300d;
   text-align: center;
   font-weight: bolder;
   font-size: 25px;
-  justify-content: center;
 }
 .Credential {
   margin: 20px;
@@ -41,40 +43,36 @@ span {
   border: none;
   outline: none;
   border-radius: 60px;
-  background-color: #42707f;
-  color: #062f3d;
+  background-color: #2b300d;
+  color: #e0e3ce;
   cursor: pointer;
   font-size: 15px;
+  transition: 0.2s;
 }
 .Credential input {
   text-align: left;
   border-radius: 10px;
-  text-decoration: none;
   border: none;
   padding: 10px;
   margin: 10px;
-  background-color: #fff6e5;
-  color: #42707f;
+  background-color: #e0e3ce;
+  color: #2b300d;
   letter-spacing: 1px;
-  border-radius: 60px;
-
-  background-repeat: no-repeat;
+  border-radius: 40px;
   background-size: 20px;
   background-position: 15px;
 }
 .Credential input::placeholder {
-  text-align: left;
   font-size: 14px;
+  color: #2b300d;
 }
 .Noac a {
   text-decoration: none;
-  color: #fff6e5;
-  display: inline-block;
+  color: #e0e3ce;
 }
 .Noac {
-  color: #42707f;
+  color: #2b300d;
 }
 .Credential button:hover {
-  color: #fff6e5;
-  box-shadow: 0px 0px 5px 0px #42707f;
+  box-shadow: 0px 0px 0px 1px #2b300d;
 }

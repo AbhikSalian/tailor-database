@@ -50,12 +50,12 @@
       </ul>
       <h3>Visit Us</h3>
       <p>We invite you to visit our store and experience the world of custom tailoring firsthand. Our friendly team is ready to assist you in creating the wardrobe of your dreams.</p>
-      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1224.6114296462883!2d74.87806279974642!3d12.978301287459594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba356c9c075667f%3A0xf5f0b9641d6a136c!2sStitch%20Well!5e0!3m2!1sen!2sin!4v1693242046570!5m2!1sen!2sin" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+      <iframe class="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1224.6114296462883!2d74.87806279974642!3d12.978301287459594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba356c9c075667f%3A0xf5f0b9641d6a136c!2sStitch%20Well!5e0!3m2!1sen!2sin!4v1693242046570!5m2!1sen!2sin" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <h3>Contact Us</h3>
       <p>Have questions or want to schedule a consultation? We're just a phone call or email away. Reach out to us anytime, and we'll be delighted to assist you. <br><br>
 
-        <i class="fa-solid fa-phone" style="color: black;"></i> 7411328238 <br>
-        <i class="fa-solid fa-envelope" style="color: black;"></i> abhiksalian0728@gmail.com <br><br>
+        <i class="fa-solid fa-phone" style="color: black;"></i> 7760447896 <br>
+        <i class="fa-solid fa-envelope" style="color: black;"></i> akashacharya2003@gmail.com <br><br>
 
         Thank you for choosing SmartStitch. We look forward to being your trusted partner in creating exceptional clothing that reflects your style and personality.
       </p>
@@ -64,13 +64,15 @@
 
   <footer>
     <div class="footer">
-      <img src="logo bg.png" alt="" height="120px">
+      <div class="flogo">
+        <img class="fimg" src="SmartStitchLogo.png" alt="" height="40px">
+      </div>
       <div class="contact">
         <ul>
           <h4>CONTACT</h4>
 
-          <li><i class="fa-solid fa-phone" style="color: #42707f;"></i> 7411328238</li>
-          <li><a href="mailto: abhiksalian0728@gmail.com"><i class="fa-solid fa-envelope" style="color: #42707f;"></i> abhiksalian0728@gmail.com</li></a>
+          <li><i class="fa-solid fa-phone" style="color: #2b300d;"></i> 7760447896</li>
+          <li><a href="mailto: akashacharya2003@gmail.com"><i class="fa-solid fa-envelope" style="color: #2b300d;"></i> akashacharya2003@gmail.com</li></a>
         </ul>
       </div>
       <div class="business">
@@ -83,8 +85,8 @@
       </div>
     </div>
     <!-- <hr /> -->
-    <h5 class="copyright">
-      @copyright 2023 SmartStitch - All Rigths Reserved
+    <h5 class="Copyright">
+      @Copyright 2023 SmartStitch - All Rigths Reserved
     </h5>
   </footer>
 </body>

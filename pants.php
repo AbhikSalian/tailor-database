@@ -32,12 +32,12 @@
       <div class="shirt">
         <img class="shirtimg" src="Images/pantsFabric1.jpg" alt="" height="250px">
         <p>Colour Checks Pants Fabric Black Honey Day</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>545.00
         </p>
         <div class="placeorder">
         <form action="p1.php" method="post">
-          <a href="p1.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="p1.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -46,12 +46,12 @@
       <div class="shirt">
         <img class="shirtimg" src="Images/pantsFabric2.jpg" alt="" height="250px">
         <p>Cotton Colour Checked Grey Suiting Fabric Fun</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>655.00
         </p>
         <div class="placeorder">
         <form action="p2.php" method="post">
-          <a href="p2.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="p2.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -59,12 +59,12 @@
       <div class="shirt">
         <img class="shirtimg" src="Images/pantsFabric3.jpg" alt="" height="250px">
         <p>Colour Off White Checks Pants Fabric Honey Day</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>545.00
         </p>
         <div class="placeorder">
         <form action="p3.php" method="post">
-          <a href="p3.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="p3.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -72,12 +72,12 @@
       <div class="shirt">
         <img class="shirtimg" src="Images/pantsFabric4.jpg" alt="" height="250px">
         <p>Cotton Colour Checked Pant Fabric Sandal Chronicle</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>625.00
         </p>
         <div class="placeorder">
         <form action="p4.php" method="post">
-          <a href="p4.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="p4.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -85,12 +85,12 @@
       <div class="shirt">
         <img class="shirtimg" src="Images/pantsFabric5.jpg" alt="" height="250px">
         <p>Cotton Colour Plain Pants Fabric Navy Style Craft</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>660.00
         </p>
         <div class="placeorder">
         <form action="p5.php" method="post">
-          <a href="p5.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="p5.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -98,12 +98,12 @@
       <div class="shirt">
         <img class="shirtimg" src="Images/pantsFabric6.jpg" alt="" height="250px">
         <p>Cotton Colour Checked Pants Fabric Grayish Blue</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>670.00
         </p>
         <div class="placeorder">
         <form action="p6.php" method="post">
-          <a href="p6.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="p6.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -111,12 +111,12 @@
       <div class="shirt">
         <img class="shirtimg" src="Images/pantsFabric7.jpg" alt="" height="250px">
         <p>Wrinkle Free Cotton White Plain Pants Fabric Romantic</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>695.00
         </p>
         <div class="placeorder">
         <form action="p7.php" method="post">
-          <a href="p7.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="p7.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -124,12 +124,12 @@
       <div class="shirt">
         <img class="shirtimg" src="Images/pantsFabric8.jpg" alt="" height="250px">
         <p>Cotton Colour Checked Pant Fabric Navy ICLE Stretch</p>
-        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #fff6e5;"></i>
+        <p><i class="fa-solid fa-indian-rupee-sign" style="color: #2b300d;"></i>
           <Rs class="money"></Rs>740.00
         </p>
         <div class="placeorder">
         <form action="p8.php" method="post">
-          <a href="p8.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #062f3d;"></i> Place Order</button></a>
+          <a href="p8.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -141,13 +141,15 @@
 
   <footer>
     <div class="footer">
-      <img src="logo bg.png" alt="" height="120px">
-      <div class="contact">
+    <div class="flogo">
+      <img class="fimg" src="SmartStitchLogo.png" alt="" height="40px">
+      </div>     
+       <div class="contact">
         <ul>
           <h4>CONTACT</h4>
 
-          <li><i class="fa-solid fa-phone" style="color: #42707f;"></i> 7411328238</li>
-          <li><a href="mailto: abhiksalian0728@gmail.com"><i class="fa-solid fa-envelope" style="color: #42707f;"></i> abhiksalian0728@gmail.com</li></a>
+          <li><i class="fa-solid fa-phone" style="color: #2b300d;"></i> 7760447896</li>
+          <li><a href="mailto: akashacharya2003@gmail.com"><i class="fa-solid fa-envelope" style="color: #2b300d;"></i> akashacharya2003@gmail.com</li></a>
         </ul>
       </div>
       <div class="business">
@@ -160,8 +162,8 @@
       </div>
     </div>
     <!-- <hr /> -->
-    <h5 class="copyright">
-      @copyright 2023 SmartStitch - All Rigths Reserved
+    <h5 class="Copyright">
+      @Copyright 2023 SmartStitch - All Rigths Reserved
     </h5>
   </footer>
 
