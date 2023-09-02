@@ -83,7 +83,7 @@ if (!empty($email_id) and !empty($password)) {
     <div class="container">
       <span>SIGN IN</span>
       <div class="Credential">
-        <input type="text" placeholder="Username" name="email_id" required />
+        <input type="text" placeholder="Email ID" name="email_id" required />
         <input type="password" placeholder="Password" name="password" required />
         <div class="button">
           <a href="Hom.php"><button type="submit">Sign In</button></a>

@@ -113,7 +113,7 @@ if ($result2) {
     { -->
 
         <div class="measure">
-            <h3>Measrements</h3>
+            <h3>Measurements</h3>
             <h4>Shirt measurements :</h4>
             <table>
                 <tr>
