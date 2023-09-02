@@ -28,10 +28,10 @@
   <main>
 
     <img class="welcomeimg" src="Images/Welcome.png" alt="" width="100%">
-    <div class="quote">
+    <!-- <div class="quote">
 
 <h1 >We Visit you instead of making you travel</h1>
-</div>
+</div> -->
 
   </main>
   <footer>
