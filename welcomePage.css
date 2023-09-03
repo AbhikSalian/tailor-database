@@ -45,6 +45,7 @@ header {
   background-color: #2b300d;
   width: max-content;
   cursor: pointer;
+
   font-weight: bold;
   font-size: 15px;
   transition: 0.3s;

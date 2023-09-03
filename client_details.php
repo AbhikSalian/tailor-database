@@ -219,9 +219,10 @@ if ($result2) {
     <footer>
         <div class="footer">
 
-        <div class="flogo">
-      <img class="fimg" src="SmartStitchLogo.png" alt="" height="40px">
-      </div>             <div class="contact">
+            <div class="flogo">
+                <img class="fimg" src="SmartStitchLogo.png" alt="" height="40px">
+            </div>
+            <div class="contact">
                 <ul>
                     <h4>CONTACT</h4>
 
