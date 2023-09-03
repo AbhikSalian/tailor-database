@@ -157,11 +157,9 @@ main {
   padding: 10px;
   display: inline-block;
   width: 32%;
-  /* box-sizing: border-box; */
   width: min-content;
   margin-left: 65px;
   margin-top: 60px;
-  /* margin-bottom: 25px; */
   color: #2b300d;
   padding: 20px;
   border-radius: 25px;

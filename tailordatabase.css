@@ -124,4 +124,5 @@ td {
 .details h3 {
   text-align: center;
   text-transform: uppercase;
+  margin-top: 0px;
 }
