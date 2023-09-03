@@ -8,7 +8,7 @@ body {
 .logo {
   margin-left: 20px;
   margin-top: 4px;
-  transition: 0.2s;
+  transition: 0.3s;
 
 }
 .list {
@@ -22,7 +22,7 @@ body {
   
 }
 .list li a {
-  transition: 0.2s;
+  transition: 0.3s;
   font-size: 20px;
   margin-right: 25px;
   color: #2b300d;
@@ -55,13 +55,15 @@ body {
   font-weight: bold;
   font-size: 15px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 .signout:hover {
   box-shadow: 0px 0px 0px 1px #2b300d;
+  opacity: 0.7;
 }
 .list li a:hover {
-  color: #e0e3ce;
+  /* color: #e0e3ce; */
+  opacity: 0.4;
 }
 .logo:hover {
   opacity: 0.5;
@@ -153,5 +155,7 @@ p {
   text-align: center;
 }
 .about {
-  padding: 25px 200px 25px 200px;
+  width: 800px;
+  margin: auto;
+  padding: 25px 0px 25px 0px;
 }

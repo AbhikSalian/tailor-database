@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartStitch-tailor-ClienttDetails</title>
+    <title>SmartStitch-tailor-ClientDetails</title>
     <link rel="stylesheet" href="tailorDatabase.css">
 </head>
 <body>

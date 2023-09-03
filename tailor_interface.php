@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar">
             <div class="navdiv">
-                <div class="logo"><a href="Home.html"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
+                <div class="logo"><a href="tailor_interface.php"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
             </div>
             <p class="home">Tailor Interface</p>
             <span><a href="welcomePage.php"><button>Logout</button></a></span>

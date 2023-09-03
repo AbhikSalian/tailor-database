@@ -6,6 +6,15 @@ body {
 
   background-color: #e0e3ce;
 }
+.logo {
+  margin-left: 20px;
+  margin-top: 4px;
+  transition: 0.3s;
+
+}
+.logo:hover {
+  opacity: 0.5;
+}
 .navdiv {
   text-align: center;
   overflow: auto;
@@ -47,7 +56,7 @@ p {
   cursor: pointer;
   font-size: 15px;
   width: 250px;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .button button:hover {
@@ -67,7 +76,7 @@ p {
   font-weight: bold;
   font-size: 15px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 span {
   width: 179px;
@@ -89,7 +98,6 @@ td {
 }
 .details {
   margin: 30px;
-
   position: relative;
   left: 65px;
   color: #e0e3ce;
@@ -97,7 +105,6 @@ td {
   padding-top: 20px;
   width: 80%;
   background-color: #7e876d;
-
   border-bottom-left-radius: 40px;
   border-top-right-radius: 40px;
 }
