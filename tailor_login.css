@@ -61,4 +61,5 @@ body {
 }
 .container button:hover {
   box-shadow: 0px 0px 0px 1px #2b300d;
+  opacity: 0.7;
 }

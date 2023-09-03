@@ -9,7 +9,12 @@
         function verify()
         {
             var password=document.getElementById('pass').value;
-            if(password==1234)
+            if(password==0)
+            {
+                alert("Enter password");
+                
+            }
+            else if(password==1234)
             window.open("tailor_interface.php")
         else
     alert ("Incorrect Password");
@@ -22,8 +27,8 @@
 <body>
     <div class="container">
        <h3>TAILOR LOGIN</h3>
-            <input type="password" id="pass" placeholder="Password">
-            <button onclick="verify()" >Login</button>
+            <input type="password" id="pass" placeholder="Password" required/>
+            <button type="submit" onclick="verify()" >Login</button>
 
     </div>
     
