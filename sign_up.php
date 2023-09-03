@@ -24,7 +24,7 @@
 
         <input type="text" placeholder="Enter your Address" name="address" required />
 
-        <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="Enter your mobile number" required />
+        <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="Enter your Mobile Number" required />
 
         <input type="email" placeholder="Enter your Email ID" name="email_id" required />
 
