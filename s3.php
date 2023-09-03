@@ -45,14 +45,14 @@ if(!empty($cid) and !empty($delivery_date))
 <header>
       <nav class="navbar">
         <div class="navdiv">
-          <p class="home">Orders</p>
+          <p class="home">PLACE ORDER</p>
         </div>
       </nav>
     </header>
     <main>
     <div class="order">
 
-    <h3>Order Details:</h3>
+    <h3>ORDER DETAILS:</h3>
     <p>Client ID : <?php echo $_SESSION['client_id']; ?></p>
     <p>Client name : <?php echo $_SESSION['client_name']; ?></p>
     <p>Shirt type : Cotton Striped Shirt Fabric Blue Candy Colour</p>
