@@ -169,8 +169,9 @@ main {
   /* border-top: 8px solid #2b300d; */
   /* box-shadow: 8px 8px 0px 0px #2b300d; */
   transition: 0.4s;
-  box-shadow: 0px 0px 10px 0px #7e876d;
 
+  box-shadow: 0px 0px 5px 3px #2b300d;
+  box-shadow: 2px 2px 2px 0px #2b300d;
 }
 .shirtimg {
   border-radius: 20px;
