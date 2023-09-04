@@ -28,16 +28,16 @@
 
 
   <main>
-    <img class="welcomeimg" src="Images/qqq.png" alt="" width="100%">
-    <div class="homebutton">
-      <a href="shirts.php"><input type="submit" value="SHIRTS"></a><br>
-      <a href="pants.php"><input type="submit" value="PANTS"></a>
-
-    </div>
-    <!-- <div class="quote">
-
-    <h1 >We Visit you instead of making you travel</h1>
-  </div> -->
+    <img class="welcomeimg" src="Images/Welcome.png" alt="" width="100%">
+    <div class="quote">
+      
+      <div class="homebutton">
+        <h1 >We make cloths that suits you</h1>
+        <a href="shirts.php"><input type="submit" value="SHIRTS"></a><br>
+        <a href="pants.php"><input type="submit" value="PANTS"></a>
+  
+      </div>
+  </div>
 
   </main>
 

@@ -121,3 +121,15 @@ h3 {
   margin-top: auto;
   margin-bottom: auto;
 }
+.quote {
+  position: absolute;
+  right: 143px;
+  top: 298px;
+  font-size: larger;
+  font-weight: bolder;
+  width: 287px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #7e876d;
+}

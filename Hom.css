@@ -9,17 +9,14 @@ body {
   margin-left: 20px;
   margin-top: 4px;
   transition: 0.3s;
-
 }
 .list {
   overflow: auto;
   padding: 1px;
-
 }
 .list li {
   list-style: none;
   display: inline-block;
-  
 }
 .list li a {
   transition: 0.3s;
@@ -32,12 +29,8 @@ body {
   padding-left: 15px;
   padding-right: 35px;
   background-color: #7e876d;
-  /* border-radius: 50px; */
-  /* margin: 10px; */
-  
   border-bottom: 8px solid #2b300d;
   box-sizing: border-box;
-  
 }
 .navdiv {
   display: flex;
@@ -63,7 +56,6 @@ body {
   opacity: 0.7;
 }
 .list li a:hover {
-  /* color: #e0e3ce; */
   opacity: 0.7;
 }
 .logo:hover {
@@ -90,7 +82,7 @@ footer {
   line-height: 20px;
   align-items: center;
   text-align: center;
-  
+
   border-top: 8px solid #2b300d;
   box-sizing: border-box;
 }
@@ -142,29 +134,40 @@ h3 {
 }
 
 /* main */
-.homebutton{
+/* .homebutton {
   position: absolute;
   top: 300px;
   right: 100px;
-  
-}
-.homebutton input{
+} */
+.homebutton input {
   width: 150px;
   padding: 15px;
   border: none;
   border-top-left-radius: 30px;
-  border-top-right-radius: 30px ;
+  border-top-right-radius: 30px;
   border-bottom-left-radius: 30px;
-  border-bottom-right-radius:30px ;
+  border-bottom-right-radius: 30px;
   margin-top: 20px;
-  background-color: #7e876d;
-  color: #2b300d;
+  background-color: #2b300d;
+  color: #e0e3ce;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
-
 }
-.homebutton input:hover{
+.homebutton input:hover {
   box-shadow: 0px 0px 0px 1px #7e876d;
-  
+  opacity: 0.7;
+}
+
+.quote {
+  position: absolute;
+  right: 143px;
+  top: 240px;
+  font-size: larger;
+  font-weight: bolder;
+  width: 287px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #7e876d;   
 }

@@ -28,16 +28,15 @@
   <main>
 
     <img class="welcomeimg" src="Images/Welcome.png" alt="" width="100%">
-    <!-- <div class="quote">
-
-<h1 >We Visit you instead of making you travel</h1>
-</div> -->
+    <div class="quote">
+      <h1>We Visit you instead of making you Travel</h1>
+    </div>
 
   </main>
   <footer>
     <div class="footer">
       <div class="flogo">
-      <img class="fimg" src="SmartStitchLogo.png" alt="" height="40px">
+        <img class="fimg" src="SmartStitchLogo.png" alt="" height="40px">
       </div>
       <div class="contact">
         <ul>
