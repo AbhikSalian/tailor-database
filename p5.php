@@ -58,23 +58,38 @@ if(!empty($cid) and !empty($delivery_date))
     <p>Pant type : Cotton Colour Plain Pants Fabric Navy Style Craft</p>
     <p>Order value : Rs. 660.00<br>
     <form action="" method="post">
-        <label for="delivery_date">Expected delivery date:</label>
-        <input class="date" type="date" id="delivery_date" name="delivery_date"><br>
-        <div class="submit">
-        <button type="submit" onclick="message()">Place order</button>
-        </div>
-    </form>
+                <label for="delivery_date">Expected delivery date:</label>
+                <input class="date" type="date" id="delivery_date" name="delivery_date"><br>
+                <p id="alertMessage">NOTE: Please select a date on or after today.</p>
+                <div class="submit">
+                    <button type="submit" onclick="message()">Place order</button>
+                </div>
+            </form>
     </div>
     </main>
     <script>
-        function message()
-        {
-            if(delivery_date.value.length!=0)
-            alert ("Order placed Successfully");
-        
-            if(delivery_date.value.length == 0)
-            alert ("Please enter Date");
+        function message() {
+            if (delivery_date.value.length != 0)
+                alert("Order placed Successfully");
+
+            if (delivery_date.value.length == 0)
+                alert("Please enter Date");
         }
+        const delivery_date = document.getElementById('delivery_date');
+        const alertMessage = document.getElementById('alertMessage');
+
+        delivery_date.addEventListener('change', function () {
+            const selectedDate = new Date(this.value);
+            const today = new Date();
+
+            if (selectedDate < today) {
+                alertMessage.style.display = 'block';
+            
+            } else {
+                alertMessage.style.display = 'none';
+                
+            }
+        });
     </script>
 
 </body>

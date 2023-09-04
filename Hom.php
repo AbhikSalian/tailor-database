@@ -28,8 +28,13 @@
 
 
   <main>
-  <img class="welcomeimg" src="Images/Suits-Shirts-1.jpg" alt="" width="100%">
-  <!-- <div class="quote">
+    <img class="welcomeimg" src="Images/qqq.png" alt="" width="100%">
+    <div class="homebutton">
+      <a href="shirts.php"><input type="submit" value="SHIRTS"></a><br>
+      <a href="pants.php"><input type="submit" value="PANTS"></a>
+
+    </div>
+    <!-- <div class="quote">
 
     <h1 >We Visit you instead of making you travel</h1>
   </div> -->
@@ -39,9 +44,10 @@
   <footer>
     <div class="footer">
 
-    <div class="flogo">
-      <img class="fimg" src="SmartStitchLogo.png" alt="" height="40px">
-      </div>      <div class="contact">
+      <div class="flogo">
+        <img class="fimg" src="SmartStitchLogo.png" alt="" height="40px">
+      </div>
+      <div class="contact">
         <ul>
           <h4>CONTACT</h4>
 

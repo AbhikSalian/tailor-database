@@ -9,12 +9,20 @@
     <link rel="stylesheet" href="measurements.css" />
   </head>
   <body>
+    
+  <header>
+        <nav class="navbar">
+            <div class="navdiv">
+                <p class="home">UPDATE MEASUREMENTS</p>
+            </div>
+        </nav>
+    </header>
 
     <form action="" method="post">
       <div class="measurement">
 
         <div class="shirt">
-          <h3>Shirt</h3>
+          <h4>SHIRT</h4>
           <ol>
             <li>
               <label for="">Collar : </label
@@ -63,7 +71,7 @@
         </div>
   
         <div class="pant">
-          <h3>Pant</h3>
+          <h4>PANT</h4>
           <ol>
             <li>
               <label for="">Waist : </label

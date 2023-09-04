@@ -37,6 +37,7 @@ body {
   
   border-bottom: 8px solid #2b300d;
   box-sizing: border-box;
+  
 }
 .navdiv {
   display: flex;
@@ -140,3 +141,30 @@ h3 {
   margin-bottom: auto;
 }
 
+/* main */
+.homebutton{
+  position: absolute;
+  top: 300px;
+  right: 100px;
+  
+}
+.homebutton input{
+  width: 150px;
+  padding: 15px;
+  border: none;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px ;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius:30px ;
+  margin-top: 20px;
+  background-color: #7e876d;
+  color: #2b300d;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+.homebutton input:hover{
+  box-shadow: 0px 0px 0px 1px #7e876d;
+  
+}

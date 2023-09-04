@@ -28,7 +28,8 @@ body {
   align-content: center;
   position: relative;
   padding: 30px;
-  color: #e0e3ce;
+  padding-top: 20px;
+  color: #2b300d;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   border-top: 20px solid #2b300d;
@@ -63,6 +64,17 @@ h3 {
   border: none;
   padding: 5px 10px 5px 10px;
   background-color: #e0e3ce;
+  color: #7e876d;
   border-radius: 30px;
   text-transform: uppercase;
+}
+
+#dateInput {
+  padding: 10px;
+  font-size: 16px;
+}
+#alertMessage {
+  color: #2b300d;
+  font-weight: bold;
+  display: none;
 }

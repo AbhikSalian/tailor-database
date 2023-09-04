@@ -67,18 +67,91 @@ if ($result2) {
     <title>SmartStitch-Profile</title>
     <link rel="stylesheet" href="client_details.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script>
+        function detailshide() {
 
+            let detailsid = document.getElementById('detailsid');
+            let btn1 = document.getElementById('btn1');
+            let btn2 = document.getElementById('btn2');
+            let btn3 = document.getElementById('btn3');
+            let btn4 = document.getElementById('btn4');
+            if (detailsid.style.display != 'none') {
+
+                detailsid.style.display = 'none';
+                btn1.style.opacity = null;
+            } else {
+                detailsid.style.display = 'block';
+                measureid.style.display = 'none';
+                orderid.style.display = 'none';
+                btn1.style.opacity = 0.7;
+                btn2.style.opacity = null;
+                btn3.style.opacity = null;
+                btn4.style.opacity = null;
+            }
+        }
+
+        function measurehide() {
+            let measureid = document.getElementById('measureid');
+
+
+            if (measureid.style.display != 'none') {
+
+                measureid.style.display = 'none';
+                btn2.style.opacity = null;
+
+
+            } else {
+
+                measureid.style.display = 'block';
+                detailsid.style.display = 'none';
+                orderid.style.display = 'none';
+
+                btn1.style.opacity = null;
+                btn2.style.opacity = 0.7;
+                btn3.style.opacity = null;
+                btn4.style.opacity = null;
+            }
+        }
+
+        function orderhide() {
+            let orderid = document.getElementById('orderid');
+
+            if (orderid.style.display != 'none') {
+                orderid.style.display = 'none';
+                btn3.style.opacity = null;
+
+            } else {
+                orderid.style.display = 'block';
+                detailsid.style.display = 'none';
+                measureid.style.display = 'none';
+
+                btn1.style.opacity = null;
+                btn2.style.opacity = null;
+                btn3.style.opacity = 0.7;
+                btn4.style.opacity = null;
+
+            }
+        }
+
+        
+
+        function hide() {
+            let detailsid = document.getElementById('detailsid');
+
+
+            detailsid.style.display = 'none';
+            measureid.style.display = 'none';
+            orderid.style.display = 'none';
+
+
+
+
+
+        }
+    </script>
 </head>
-<!-- <script>
-    function check()
-    {
-        if(collar||neck_to_shoulder||sleeve_length||shoulder_to_shoulder||chest||front_length||sleeve_cuff||hem == 0)
-        laod();
-    }
 
-</script> -->
-
-<body onload="check()">
+<body onload="hide()">
     <header>
         <nav class="navbar">
             <div class="navdiv">
@@ -96,24 +169,32 @@ if ($result2) {
     </header>
 
     <main>
+        <div class="buttons">
 
-        <div class="details">
+            <div class="button"><button id="btn1" onclick="detailshide()">Personal Details</button></div>
+
+            <div class="button"><button id="btn2" onclick="measurehide()">My Measurements</button></div>
+            <div class="button"><button id="btn3" onclick="orderhide()">My Orders</button></div>
+
+        </div>
+
+        <div class="details" id="detailsid">
             <h3>Personal Details</h3>
-            <p>Client ID : <span><?php echo $_SESSION['client_id']; ?></span></p>
-            <p>Name : <span><?php echo $_SESSION['client_name']; ?></span></p>
-            <p>Age : <span><?php echo $_SESSION['age']; ?></span></p>
-            <p>Gender : <span><?php echo $_SESSION['gender']; ?></span></p>
-            <p>Address : <span><?php echo $_SESSION['address']; ?></span></p>
-            <p>Mobile No. : <span><?php echo $_SESSION['ph_no']; ?></span></p>
-            <p>Email ID : <span><?php echo $_SESSION['email_id']; ?></span></p>
+            <p><b>Client ID : </b><span><?php echo $_SESSION['client_id']; ?></span></p>
+            <p><b>Name : </b><span><?php echo $_SESSION['client_name']; ?></span></p>
+            <p><b>Age : </b><span><?php echo $_SESSION['age']; ?></span></p>
+            <p><b>Gender : </b><span><?php echo $_SESSION['gender']; ?></span></p>
+            <p><b>Address : </b><span><?php echo $_SESSION['address']; ?></span></p>
+            <p><b>Mobile No. : </b><span><?php echo $_SESSION['ph_no']; ?></span></p>
+            <p><b>Email ID : </b><span><?php echo $_SESSION['email_id']; ?></span></p>
 
         </div>
         <!-- <script>
     function load()
     { -->
 
-        <div class="measure">
-            <h3>Measurements</h3>
+        <div class="measure" id="measureid">
+            <h3>My Measurements</h3>
             <h4>Shirt measurements :</h4>
             <table>
                 <tr>
@@ -178,12 +259,12 @@ if ($result2) {
                     ?>
                 </tr>
             </table>
+            <div class="edit">
+                <a href="measurement.php"><button>Edit Measurements</button></a>
+            </div>
         </div>
-        <div class="edit">
-            <a href="measurement.php"><button>Edit Measurements</button></a>
-        </div>
-        <div class="order">
-            <h3>Orders</h3>
+        <div class="order" id="orderid" >
+            <h3>My Orders</h3>
             <table>
                 <tr>
                     <th>Order ID</th>

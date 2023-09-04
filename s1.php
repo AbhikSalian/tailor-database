@@ -36,39 +36,54 @@
 </head>
 
 <body>
-<header>
-      <nav class="navbar">
-        <div class="navdiv">
-          <p class="home">PLACE ORDER</p>
-        </div>
-      </nav>
+    <header>
+        <nav class="navbar">
+            <div class="navdiv">
+                <p class="home">PLACE ORDER</p>
+            </div>
+        </nav>
     </header>
     <main>
-    <div class="order">
+        <div class="order">
 
-    <h3>ORDER DETAILS:</h3>
-    <p>Client ID : <?php echo $_SESSION['client_id']; ?></p>
-    <p>Client name : <?php echo $_SESSION['client_name']; ?></p>
-    <p>Shirt type : Cotton Colour Plain Shirt Fabric Green</p>
-    <p>Order value : Rs. 360.00<br>
-    <form action="" method="post">
-        <label for="delivery_date">Expected delivery date:</label>
-        <input class="date" type="date" id="delivery_date" name="delivery_date"><br>
-        <div class="submit">
-        <button type="submit" onclick="message()">Place order</button>
+            <h3>ORDER DETAILS:</h3>
+            <p>Client ID : <?php echo $_SESSION['client_id']; ?></p>
+            <p>Client name : <?php echo $_SESSION['client_name']; ?></p>
+            <p>Shirt type : Cotton Colour Plain Shirt Fabric Green</p>
+            <p>Order value : Rs. 360.00<br>
+            <form action="" method="post">
+                <label for="delivery_date">Expected delivery date:</label>
+                <input class="date" type="date" id="delivery_date" name="delivery_date"><br>
+                <p id="alertMessage">NOTE: Please select a date on or after today.</p>
+                <div class="submit">
+                    <button type="submit" onclick="message()">Place order</button>
+                </div>
+            </form>
         </div>
-    </form>
-    </div>
     </main>
     <script>
-        function message()
-        {
-            if(delivery_date.value.length!=0)
-            alert ("Order placed Successfully");
-        
-            if(delivery_date.value.length == 0)
-            alert ("Please enter Date");
+        function message() {
+            if (delivery_date.value.length != 0)
+                alert("Order placed Successfully");
+
+            if (delivery_date.value.length == 0)
+                alert("Please enter Date");
         }
+        const delivery_date = document.getElementById('delivery_date');
+        const alertMessage = document.getElementById('alertMessage');
+
+        delivery_date.addEventListener('change', function () {
+            const selectedDate = new Date(this.value);
+            const today = new Date();
+
+            if (selectedDate < today) {
+                alertMessage.style.display = 'block';
+            
+            } else {
+                alertMessage.style.display = 'none';
+                
+            }
+        });
     </script>
 
 </body>
