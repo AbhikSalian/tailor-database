@@ -1,0 +1,9 @@
+create table client(client_id int primary key,client_name varchar(255),age int,gender varchar(20),address text,ph_no bigint,email_id varchar(255),password varchar(255));
+
+create table shirt(shirt_id int primary key,collar float,neck_to_shoulder float,sleeve_length float,shoulder_to_shoulder float,chest float,front_length float,sleeve_cuff float,hem float,client_id int,foreign key(client_id)references client(client_id));
+
+create table pant(pant_id int primary key,waist float,front_rise float,hip float,thigh float,length float,knee float,inseam float,leg_opening float,client_id int,foreign key(client_id)references client(client_id));
+
+create table orders(order_id int primary key,client_id int,shirt_type varchar(255),pant_type varchar(255),order_date date,delivery_date date,order_total decimal(10,2));
+
+create table link(client_id int,shirt_id int,pant_id int,foreign key(client_id)references client(client_id),foreign key(shirt_id)references shirt(shirt_id),foreign key(pant_id)references pant(pant_id),primary key(client_id,shirt_id,pant_id));
