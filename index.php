@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width= , initial-scale=1.0" />
   <title>SmartStitch-Welcome</title>
-  <link rel="stylesheet" href="welcomePage.css" />
+  <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -15,7 +15,7 @@
     <nav class="navbar">
       <div class="navdiv">
         <div class="logo">
-          <a href="welcomePage.php"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px" /></a>
+          <a href="index.php"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px" /></a>
         </div>
         <div class="sign">
           <a href="tailor_login.php"><button class="b1">Tailor Login</button></a>

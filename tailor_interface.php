@@ -136,7 +136,7 @@ $result4 = mysqli_query($conn, $query_orders);
                 <div class="logo"><a href="tailor_interface.php"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
             </div>
             <p class="home">TAILOR DATABASE</p>
-            <span><a href="welcomePage.php"><button>Logout</button></a></span>
+            <span><a href="index.php"><button>Logout</button></a></span>
         </nav>
     </header>
     <main>
