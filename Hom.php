@@ -32,7 +32,7 @@
     <div class="quote">
       
       <div class="homebutton">
-        <h1 >We make cloths that suits you</h1>
+        <h1 >We make clothes that suits you</h1>
         <a href="shirts.php"><input type="submit" value="SHIRTS"></a><br>
         <a href="pants.php"><input type="submit" value="PANTS"></a>
   
