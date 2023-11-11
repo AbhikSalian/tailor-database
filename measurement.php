@@ -1,6 +1,106 @@
 <?php
+error_reporting(0);
+?><?php
+// Your existing PHP code
 //error_reporting(0);
-?><!DOCTYPE html>
+@include 'config.php';
+    session_start();
+    $cl_id=$_GET['id'];
+    $shirt_display="SELECT * FROM shirt WHERE client_id='$cl_id'";
+     $res_shirt=mysqli_query($conn,$shirt_display);
+     if($res_shirt)
+     {
+         $row_shirt=mysqli_fetch_assoc($res_shirt);
+         $disp_collar=$row_shirt['collar'];
+         $disp_nts=$row_shirt['neck_to_shoulder'];
+         $disp_sl=$row_shirt['sleeve_length'];
+         $disp_chest=$row_shirt['chest'];
+         $disp_fl=$row_shirt['front_length'];
+         $disp_sc=$row_shirt['sleeve_cuff'];
+         $disp_hem=$row_shirt['hem'];
+         $disp_sts=$row_shirt['shoulder_to_shoulder'];
+     }
+     else
+     {
+         echo "No data";
+     }
+     $pant_display="SELECT * FROM pant WHERE client_id='$cl_id'";
+     $res_pant=mysqli_query($conn,$pant_display);
+     if($res_pant)
+     {
+         $row_pant=mysqli_fetch_assoc($res_pant);
+         $disp_waist=$row_pant['waist'];
+         $disp_fr=$row_pant['front_rise'];
+         $disp_hip=$row_pant['hip'];
+         $disp_thigh=$row_pant['thigh'];
+         $disp_length=$row_pant['length'];
+         $disp_knee=$row_pant['knee'];
+         $disp_inseam=$row_pant['inseam'];
+         $disp_lo=$row_pant['leg_opening'];
+     }
+     else
+     {
+         echo "No data";
+     }
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+     $cid=$_SESSION['client_id'];
+     
+        $collar=$_POST["collar"];
+        $neck_to_shoulder=$_POST["neck_to_shoulder"];
+        $sleeve_length=$_POST["sleeve_length"];
+        $shoulder_to_shoulder=$_POST["shoulder_to_shoulder"];
+        $chest=$_POST["chest"];
+        $front_length=$_POST["front_length"];
+        $sleeve_cuff=$_POST["sleeve_cuff"];
+        $hem=$_POST["hem"];
+        $waist=$_POST["waist"];
+        $front_rise=$_POST["front_rise"];
+        $hip=$_POST["hip"];
+        $thigh=$_POST["thigh"];
+        $length=$_POST["length"];
+        $knee=$_POST["knee"];
+        $inseam=$_POST["inseam"];
+        $leg_opening=$_POST["leg_opening"];
+         
+          $shirt_insert="UPDATE shirt SET 
+          collar='$collar',
+          neck_to_shoulder='$neck_to_shoulder',
+          sleeve_length='$sleeve_length',
+          shoulder_to_shoulder='$shoulder_to_shoulder',
+          chest='$chest',
+          front_length='$front_length',
+          sleeve_cuff='$sleeve_cuff',
+          hem='$hem' 
+          WHERE
+          client_id='$cid'";
+        
+          $pant_insert="UPDATE pant SET
+          waist='$waist',
+          front_rise='$front_rise',
+          hip='$hip',
+          thigh='$thigh',
+          length='$length',
+          knee='$knee',
+          inseam='$inseam',
+          leg_opening='$leg_opening'
+          WHERE
+          client_id='$cid'";
+          
+          $res_shirt=mysqli_query($conn,$shirt_insert) or die(mysqli_error());
+          $res_pant=mysqli_query($conn,$pant_insert) or die(mysqli_error());
+          if ($res_shirt && $res_pant) {
+            header('Location: https://smartstitchh.000webhostapp.com/client_details.php');
+            exit;
+          } 
+          else 
+          {
+            echo "Data not inserted";
+        }
+    
+}
+echo $disp_collar;
+?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,8 +125,9 @@
           <h4>SHIRT</h4>
           <ol>
             <li>
+                
               <label for="">Collar : </label
-              ><input type="number" placeholder="in inches" id="" name="collar" />
+              ><input type="number" id="" placeholder="in inches" name="collar" value="<?php echo $disp_collar;?>"/>
             </li>
             <li>
               <label for="">Neck to Shoulder : </label
@@ -35,11 +136,12 @@
                 placeholder="in inches"
                 id=""
                 name="neck_to_shoulder"
+                value="<?php echo $disp_nts;?>"
               />
             </li>
             <li>
               <label for="">Sleeve Length : </label
-              ><input type="number" placeholder="in inches" id="" name="sleeve_length" />
+              ><input type="number" placeholder="in inches" id="" name="sleeve_length" value="<?php echo $disp_sl;?>"/>
             </li>
             <li>
               <label for="">Shoulder : </label
@@ -48,23 +150,24 @@
                 placeholder="in inches"
                 id=""
                 name="shoulder_to_shoulder"
+                value="<?php echo $disp_sts;?>"
               />
             </li>
             <li>
               <label for="">Chest : </label
-              ><input type="number" placeholder="in inches" id="" name="chest" />
+              ><input type="number" placeholder="in inches" id="" name="chest" value="<?php echo $disp_chest;?>"/>
             </li>
             <li>
               <label for="">Front Length : </label
-              ><input type="number" placeholder="in inches" id="" name="front_length" />
+              ><input type="number" placeholder="in inches" id="" name="front_length" value="<?php echo $disp_fl;?>"/>
             </li>
             <li>
               <label for="">Sleeve cuff : </label
-              ><input type="number" placeholder="in inches" id="" name="sleeve_cuff" />
+              ><input type="number" placeholder="in inches" id="" name="sleeve_cuff" value="<?php echo $disp_sc;?>"/>
             </li>
             <li>
               <label for="">Hem : </label
-              ><input type="number" placeholder="in inches" id="" name="hem" />
+              ><input type="number" placeholder="in inches" id="" name="hem" value="<?php echo $disp_hem;?>"/>
             </li>
           </ol>
           <img class="measureimg" src="Images/shirtmeasure.png" height="300px" alt="" />
@@ -75,35 +178,35 @@
           <ol>
             <li>
               <label for="">Waist : </label
-              ><input type="number" placeholder="in inches" id="" name="waist" />
+              ><input type="number" placeholder="in inches" id="" name="waist" value="<?php echo $disp_waist;?>"/>
             </li>
             <li>
               <label for="">Front Rise : </label
-              ><input type="number" placeholder="in inches" id="" name="front_rise" />
+              ><input type="number" placeholder="in inches" id="" name="front_rise" value="<?php echo $disp_fr;?>"/>
             </li>
             <li>
               <label for="">Hip : </label
-              ><input type="number" placeholder="in inches" id="" name="hip" />
+              ><input type="number" placeholder="in inches" id="" name="hip" value="<?php echo $disp_hip;?>"/>
             </li>
             <li>
               <label for="">Thigh : </label
-              ><input type="number" placeholder="in inches" id="" name="thigh" />
+              ><input type="number" placeholder="in inches" id="" name="thigh" value="<?php echo $disp_thigh;?>"/>
             </li>
             <li>
               <label for="">Length : </label
-              ><input type="number" placeholder="in inches" id="" name="length" />
+              ><input type="number" placeholder="in inches" id="" name="length" value="<?php echo $disp_length;?>"/>
             </li>
             <li>
               <label for="">Knee : </label
-              ><input type="number" placeholder="in inches" id="" name="knee" />
+              ><input type="number" placeholder="in inches" id="" name="knee" value="<?php echo $disp_knee;?>"/>
             </li>
             <li>
               <label for="">Inseam : </label
-              ><input type="number" placeholder="in inches" id="" name="inseam" />
+              ><input type="number" placeholder="in inches" id="" name="inseam" value="<?php echo $disp_inseam;?>"/>
             </li>
             <li>
               <label for="">Leg Opening : </label
-              ><input type="number" placeholder="in inches" id="" name="leg_opening" />
+              ><input type="number" placeholder="in inches" id="" name="leg_opening" value="<?php echo $disp_lo;?>"/>
             </li>
           </ol>
           <img class="measureimg" src="Images/pantmeasure.png" height="300px" alt="" />
@@ -112,80 +215,8 @@
 
 
       <div class="submit">
-        <a href="client_details.php"><button type="submit">Update</button></a>
+        <a href="https://smartstitchh.000webhostapp.com/client_details.php"><button type="submit">Update</button></a>
       </div>
     </form>
   </body>
-</html><?php
-// Start the output buffering to capture any output before it's sent
-ob_start();
-
-// Your existing PHP code
-//error_reporting(0);
-@include 'config.php';
-    session_start();
-
-   
-      $collar=$_POST["collar"];
-    $neck_to_shoulder=$_POST["neck_to_shoulder"];
-    $sleeve_length=$_POST["sleeve_length"];
-    $shoulder_to_shoulder=$_POST["shoulder_to_shoulder"];
-    $chest=$_POST["chest"];
-    $front_length=$_POST["front_length"];
-    $sleeve_cuff=$_POST["sleeve_cuff"];
-    $hem=$_POST["hem"];
-    $waist=$_POST["waist"];
-    $front_rise=$_POST["front_rise"];
-    $hip=$_POST["hip"];
-    $thigh=$_POST["thigh"];
-    $length=$_POST["length"];
-    $knee=$_POST["knee"];
-    $inseam=$_POST["inseam"];
-    $leg_opening=$_POST["leg_opening"];
-      
-              
-                  $cid=$_SESSION['client_id'];
-                  $shirt_insert="UPDATE shirt SET 
-                  collar='$collar',
-                  neck_to_shoulder='$neck_to_shoulder',
-                  sleeve_length='$sleeve_length',
-                  shoulder_to_shoulder='$shoulder_to_shoulder',
-                  chest='$chest',
-                  front_length='$front_length',
-                  sleeve_cuff='$sleeve_cuff',
-                  hem='$hem' 
-                  WHERE
-                  client_id='$cid'";
-
-                  $pant_insert="UPDATE pant SET
-                  waist='$waist',
-                  front_rise='$front_rise',
-                  hip='$hip',
-                  thigh='$thigh',
-                  length='$length',
-                  knee='$knee',
-                  inseam='$inseam',
-                  leg_opening='$leg_opening'
-                  WHERE
-                  client_id='$cid'";
-                  
-                  $stmt1 = mysqli_query($conn,$shirt_insert);
-                  $stmt2 = mysqli_query($conn,$pant_insert);
-                
-   
-            
-                
-            
-            
-           
-    
-// Redirect only if there's no output yet
-if (ob_get_length() > 0) {
-    ob_end_flush(); // Flush and send any captured output
-} else {
-    ob_end_clean(); // Clean and discard any captured output
-    header('Location: client_details.php');
-    error_reporting(0);
-    exit; // Make sure to exit the script
-}
-?>
+</html>
