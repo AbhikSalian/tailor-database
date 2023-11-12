@@ -139,33 +139,9 @@
     </div>
   </main>
 
-  <footer>
-    <div class="footer">
-    <div class="flogo">
-      <img class="fimg" src="SmartStitchLogo.png" alt="" height="40px">
-      </div>     
-       <div class="contact">
-        <ul>
-          <h4>CONTACT</h4>
-
-          <li><i class="fa-solid fa-phone" style="color: #2b300d;"></i> 7760447896</li>
-          <li><a href="mailto: akashacharya2003@gmail.com"><i class="fa-solid fa-envelope" style="color: #2b300d;"></i> akashacharya2003@gmail.com</li></a>
-        </ul>
-      </div>
-      <div class="business">
-        <ul>
-          <h4>BUSINESS HOURS</h4>
-          <li>Monday - Friday : 09:00 AM - 06:00 PM</li>
-          <li>Saturday : 09:00 AM - 04:00 PM</li>
-          <li>Sunday : Closed</li>
-        </ul>
-      </div>
-    </div>
-    <!-- <hr /> -->
-    <h5 class="Copyright">
-      @Copyright 2023 SmartStitch - All Rigths Reserved
-    </h5>
-  </footer>
+  <?php 
+  include('footer.php');
+  ?>
 
 </body>
 
