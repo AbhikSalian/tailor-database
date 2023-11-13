@@ -59,68 +59,8 @@ header {
   opacity: 0.5;
 }
 /* footer */
-footer {
-  min-height: 20vh;
-  margin: 0px 0px 0px 0px;
-  background-color: #7e876d;
-  width: 100%;
-  position: relative;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  color: #2b300d;
-  line-height: 20px;
-  align-items: center;
-  text-align: center;
-  border-top: 8px solid #2b300d;
-}
 
-.footer {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-.contact,
-.business {
-  text-align: center;
-  margin-left: 60px;
-  margin-right: 60px;
-  justify-content: center;
-}
-.footer li {
-  list-style: none;
-  width: fit-content;
-}
 
-.Copyright {
-  padding: -5px;
-  margin: 0px;
-  margin-top: 0px;
-  text-align: center;
-  font-weight: lighter;
-}
-a {
-  color: #2b300d;
-}
-.fa-solid {
-  font-size: small;
-  color: #2b300d;
-}
-h3 {
-  text-transform: uppercase;
-}
-.welcomeimg {
-  margin: 0px 0px -5px 0px;
-  padding: 0%;
-}
-
-.flogo .fimg {
-  margin: auto;
-}
-.flogo {
-  margin-top: auto;
-  margin-bottom: auto;
-}
 .quote {
   position: absolute;
   right: 143px;

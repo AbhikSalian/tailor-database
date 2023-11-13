@@ -13,6 +13,7 @@
             text-decoration: none;
             box-sizing: border-box;
             list-style: none;
+            cursor: pointer;
 
         }
 
@@ -35,7 +36,8 @@
         }
 
         .nav-list {
-            width: 40%;
+            width: 45%;
+
         }
 
         .list-ul {
@@ -74,14 +76,16 @@
         .nav-logo:hover {
             opacity: 0.5;
         }
-        .nav-menu{
+
+        .nav-menu {
             display: none;
         }
 
         @media only screen and (max-width: 700px) {
-            header{
+            header {
                 width: 100%;
             }
+
             .nav-div {
                 width: 100%;
                 display: flex;
@@ -89,16 +93,58 @@
             }
 
             .nav-logo {
+                width: 60%;
+                position: fixed;
+
             }
 
+
+
             .nav-list {
-                display: none;
+                display: block;
+
             }
-            .nav-menu{
+
+            .list-ul {
+                background-color: #7e876d;
                 display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                height: 40%;
+                width: 100%;
+
+            }
+
+            .nav-menu {
+                display: flex;
+                position: fixed;
+                right: 30px;
+                cursor: pointer;
+                padding: 4px;
+
+            }
+
+            .nav-menu:hover {
+                background-color: #e0e3ce;
+                border-radius: 2px;
+
             }
         }
     </style>
+    <script>
+        function toggle() {
+        // alert('hiii');
+            let display = document.getElementById('display');
+            if (display.style.display != 'none') {
+
+                display.style.display = 'none';
+            } else {
+                display.style.display = 'block';
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -106,13 +152,13 @@
         <div class="nav-div">
             <div class="nav-logo">
                 <a href="Home.html">
-                    <img src="SmartStitchLogo.png" alt="SmartStitch" height="40px">
+                    <img src="SmartStitchLogo.png" alt="SmartStitch" width="180px">
                 </a>
             </div>
-            <div class="nav-menu">
-                <i class="fa-solid fa-bars" style="color: #4d3e3e;"></i>
+            <div class="nav-menu" onclick="toggle()">
+                <i class="fa-solid fa-bars"   style="color: #2b300d;"></i>
             </div>
-            <div class="nav-list">
+            <div class="nav-list" id="display">
                 <ul class="list-ul">
                     <li><a href="Hom.php">Home</a></li>
                     <li><a href="shirts.php">Shirts</a></li>
