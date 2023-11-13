@@ -82,6 +82,7 @@
         }
 
         @media only screen and (max-width: 700px) {
+
             header {
                 width: 100%;
             }
@@ -131,20 +132,38 @@
                 border-radius: 2px;
 
             }
+
+            .list-ul li a:hover {
+                color: #e0e3ce;
+            }
+
+            .nav-list {
+                display: none;
+            }
+
+            .nav-list.displayactive {
+                display: block;
+            }
         }
     </style>
     <script>
-        function toggle() {
-        // alert('hiii');
-            let display = document.getElementById('display');
-            if (display.style.display != 'none') {
-
-                display.style.display = 'none';
-            } else {
-                display.style.display = 'block';
-            }
+        const toggle = () => {
+            document.getElementById('display').classList.toggle('displayactive');
         }
+
+
+        // function toggle() {
+        // // alert('hiii');
+        //     let display = document.getElementById('display');
+        //     if (display.style.display != 'none') {
+
+        //         display.style.display = 'none';
+        //     } else {
+        //         display.style.display = 'block';
+        //     }
+        // }
     </script>
+
 </head>
 
 <body>
@@ -156,7 +175,7 @@
                 </a>
             </div>
             <div class="nav-menu" onclick="toggle()">
-                <i class="fa-solid fa-bars"   style="color: #2b300d;"></i>
+                <i class="fa-solid fa-bars" style="color: #2b300d;"></i>
             </div>
             <div class="nav-list" id="display">
                 <ul class="list-ul">
