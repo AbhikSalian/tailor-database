@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+include('config.php');
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,12 +17,12 @@
     <nav class="navbar">
       <div class="navdiv">
         <div class="logo">
-          <a href="index.php"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px" /></a>
+          <a href="<?php echo SITEURL;?>index.php"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px" /></a>
         </div>
         <div class="sign">
-          <a href="tailor_login.php"><button class="b1">Tailor Login</button></a>
-          <a href="sign_up.php"><button class="b1">Sign Up</button></a>
-          <a href="sign_in.php"><button class="b2">Sign In</button></a>
+          <a href="<?php echo SITEURL;?>tailor_login.php"><button class="b1">Tailor Login</button></a>
+          <a href="<?php echo SITEURL;?>sign_up.php"><button class="b1">Sign Up</button></a>
+          <a href="<?php echo SITEURL;?>sign_in.php"><button class="b2">Sign In</button></a>
         </div>
       </div>
     </nav>

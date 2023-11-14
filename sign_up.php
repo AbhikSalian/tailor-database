@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
                     $res_link=mysqli_query($conn,$link_insert) or die(mysqli_error($conn));
                     if($res_link)
                     {
-                        header('Location: http://smartstitchh.000webhostapp.com/sign_in.php');
+                        header('Location: '.SITEURL.'sign_in.php');
                         exit;
                     }
                 }
@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 </head>
 
 <body>
-  <form onSubmit="return checkPassword(this)" action="sign_up.php" method="post">
+  <form onSubmit="return checkPassword(this)" action="<?php echo SITEURL;?>sign_up.php" method="post">
     <div class="container">
       <span>SIGN UP</span>
       <div class="Credential">
@@ -119,11 +119,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         <input type="password" placeholder="Re-Enter Password" id="p2" name="p2" required />
 
         <div class="button">
-          <a href="sign_in.php"><button type="submit" value="Submit">Sign Up</button></a>
+          <a href="<?php echo SITEURL;?>sign_in.php"><button type="submit" value="Submit">Sign Up</button></a>
         </div>
 
         <div class="Noac">
-          Already have an account?<a href="sign_in.php"> Sign in</a>
+          Already have an account?<a href="<?php echo SITEURL;?>sign_in.php"> Sign in</a>
         </div>
       </div>
     </div>

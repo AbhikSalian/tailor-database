@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           $_SESSION['email_id']=$email_id;
           if ($res_client) {
               
-          header('Location: https://smartstitchh.000webhostapp.com/client_details.php');
+          header('Location: '.SITEURL.'client_details.php');
             exit;
           } 
           else 

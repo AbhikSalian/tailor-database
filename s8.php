@@ -22,8 +22,8 @@ if (!empty($cid) and !empty($delivery_date)) {
             die(mysqli_error($conn));
         }
         mysqli_stmt_execute($stmt);
-        echo "<script type='text/javascript'>alert('Order placed successfully')</script>";
-        header("Location: Hom.php");
+        //echo "<script type='text/javascript'>alert('Order placed successfully')</script>";
+        header("Location: ".SITEURL."Hom.php");
     }
 }
 ?>

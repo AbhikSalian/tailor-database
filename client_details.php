@@ -4,7 +4,7 @@
 session_start();
 //echo $_SESSION['client_id'];
 if (!isset($_SESSION['client_name'])) {
-    header('location:Hom.php');
+    header('location: '.SITEURL.'Hom.php');
 }
 $cid = $_SESSION['client_id'];
 $query1 = "select * from shirt where shirt_id in(select shirt_id from link where client_id='$cid')";
@@ -16,8 +16,6 @@ $order_result = mysqli_query($conn, $order_query);
 if ($result1) {
     if ($result1 && mysqli_num_rows($result1) > 0) {
         $client_shirt_data = mysqli_fetch_assoc($result1);
-        //$row=mysqli_fetch_array($result);
-
 
         $_SESSION['collar'] = $client_shirt_data['collar'];
         $_SESSION['neck_to_shoulder'] = $client_shirt_data['neck_to_shoulder'];
@@ -28,18 +26,11 @@ if ($result1) {
         $_SESSION['sleeve_cuff'] = $client_shirt_data['sleeve_cuff'];
         $_SESSION['hem'] = $client_shirt_data['hem'];
         $_SESSION['shirt_id'] = $client_shirt_data['shirt_id'];
-
-
-        //header("Location: client_details.php");
-        //echo"<script type='text/javascript'>alert('Login successful')</script>";  
     }
 }
 if ($result2) {
     if ($result2 && mysqli_num_rows($result2) > 0) {
         $client_pant_data = mysqli_fetch_assoc($result2);
-        //$row=mysqli_fetch_array($result);
-
-
         $_SESSION['pant_id'] = $client_pant_data['pant_id'];
         $_SESSION['waist'] = $client_pant_data['waist'];
         $_SESSION['front_rise'] = $client_pant_data['front_rise'];
@@ -49,10 +40,6 @@ if ($result2) {
         $_SESSION['inseam'] = $client_pant_data['inseam'];
         $_SESSION['leg_opening'] = $client_pant_data['leg_opening'];
         $_SESSION['knee'] = $client_pant_data['knee'];
-
-
-        //header("Location: client_details.php");
-        //echo"<script type='text/javascript'>alert('Login successful')</script>";  
     }
 }
 ?>

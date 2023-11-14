@@ -15,7 +15,7 @@
                 
             }
             else if(password==1234)
-            window.open("tailor_interface.php")
+            window.open("<?php echo SITEURL;?>tailor_interface.php")
         else
     alert ("Incorrect Password");
 

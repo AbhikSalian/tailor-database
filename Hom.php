@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+include('config.php');
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -59,6 +61,7 @@
 <body>
   <?php
   include('header.php');
+  
   ?>
 
   <main>
@@ -66,8 +69,8 @@
     <div class="quote">
       <div class="homebutton">
         <h1>We make clothes that suits you</h1>
-        <a href="shirts.php"><input type="submit" value="SHIRTS"></a><br>
-        <a href="pants.php"><input type="submit" value="PANTS"></a>
+        <a href="<?php echo SITEURL;?>shirts.php"><input type="submit" value="SHIRTS"></a><br>
+        <a href="<?php echo SITEURL;?>pants.php"><input type="submit" value="PANTS"></a>
       </div>
     </div>
   </main>

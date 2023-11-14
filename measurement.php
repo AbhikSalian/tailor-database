@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           $res_shirt=mysqli_query($conn,$shirt_insert) or die(mysqli_error($conn));
           $res_pant=mysqli_query($conn,$pant_insert) or die(mysqli_error($conn));
           if ($res_shirt && $res_pant) {
-            header('Location: https://smartstitchh.000webhostapp.com/client_details.php');
+            header('Location: '.SITEURL.'client_details.php');
             exit;
           } 
           else 
@@ -213,7 +213,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
       <div class="submit">
-        <a href="https://smartstitchh.000webhostapp.com/client_details.php"><button type="submit">Update</button></a>
+        <a href="<?php echo SITEURL;?>client_details.php"><button type="submit">Update</button></a>
       </div>
     </form>
   </body>

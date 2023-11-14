@@ -54,7 +54,7 @@ if (!empty($email_id) and !empty($password)) {
       //mysqli_stmt_execute($stmt3);
 
 
-      header("Location: Hom.php");
+      header("Location: ".SITEURL."Hom.php");
       //echo"<script type='text/javascript'>alert('Login successful')</script>";
 
     } else {
@@ -79,17 +79,17 @@ if (!empty($email_id) and !empty($password)) {
 </head>
 
 <body>
-  <form action="sign_in.php" method="post">
+  <form action="<?php echo SITEURL;?>sign_in.php" method="post">
     <div class="container">
       <span>SIGN IN</span>
       <div class="Credential">
         <input type="text" placeholder="Email ID" name="email_id" required />
         <input type="password" placeholder="Password" name="password" required />
         <div class="button">
-          <a href="Hom.php"><button type="submit">Sign In</button></a>
+          <a href="<?php echo SITEURL;?>Hom.php"><button type="submit">Sign In</button></a>
         </div>
         <div class="Noac">
-          Don't have an account?/ <a href="sign_up.php"> Sign up</a>
+          Don't have an account?/ <a href="<?php echo SITEURL;?>sign_up.php"> Sign up</a>
         </div>
       </div>
     </div>
