@@ -2,7 +2,8 @@
 @include 'config.php';
 
 session_start();
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,21 +15,9 @@ session_start();
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="navdiv">
-        <div class="logo"><a href="Hom.php"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
-        <ul class="list">
-          <li><a href="Hom.php">Home</a></li>
-          <li class="home"><a href="shirts.php">Shirts</a></li>
-          <li><a href="pants.php">Pants</a></li>
-          <li><a href="aboutUs.php">About</a></li>
-          <li><a href="client_details.php">Profile</a></li>
-          <a href="logout.php"><button class="signout">Sign Out</button></a>
-        </ul>
-      </div>
-    </nav>
-  </header>
+  <?php
+  include('header.php');
+  ?>
 
 
   <main>
@@ -41,7 +30,7 @@ session_start();
         </p>
         <div class="placeorder">
           <form action="s1.php" method="post">
-          <a href="s1.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
+            <a href="s1.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -54,8 +43,8 @@ session_start();
           <Rs class="money"></Rs>415.00
         </p>
         <div class="placeorder">
-        <form action="s2.php" method="post">
-          <a href="s2.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
+          <form action="s2.php" method="post">
+            <a href="s2.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -67,8 +56,8 @@ session_start();
           <Rs class="money"></Rs>415.00
         </p>
         <div class="placeorder">
-        <form action="s3.php" method="post">
-          <a href="s3.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
+          <form action="s3.php" method="post">
+            <a href="s3.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -80,8 +69,8 @@ session_start();
           <Rs class="money"></Rs>425.00
         </p>
         <div class="placeorder">
-        <form action="s4.php" method="post">
-          <a href="s4.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
+          <form action="s4.php" method="post">
+            <a href="s4.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -93,8 +82,8 @@ session_start();
           <Rs class="money"></Rs>445.00
         </p>
         <div class="placeorder">
-        <form action="s5.php" method="post">
-          <a href="s5.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
+          <form action="s5.php" method="post">
+            <a href="s5.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -106,8 +95,8 @@ session_start();
           <Rs class="money"></Rs>445.00
         </p>
         <div class="placeorder">
-        <form action="s6.php" method="post">
-          <a href="s6.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
+          <form action="s6.php" method="post">
+            <a href="s6.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -119,8 +108,8 @@ session_start();
           <Rs class="money"></Rs>445.00
         </p>
         <div class="placeorder">
-        <form action="s7.php" method="post">
-          <a href="s7.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
+          <form action="s7.php" method="post">
+            <a href="s7.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -132,8 +121,8 @@ session_start();
           <Rs class="money"></Rs>445.00
         </p>
         <div class="placeorder">
-        <form action="s8.php" method="post">
-          <a href="s8.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
+          <form action="s8.php" method="post">
+            <a href="s8.php"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #e0e3ce;"></i> Place Order</button></a>
           </form>
         </div>
 
@@ -143,7 +132,7 @@ session_start();
     </div>
   </main>
 
-  <?php 
+  <?php
   include('footer.php');
   ?>
 

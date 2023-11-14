@@ -133,7 +133,7 @@ if ($result2) {
             }
         }
 
-        
+
 
         function hide() {
             let detailsid = document.getElementById('detailsid');
@@ -152,22 +152,9 @@ if ($result2) {
 </head>
 
 <body onload="hide()">
-    <header>
-        <nav class="navbar">
-            <div class="navdiv">
-                <div class="logo"><a href="Home.html"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
-                <ul class="list">
-                    <li><a href="Hom.php">Home</a></li>
-                    <li><a href="shirts.php">Shirts</a></li>
-                    <li><a href="pants.php">Pants</a></li>
-                    <li><a href="aboutUs.php">About</a></li>
-                    <li class="home"><a href="client_details.php">Profile</a></li>
-                    <a href="logout.php"><button class="signout">Sign Out</button></a>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
+    <?php
+    include('header.php');
+    ?>
     <main>
         <div class="buttons">
 
@@ -189,9 +176,6 @@ if ($result2) {
             <p><b>Email ID : </b><span><?php echo $_SESSION['email_id']; ?></span></p>
 
         </div>
-        <!-- <script>
-    function load()
-    { -->
 
         <div class="measure" id="measureid">
             <h3>My Measurements</h3>
@@ -263,7 +247,7 @@ if ($result2) {
                 <a href="measurement.php"><button>Edit Measurements</button></a>
             </div>
         </div>
-        <div class="order" id="orderid" >
+        <div class="order" id="orderid">
             <h3>My Orders</h3>
             <table>
                 <tr>
@@ -291,40 +275,12 @@ if ($result2) {
 
             </table>
         </div>
-        <!-- }
-
-</script> -->
 
     </main>
 
-    <footer>
-        <div class="footer">
-
-            <div class="flogo">
-                <img class="fimg" src="SmartStitchLogo.png" alt="" height="40px">
-            </div>
-            <div class="contact">
-                <ul>
-                    <h4>CONTACT</h4>
-
-                    <li><i class="fa-solid fa-phone" style="color: #2b300d;"></i> 7760447896</li>
-                    <li><a href="mailto: akashacharya2003@gmail.com"><i class="fa-solid fa-envelope" style="color: #2b300d;"></i> akashacharya2003@gmail.com</li></a>
-                </ul>
-            </div>
-            <div class="business">
-                <ul>
-                    <h4>BUSINESS HOURS</h4>
-                    <li>Monday - Friday : 09:00 AM - 06:00 PM</li>
-                    <li>Saturday : 09:00 AM - 04:00 PM</li>
-                    <li>Sunday : Closed</li>
-                </ul>
-            </div>
-        </div>
-        <!-- <hr /> -->
-        <h5 class="Copyright">
-            @Copyright 2023 SmartStitch - All Rigths Reserved
-        </h5>
-    </footer>
+    <?php
+    include('footer.php');
+    ?>
 </body>
 
 </html>

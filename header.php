@@ -14,7 +14,6 @@
             box-sizing: border-box;
             list-style: none;
             cursor: pointer;
-
         }
 
         .nav-div {
@@ -37,7 +36,6 @@
 
         .nav-list {
             width: 45%;
-
         }
 
         .list-ul {
@@ -82,11 +80,6 @@
         }
 
         @media only screen and (max-width: 700px) {
-
-            header {
-                width: 100%;
-            }
-
             .nav-div {
                 width: 100%;
                 display: flex;
@@ -95,14 +88,18 @@
 
             .nav-logo {
                 width: 60%;
-                position: fixed;
+                position: absolute;
 
             }
 
-
+            .nav-logo a {
+                display: flex;
+                align-items: center;
+            }
 
             .nav-list {
                 display: block;
+                z-index: 10;
 
             }
 
@@ -120,7 +117,7 @@
 
             .nav-menu {
                 display: flex;
-                position: fixed;
+                position: absolute;
                 right: 30px;
                 cursor: pointer;
                 padding: 4px;
@@ -150,20 +147,7 @@
         const toggle = () => {
             document.getElementById('display').classList.toggle('displayactive');
         }
-
-
-        // function toggle() {
-        // // alert('hiii');
-        //     let display = document.getElementById('display');
-        //     if (display.style.display != 'none') {
-
-        //         display.style.display = 'none';
-        //     } else {
-        //         display.style.display = 'block';
-        //     }
-        // }
     </script>
-
 </head>
 
 <body>
@@ -171,7 +155,7 @@
         <div class="nav-div">
             <div class="nav-logo">
                 <a href="Home.html">
-                    <img src="SmartStitchLogo.png" alt="SmartStitch" width="180px">
+                    <img src="SmartStitchLogo.png" alt="SmartStitch" width="180px ">
                 </a>
             </div>
             <div class="nav-menu" onclick="toggle()">

@@ -14,7 +14,6 @@
             text-decoration: none;
             list-style: none;
             color: #2b300d;
-
             box-sizing: border-box;
         }
 
@@ -69,16 +68,18 @@
                 display: flex;
                 flex-direction: column;
                 height: fit-content;
-                text-align: center;      
+                text-align: center;
             }
-            .footer-logo{
+
+            .footer-logo {
                 display: none;
             }
-            .footer-contact,.footer-business{
-                margin:12px;
+
+            .footer-contact,
+            .footer-business {
+                margin: 12px;
             }
         }
-        
     </style>
 </head>
 

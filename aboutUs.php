@@ -7,24 +7,46 @@
   <title>SmartStitch-About Us</title>
   <link rel="stylesheet" href="aboutUs.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      text-decoration: none;
+    }
+
+    body {
+      margin: 0;
+      background-color: #e0e3ce;
+    }
+
+    main {
+      color: #2b300d;
+    }
+
+    p {
+      font-size: large;
+      justify-content: space-around;
+
+    }
+
+    .heading {
+      font-size: larger;
+      text-align: center;
+    }
+
+    .about {
+      width: 800px;
+      margin: auto;
+      padding: 25px 0px 25px 0px;
+    }
+  </style>
 </head>
 
+
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="navdiv">
-        <div class="logo"><a href="Home.html"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
-        <ul class="list">
-          <li><a href="Hom.php">Home</a></li>
-          <li><a href="shirts.php">Shirts</a></li>
-          <li><a href="pants.php">Pants</a></li>
-          <li class="home"><a href="#">About</a></li>
-          <li><a href="client_details.php">Profile</a></li>
-          <a href="logout.php"><button class="signout">Sign Out</button></a>
-        </ul>
-      </div>
-    </nav>
-  </header>
+  <?php
+  include('header.php');
+  ?>
+
   <main>
     <div class="about">
       <h3 class="heading">Welcome to SmartStitch - A Tailor Made Perfection</h3>
@@ -62,7 +84,7 @@
     </div>
   </main>
 
-  <?php 
+  <?php
   include('footer.php');
   ?>
 </body>
