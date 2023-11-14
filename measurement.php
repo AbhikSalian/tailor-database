@@ -1,8 +1,6 @@
 <?php
-error_reporting(0);
-?><?php
 // Your existing PHP code
-//error_reporting(0);
+error_reporting(0);
 @include 'config.php';
     session_start();
     $cl_id=$_GET['id'];
@@ -86,8 +84,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           WHERE
           client_id='$cid'";
           
-          $res_shirt=mysqli_query($conn,$shirt_insert) or die(mysqli_error());
-          $res_pant=mysqli_query($conn,$pant_insert) or die(mysqli_error());
+          $res_shirt=mysqli_query($conn,$shirt_insert) or die(mysqli_error($conn));
+          $res_pant=mysqli_query($conn,$pant_insert) or die(mysqli_error($conn));
           if ($res_shirt && $res_pant) {
             header('Location: https://smartstitchh.000webhostapp.com/client_details.php');
             exit;

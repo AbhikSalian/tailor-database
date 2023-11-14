@@ -244,7 +244,7 @@ if ($result2) {
                 </tr>
             </table>
             <div class="edit">
-                <a href="measurement.php"><button>Edit Measurements</button></a>
+                <a href="https://smartstitchh.000webhostapp.com/measurement.php?id=<?php echo $cid;?>"><button>Edit Measurements</button></a>
             </div>
         </div>
         <div class="order" id="orderid">
