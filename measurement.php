@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     
 }
-echo $disp_collar;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -174,7 +174,9 @@ if ($result2) {
             <p><b>Address : </b><span><?php echo $_SESSION['address']; ?></span></p>
             <p><b>Mobile No. : </b><span><?php echo $_SESSION['ph_no']; ?></span></p>
             <p><b>Email ID : </b><span><?php echo $_SESSION['email_id']; ?></span></p>
-
+            <div class="edit">
+                <a href="<?php echo SITEURL;?>client_edit.php?id=<?php echo $cid;?>"><button>Edit Details</button></a>
+            </div>
         </div>
 
         <div class="measure" id="measureid">
@@ -238,13 +240,10 @@ if ($result2) {
                     <td><?php echo $_SESSION['inseam']; ?> inches</td>
                     <td><?php echo $_SESSION['leg_opening']; ?> inches</td>
 
-                    <?php
-
-                    ?>
                 </tr>
             </table>
             <div class="edit">
-                <a href="https://smartstitchh.000webhostapp.com/measurement.php?id=<?php echo $cid;?>"><button>Edit Measurements</button></a>
+                <a href="<?php echo SITEURL;?>measurement.php?id=<?php echo $cid;?>"><button>Edit Measurements</button></a>
             </div>
         </div>
         <div class="order" id="orderid">

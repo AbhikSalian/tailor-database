@@ -1,5 +1,5 @@
 <?php
-
+    define('SITEURL','https://smartstitchh.000webhostapp.com/');
    
         $dbname= "id21513501_smartstitch"; 
         $host= "localhost";
