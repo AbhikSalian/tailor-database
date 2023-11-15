@@ -31,7 +31,8 @@
             width: 30%;
             transition: 0.3s;
         }
-        .nav-logo a{
+
+        .nav-logo a {
             display: flex;
             align-items: center;
         }
@@ -46,8 +47,8 @@
             align-items: center;
         }
 
-        .list-ul li a {
-            transition: 0.3s;
+        .list-ul li a:not(.noselect) {
+            transition: 0.2s;
             font-size: 18px;
             color: #2b300d;
             padding: 4px 8px 4px 8px;
@@ -61,7 +62,7 @@
             color: #e0e3ce;
             font-size: 15px;
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.2s;
         }
 
         .signout:hover {
@@ -77,14 +78,13 @@
 
         .nav-logo:hover {
             opacity: 0.5;
-
         }
 
         .nav-menuicon {
             display: none;
         }
 
-        a:is(:link, :active, :visited).active {
+        a.active {
             color: #2b300d;
             background-color: #e0e3ce;
             padding: 4px 8px 4px 8px;
@@ -154,6 +154,7 @@
             .nav-list.displayactive {
                 display: block;
             }
+
         }
     </style>
     <script>
@@ -190,12 +191,12 @@
             </div>
             <div class="nav-list" id="display">
                 <ul class="list-ul">
-                    <li><a href="<?php echo SITEURL;?>/Hom.php">Home</a></li>
-                    <li><a href="<?php echo SITEURL;?>/shirts.php">Shirts</a></li>
-                    <li><a href="<?php echo SITEURL;?>/pants.php">Pants</a></li>
-                    <li><a href="<?php echo SITEURL;?>/aboutUs.php">About</a></li>
-                    <li><a href="<?php echo SITEURL;?>/client_details.php">Profile</a></li>
-                    <li><a class="noselect" href="<?php echo SITEURL;?>/logout.php"><button class="signout">Sign Out</button></a></li>
+                    <li><a href="<?php echo SITEURL; ?>/Hom.php">Home</a></li>
+                    <li><a href="<?php echo SITEURL; ?>/shirts.php">Shirts</a></li>
+                    <li><a href="<?php echo SITEURL; ?>/pants.php">Pants</a></li>
+                    <li><a href="<?php echo SITEURL; ?>/aboutUs.php">About</a></li>
+                    <li><a href="<?php echo SITEURL; ?>/client_details.php">Profile</a></li>
+                    <li><a class="noselect" href="<?php echo SITEURL; ?>/logout.php"><button class="signout">Sign Out</button></a></li>
                 </ul>
             </div>
         </div>

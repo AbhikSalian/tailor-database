@@ -4,7 +4,7 @@
 session_start();
 //echo $_SESSION['client_id'];
 if (!isset($_SESSION['client_name'])) {
-    header('location: '.SITEURL.'Hom.php');
+    header('location: ' . SITEURL . 'Hom.php');
 }
 $cid = $_SESSION['client_id'];
 $query1 = "select * from shirt where shirt_id in(select shirt_id from link where client_id='$cid')";
@@ -55,85 +55,45 @@ if ($result2) {
     <link rel="stylesheet" href="client_details.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <script>
+        function hideElement(element, activeButton) {
+            const elements = ['detailsid', 'measureid', 'orderid'];
+            const buttons = ['btn1', 'btn2', 'btn3', 'btn4'];
+
+            elements.forEach(el => {
+                const currentElement = document.getElementById(el);
+                if (el === element) {
+                    currentElement.style.display = 'block';
+                } else {
+                    currentElement.style.display = 'none';
+                }
+            });
+
+            buttons.forEach(btn => {
+                const currentButton = document.getElementById(btn);
+                if (btn === activeButton) {
+                    currentButton.style.borderBottom = '2px solid #2b300d';
+                } else {
+                    currentButton.style.borderBottom = null;
+                }
+            });
+        }
+
         function detailshide() {
-
-            let detailsid = document.getElementById('detailsid');
-            let btn1 = document.getElementById('btn1');
-            let btn2 = document.getElementById('btn2');
-            let btn3 = document.getElementById('btn3');
-            let btn4 = document.getElementById('btn4');
-            if (detailsid.style.display != 'none') {
-
-                detailsid.style.display = 'none';
-                btn1.style.opacity = null;
-            } else {
-                detailsid.style.display = 'block';
-                measureid.style.display = 'none';
-                orderid.style.display = 'none';
-                btn1.style.opacity = 0.7;
-                btn2.style.opacity = null;
-                btn3.style.opacity = null;
-                btn4.style.opacity = null;
-            }
+            hideElement('detailsid', 'btn1');
         }
 
         function measurehide() {
-            let measureid = document.getElementById('measureid');
-
-
-            if (measureid.style.display != 'none') {
-
-                measureid.style.display = 'none';
-                btn2.style.opacity = null;
-
-
-            } else {
-
-                measureid.style.display = 'block';
-                detailsid.style.display = 'none';
-                orderid.style.display = 'none';
-
-                btn1.style.opacity = null;
-                btn2.style.opacity = 0.7;
-                btn3.style.opacity = null;
-                btn4.style.opacity = null;
-            }
+            hideElement('measureid', 'btn2');
         }
 
         function orderhide() {
-            let orderid = document.getElementById('orderid');
-
-            if (orderid.style.display != 'none') {
-                orderid.style.display = 'none';
-                btn3.style.opacity = null;
-
-            } else {
-                orderid.style.display = 'block';
-                detailsid.style.display = 'none';
-                measureid.style.display = 'none';
-
-                btn1.style.opacity = null;
-                btn2.style.opacity = null;
-                btn3.style.opacity = 0.7;
-                btn4.style.opacity = null;
-
-            }
+            hideElement('orderid', 'btn3');
         }
 
-
-
         function hide() {
-            let detailsid = document.getElementById('detailsid');
-
-
-            detailsid.style.display = 'none';
+            btn1.style.borderBottom = '2px solid #2b300d';
             measureid.style.display = 'none';
             orderid.style.display = 'none';
-
-
-
-
-
         }
     </script>
 </head>
@@ -143,125 +103,227 @@ if ($result2) {
     include('header.php');
     ?>
     <main>
-        <div class="buttons">
+        <div class="main">
 
-            <div class="button"><button id="btn1" onclick="detailshide()">Personal Details</button></div>
-
-            <div class="button"><button id="btn2" onclick="measurehide()">My Measurements</button></div>
-            <div class="button"><button id="btn3" onclick="orderhide()">My Orders</button></div>
-
-        </div>
-
-        <div class="details" id="detailsid">
-            <h3>Personal Details</h3>
-            <p><b>Client ID : </b><span><?php echo $_SESSION['client_id']; ?></span></p>
-            <p><b>Name : </b><span><?php echo $_SESSION['client_name']; ?></span></p>
-            <p><b>Age : </b><span><?php echo $_SESSION['age']; ?></span></p>
-            <p><b>Gender : </b><span><?php echo $_SESSION['gender']; ?></span></p>
-            <p><b>Address : </b><span><?php echo $_SESSION['address']; ?></span></p>
-            <p><b>Mobile No. : </b><span><?php echo $_SESSION['ph_no']; ?></span></p>
-            <p><b>Email ID : </b><span><?php echo $_SESSION['email_id']; ?></span></p>
-            <div class="edit">
-                <a href="<?php echo SITEURL;?>client_edit.php?id=<?php echo $cid;?>"><button>Edit Details</button></a>
+            <div class="main-nav">
+                <div class="nav-items">
+                    <p id="btn1" onclick="detailshide()">Personal Details</p>
+                    <p id="btn2" onclick="measurehide()">Measurements</p>
+                    <p id="btn3" onclick="orderhide()">Orders</p>
+                </div>
             </div>
-        </div>
 
-        <div class="measure" id="measureid">
-            <h3>My Measurements</h3>
-            <h4>Shirt measurements :</h4>
-            <table>
-                <tr>
-                    <th>Shirt ID</th>
-                    <th>Collar</th>
-                    <th>Neck to shoulder</th>
-                    <th>Sleeve length</th>
-                    <th>Shoulder</th>
-                    <th>Chest</th>
-                    <th>Front length</th>
-                    <th>Sleeve cuff</th>
-                    <th>Hem</th>
-                </tr>
-                <tr>
+            <div class="main-info">
+                <div class="details" id="detailsid">
+                    <h3>Personal Details</h3>
+                    <table>
+                        <tr>
+                            <th>Client ID</th>
+                            <th>:</th>
+                            <td><?php echo $_SESSION['client_id']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Name</th>
+                            <th>:</th>
+                            <td><?php echo $_SESSION['client_name']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <th>:</th>
+                            <td><?php echo $_SESSION['age']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Gender</th>
+                            <th>:</th>
+                            <td><?php echo $_SESSION['gender']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Address</th>
+                            <th>:</th>
+                            <td><?php echo $_SESSION['address']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Mobile No.</th>
+                            <th>:</th>
+                            <td><?php echo $_SESSION['ph_no']; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Email ID</th>
+                            <th>:</th>
+                            <td><?php echo $_SESSION['email_id']; ?></td>
+                        </tr>
+                    </table>
+
+                    <div class="edit-icon">
+                        <a href="<?php echo SITEURL; ?>client_edit.php?id=<?php echo $cid; ?>"><button><i class="fa-solid fa-pen-to-square" style="color: #e0e3ce;"></i></button></a>
+                    </div>
+                </div>
+
+                <div class="measurement" id="measureid">
+                    <h3>Measurements</h3>
+                    <div class="measurement-details">
+
+                        <div class="measure-shirts">
+
+                            <table>
+                                <?php
+                                $client_shirt_data = mysqli_fetch_assoc($result1);
+
+                                ?>
+                                <tr>
+                                    <th>Shirt ID</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['shirt_id']; ?></td>
+
+                                </tr>
+                                <tr>
+                                    <th>Collar</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['collar']; ?> inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Neck to shoulder</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['neck_to_shoulder']; ?> inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Sleeve length</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['sleeve_length']; ?> inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Shoulder</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['shoulder_to_shoulder']; ?> inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Chest</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['chest']; ?> inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Front length</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['front_length']; ?> inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Sleeve cuff</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['sleeve_cuff']; ?> inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Hem</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['hem']; ?> inches</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="measure-pants">
+
+                            <table>
+                                <?php
+                                $client_pant_data = mysqli_fetch_assoc($result2);
+
+                                ?>
+                                <tr>
+                                    <th>Pant ID</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['pant_id']; ?></td>
+
+                                </tr>
+                                <tr>
+                                    <th>Waist</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['waist']; ?> inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Front rise</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['front_rise']; ?> inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Hip</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['hip']; ?> inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Thigh</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['thigh']; ?> inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Length</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['length']; ?> inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Knee</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['knee']; ?> inches</td>
+
+                                </tr>
+                                <tr>
+                                    <th>Inseam</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['inseam']; ?> inches</td>
+                                </tr>
+                                <tr>
+                                    <th>Leg opening</th>
+                                    <th>:</th>
+                                    <td><?php echo $_SESSION['leg_opening']; ?> inches</td>
+
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="edit-icon">
+                        <a href="<?php echo SITEURL; ?>measurement.php?id=<?php echo $cid; ?>"><button><i class="fa-solid fa-pen-to-square" style="color: #e0e3ce;"></i></button></a>
+                    </div>
+                </div>
+                <div class="order" id="orderid">
+                    <h3>Orders</h3>
+                    <table>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Shirt type</th>
+                            <th>Pant type</th>
+                            <th>Order date</th>
+                            <th>Delivery date</th>
+                            <th>Order Total</th>
+                        </tr>
+                        <tr>
+                            <?php
+                            while ($row = mysqli_fetch_assoc($order_result)) {
+                            ?>
+                                <td><?php echo $row['order_id']; ?></td>
+                                <td><?php echo $row['shirt_type']; ?></td>
+                                <td><?php echo $row['pant_type']; ?></td>
+                                <td><?php echo $row['order_date']; ?></td>
+                                <td><?php echo $row['delivery_date']; ?></td>
+                                <td><?php echo $row['order_total']; ?></td>
+                        </tr>
                     <?php
-                    $client_shirt_data = mysqli_fetch_assoc($result1);
-
+                            }
                     ?>
-                    <td><?php echo $_SESSION['shirt_id']; ?></td>
-                    <td><?php echo $_SESSION['collar']; ?> inches</td>
-                    <td><?php echo $_SESSION['neck_to_shoulder']; ?> inches</td>
-                    <td><?php echo $_SESSION['sleeve_length']; ?> inches</td>
-                    <td><?php echo $_SESSION['shoulder_to_shoulder']; ?> inches</td>
-                    <td><?php echo $_SESSION['chest']; ?> inches</td>
-                    <td><?php echo $_SESSION['front_length']; ?> inches</td>
-                    <td><?php echo $_SESSION['sleeve_cuff']; ?> inches</td>
-                    <td><?php echo $_SESSION['hem']; ?> inches</td>
 
-                </tr>
-            </table>
-
-            <h4>Pant measurements:</h4>
-            <table>
-                <tr>
-                    <th>Pant ID</th>
-                    <th>Waist</th>
-                    <th>Front rise</th>
-                    <th>Hip</th>
-                    <th>Thigh</th>
-                    <th>Length</th>
-                    <th>Knee</th>
-                    <th>Inseam</th>
-                    <th>Leg opening</th>
-                </tr>
-                <tr>
-                    <?php
-                    $client_pant_data = mysqli_fetch_assoc($result2);
-
-                    ?>
-                    <td><?php echo $_SESSION['pant_id']; ?></td>
-                    <td><?php echo $_SESSION['waist']; ?> inches</td>
-                    <td><?php echo $_SESSION['front_rise']; ?> inches</td>
-                    <td><?php echo $_SESSION['hip']; ?> inches</td>
-                    <td><?php echo $_SESSION['thigh']; ?> inches</td>
-                    <td><?php echo $_SESSION['length']; ?> inches</td>
-                    <td><?php echo $_SESSION['knee']; ?> inches</td>
-                    <td><?php echo $_SESSION['inseam']; ?> inches</td>
-                    <td><?php echo $_SESSION['leg_opening']; ?> inches</td>
-
-                </tr>
-            </table>
-            <div class="edit">
-                <a href="<?php echo SITEURL;?>measurement.php?id=<?php echo $cid;?>"><button>Edit Measurements</button></a>
+                    </table>
+                </div>
             </div>
-        </div>
-        <div class="order" id="orderid">
-            <h3>My Orders</h3>
-            <table>
-                <tr>
-                    <th>Order ID</th>
-                    <th>Shirt type</th>
-                    <th>Pant type</th>
-                    <th>Order date</th>
-                    <th>Delivery date</th>
-                    <th>Order Total</th>
-                </tr>
-                <tr>
-                    <?php
-                    while ($row = mysqli_fetch_assoc($order_result)) {
-                    ?>
-                        <td><?php echo $row['order_id']; ?></td>
-                        <td><?php echo $row['shirt_type']; ?></td>
-                        <td><?php echo $row['pant_type']; ?></td>
-                        <td><?php echo $row['order_date']; ?></td>
-                        <td><?php echo $row['delivery_date']; ?></td>
-                        <td><?php echo $row['order_total']; ?></td>
-                </tr>
-            <?php
-                    }
-            ?>
 
-            </table>
         </div>
-
     </main>
 
     <?php

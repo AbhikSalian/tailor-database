@@ -1,94 +1,150 @@
 * {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
+  box-sizing: border-box;
 }
 body {
-  margin: 0px 0px 0px 0px;
   background-color: #e0e3ce;
 }
 
-
 /* main */
 main {
-  min-height: 87vh;
+  min-height: 90vh;
 }
 table,
 th,
 td {
+  text-align: left;
+  padding: 4px;
+  /* margin: 0 auto; */
   border: 1px solid #2b300d;
-  border-collapse: collapse;
-  text-align: center;
-  padding: 8px;
-  margin: 0 auto;
+  border: none;
+}
+table{
+  border-spacing: 10px;
+  border: 1px solid black;
+  border: none;
+  
+
 }
 td {
   width: min-content;
 }
-h3 {
-  text-align: center;
+
+.main-info {
+  width: 100%;
 }
-.measure,
-.order,
-.details {
-  margin: auto;
-  background-color: #7e876d;
+.order th{
+  border-bottom: 1px solid black;
+}
+.order td{
+  border-bottom: 1px solid grey;
+}
+
+.measurement {
+  background-color: #e0e3ce;
   width: fit-content;
+  width: 60%;
   padding: 20px 40px 40px 40px;
   position: relative;
-  margin-top: 10px;
-  margin-bottom: 40px;
+  margin: 30px 40px 40px 40px;
   color: #2b300d;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-top: 20px solid #2b300d;
-  /* border-right:  20px solid #2b300d; */
-  box-shadow: 0px 0px 12px 2px #2b300d;
-  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 0px #2b300d;
 }
-.measure h4 {
+.measurement-details{
+  display: flex;
+  justify-content: space-evenly;
+}
+.order {
+  background-color: #e0e3ce;
+  width: fit-content;
+  padding: 20px 40px 40px 40px;
+  margin: 30px 40px 40px 40px;
+  color: #2b300d;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 0px #2b300d;
+}
+.details {
+  background-color: #e0e3ce;
+  width: fit-content;
+  padding: 20px 40px 40px 40px;
+  margin: 30px 40px 40px 40px;
+  position: relative;
+  color: #2b300d;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 0px #2b300d;
+  text-align: left;
+}
+.measurement-details{
+  margin-top: 40px;
+}
+
+.details td, .measure-pants td,.measure-shirts td {
+  border-radius: 10px;
+  padding: 4px 12px 4px 12px;
+  background-color:#e2e2e2;
+  box-shadow: 0px 0px 1px 0px #2b300d;
+  line-height: 30px;
+}
+.details th, .measure-pants th,.measure-shirts th{
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+
+
+
+.main-info h3 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.measurement h4 {
   font-size: 19px;
 }
 
-.edit {
-  text-align: center;
-  margin-top: 40px;
-  position: relative;
+.edit-icon {
+  text-align: right;
+  position: absolute;
+  top:20px;
+  right: 40px;
 }
-.edit button {
+.edit-icon button {
   transition: 0.3s;
-  font-weight: bold;
   border: none;
   background-color: #2b300d;
   color: #e0e3ce;
-  padding: 15px 30px 15px 30px;
+  padding: 10px 12px 10px 12px;
   border-radius: 30px;
   cursor: pointer;
   font-size: 15px;
 }
-.edit button:hover {
-  box-shadow: 0px 0px 0px 1px #2b300d;
+.edit-icon button:hover {
   opacity: 0.7;
 }
-.buttons {
+
+.main-nav {
+  width: 100%;
+  box-shadow: 0 0 6px 0px #2b300d;
+}
+.nav-items {
   display: flex;
-  padding-left: 300px;
-  padding-right: 300px;
+  width: 40%;
+  height: 50px;
+  position: relative;
+  left: 0;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.button button {
-  font-weight: bold;
+.nav-items p {
   border: none;
-  background-color: #2b300d;
-  color: #e0e3ce;
-  padding: 15px 30px 15px 30px;
-  margin: 30px 10px 30px 10px;
-  border-radius: 30px;
+  color: #2b300d;
+  padding: 4px 8px 4px 8px;
   cursor: pointer;
-  font-size: 15px;
-  width: 200px;
-  transition: 0.3s;
+  font-size: 16px;
 }
-
-.button button:hover {
-  box-shadow: 0px 0px 0px 1px #2b300d;
-  opacity: 0.7;
+.nav-items p:hover {
+  border-bottom: 2px solid #2b300d;
 }
-
