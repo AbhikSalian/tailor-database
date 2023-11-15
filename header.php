@@ -13,7 +13,6 @@
             text-decoration: none;
             box-sizing: border-box;
             list-style: none;
-            cursor: pointer;
         }
 
         .nav-div {
@@ -27,15 +26,18 @@
         }
 
         .nav-logo {
-
             display: flex;
             justify-content: center;
             width: 30%;
             transition: 0.3s;
         }
+        .nav-logo a{
+            display: flex;
+            align-items: center;
+        }
 
         .nav-list {
-            width: 45%;
+            width: 50%;
         }
 
         .list-ul {
@@ -48,12 +50,12 @@
             transition: 0.3s;
             font-size: 18px;
             color: #2b300d;
+            padding: 4px 8px 4px 8px;
         }
 
         .signout {
             padding: 8px 15px 8px 15px;
-
-            border-radius: 20px;
+            border-radius: 10px;
             border: none;
             background-color: #2b300d;
             color: #e0e3ce;
@@ -63,20 +65,31 @@
         }
 
         .signout:hover {
-            box-shadow: 0px 0px 0px 1px #2b300d;
-            opacity: 0.7;
+            opacity: 0.5;
         }
 
-        .list-ul li a:hover {
-            opacity: 0.7;
+        .list-ul li a:hover:not(.noselect) {
+            color: #2b300d;
+            background-color: #e0e3ce;
+            border-radius: 4px;
+            opacity: 0.5;
         }
 
         .nav-logo:hover {
             opacity: 0.5;
+
         }
 
-        .nav-menu {
+        .nav-menuicon {
             display: none;
+        }
+
+        a:is(:link, :active, :visited).active {
+            color: #2b300d;
+            background-color: #e0e3ce;
+            padding: 4px 8px 4px 8px;
+            border-radius: 4px;
+
         }
 
         @media only screen and (max-width: 700px) {
@@ -115,7 +128,7 @@
 
             }
 
-            .nav-menu {
+            .nav-menuicon {
                 display: flex;
                 position: absolute;
                 right: 30px;
@@ -124,7 +137,7 @@
 
             }
 
-            .nav-menu:hover {
+            .nav-menuicon:hover {
                 background-color: #e0e3ce;
                 border-radius: 2px;
 
@@ -147,10 +160,24 @@
         const toggle = () => {
             document.getElementById('display').classList.toggle('displayactive');
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const activePage = window.location.pathname;
+
+            const navLinks = document.querySelectorAll('.list-ul li a');
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href');
+
+                if (linkHref === activePage) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </head>
 
 <body>
+
     <header>
         <div class="nav-div">
             <div class="nav-logo">
@@ -158,17 +185,17 @@
                     <img src="SmartStitchLogo.png" alt="SmartStitch" width="180px ">
                 </a>
             </div>
-            <div class="nav-menu" onclick="toggle()">
+            <div class="nav-menuicon" onclick="toggle()">
                 <i class="fa-solid fa-bars" style="color: #2b300d;"></i>
             </div>
             <div class="nav-list" id="display">
                 <ul class="list-ul">
-                    <li><a href="<?php echo SITEURL;?>Hom.php">Home</a></li>
-                    <li><a href="<?php echo SITEURL;?>shirts.php">Shirts</a></li>
-                    <li><a href="<?php echo SITEURL;?>pants.php">Pants</a></li>
-                    <li><a href="<?php echo SITEURL;?>aboutUs.php">About</a></li>
-                    <li><a href="<?php echo SITEURL;?>client_details.php">Profile</a></li>
-                    <li> <a href="<?php echo SITEURL;?>logout.php"><button class="signout">Sign Out</button></a></li>
+                    <li><a href="<?php echo SITEURL;?>/Hom.php">Home</a></li>
+                    <li><a href="<?php echo SITEURL;?>/shirts.php">Shirts</a></li>
+                    <li><a href="<?php echo SITEURL;?>/pants.php">Pants</a></li>
+                    <li><a href="<?php echo SITEURL;?>/aboutUs.php">About</a></li>
+                    <li><a href="<?php echo SITEURL;?>/client_details.php">Profile</a></li>
+                    <li><a class="noselect" href="<?php echo SITEURL;?>/logout.php"><button class="signout">Sign Out</button></a></li>
                 </ul>
             </div>
         </div>
