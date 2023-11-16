@@ -1,6 +1,6 @@
 <!-- <?php
-include('config.php');
-?> -->
+        include('config.php');
+        ?> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -167,12 +167,16 @@ include('config.php');
 
         document.addEventListener("DOMContentLoaded", function() {
             const activePage = window.location.pathname;
+            // console.log(activePage);
 
             const navLinks = document.querySelectorAll('.list-ul li a');
             navLinks.forEach(link => {
                 const linkHref = link.getAttribute('href');
+                // console.log('/'+linkHref);
+                linkH='/'+linkHref;
 
-                if (linkHref === activePage) {
+
+                if (linkH === activePage) {
                     link.classList.add('active');
                 }
             });
