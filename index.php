@@ -29,7 +29,7 @@ include('config.php');
   </header>
   <main>
 
-    <img class="welcomeimg" src="welcome.jpg" alt="" width="100%">
+    <img class="welcomeimg" src="Images/welcome.jpg" alt="" width="100%">
     <div class="quote">
       <h1>We Visit you instead of making you Travel</h1>
     </div>

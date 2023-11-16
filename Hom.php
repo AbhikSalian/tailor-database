@@ -65,7 +65,7 @@ include('config.php');
   ?>
 
   <main>
-    <img class="welcomeimg" src="welcome.jpg" alt="" width="100%">
+    <img class="welcomeimg" src="Images/welcome.jpg" alt="" width="100%">
     <div class="quote">
       <div class="homebutton">
         <h1>We make clothes that suits you</h1>
