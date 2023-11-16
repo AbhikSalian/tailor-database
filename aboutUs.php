@@ -15,6 +15,7 @@ include('config.php');
       padding: 0;
       text-decoration: none;
       box-sizing: border-box;
+      font-size: 62.5%;
     }
 
     body {
@@ -27,20 +28,22 @@ include('config.php');
     }
 
     .about h3 {
-      line-height: 60px;
+      line-height: 6rem;
       text-transform: uppercase;
       font-size: medium;
     }
 
     .about p {
-      font-size: 16.5px;
+      font-size: 1.65rem;
       text-align: justify;
-      line-height: 25px;
+      line-height: 2.5rem;
     }
 
     .heading {
-      margin-top: 40px;
-      font-size: 20px;
+      margin-top: 4rem;
+      margin-left: 2.5rem;
+      margin-right: 2.5rem;
+      font-size: 2rem;
       text-align: center;
       text-transform: uppercase;
     }
@@ -51,40 +54,80 @@ include('config.php');
     }
 
     .location {
-      margin-top: 30px;
+      margin-top: 3rem;
       width: 100%;
-      height: 250px;
+      height: 25rem;
       border: none;
     }
 
     .about-us,
     .about-story {
-      margin: 50px;
-      margin-top: 30px;
+      margin: 5rem;
+      margin-top: 3rem;
       /* border: 2px solid black; */
 
+    }
+    .about-us {
+      margin-left:2.5rem;
+    }
+    .about-story{
+      margin-right: 2.5rem;
     }
 
     .us-visit {
       display: flex;
       flex-direction: column;
     }
+    @media only screen and (max-width: 910px) {
+      .about-us,
+    .about-story {
+      margin: 4rem;
+      margin-top: 3rem;
+      /* border: 2px solid black; */
+
+    }
+    .about-us {
+      margin-left:2rem;
+    }
+    .about-story{
+      margin-right: 2rem;
+    }
+      
+    }
 
     @media only screen and (max-width: 700px) {
+      *{
+        font-size: 59%;
+      }
       .about{
         display: flex;
         flex-direction: column;
       }
-      .heading{
-        margin-left: 30px;
-        margin-right: 30px;
-      }
       .about-us{
         margin-top: 0;
-      } 
-
+        margin-left:4rem;
+    }
+    .about-story{
+      margin-right: 4rem;
+    }
 
     }
+    @media only screen and (max-width: 400px) {
+      *{
+        font-size: 56%;
+      }
+      .about-us,
+    .about-story {
+      margin: 2.5rem;
+      margin-top: 1.5rem;
+      /* border: 2px solid black; */
+    }
+    .heading{
+      margin-left: 1.4625rem;
+      margin-right: 1.4625rem;
+    }
+    }
+
   </style>
 </head>
 

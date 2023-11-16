@@ -40,6 +40,10 @@
         .footer-contact li,
         .footer-business li {
             text-align: left;
+            font-size: 1.6rem;
+        }
+        .footer-contact li a {
+            font-size: 1.6rem;
         }
 
         .footer-copyright {
@@ -54,6 +58,7 @@
         }
 
         h4 {
+            font-size: 1.6rem;
             margin-bottom: 15px;
             text-align: center;
         }
