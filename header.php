@@ -1,3 +1,6 @@
+<!-- <?php
+include('config.php');
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -191,12 +194,12 @@
             </div>
             <div class="nav-list" id="display">
                 <ul class="list-ul">
-                    <li><a href="<?php echo SITEURL; ?>/Hom.php">Home</a></li>
-                    <li><a href="<?php echo SITEURL; ?>/shirts.php">Shirts</a></li>
-                    <li><a href="<?php echo SITEURL; ?>/pants.php">Pants</a></li>
-                    <li><a href="<?php echo SITEURL; ?>/aboutUs.php">About</a></li>
-                    <li><a href="<?php echo SITEURL; ?>/client_details.php">Profile</a></li>
-                    <li><a class="noselect" href="<?php echo SITEURL; ?>/logout.php"><button class="signout">Sign Out</button></a></li>
+                    <li><a href="<?php echo SITEURL; ?>Hom.php">Home</a></li>
+                    <li><a href="<?php echo SITEURL; ?>shirts.php">Shirts</a></li>
+                    <li><a href="<?php echo SITEURL; ?>pants.php">Pants</a></li>
+                    <li><a href="<?php echo SITEURL; ?>aboutUs.php">About</a></li>
+                    <li><a href="<?php echo SITEURL; ?>client_details.php">Profile</a></li>
+                    <li><a class="noselect" href="<?php echo SITEURL; ?>logout.php"><button class="signout">Sign Out</button></a></li>
                 </ul>
             </div>
         </div>
