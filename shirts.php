@@ -28,8 +28,8 @@ session_start();
     function generateShirtFabricItem($imgSrc, $description, $price, $pageUrl)
     {
       $html = '
-<div class="shirt">
-    <img class="shirtimg" src="' . $imgSrc . '" alt="" height="250px">
+<div class="fabric-container">
+    <img class="fabric-img" src="' . $imgSrc . '" alt="" height="250px">
     <div class="fabric-info">
     <p>' . $description . '</p>
     <p id="price"><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(166, 50, 50);"></i>
@@ -48,7 +48,7 @@ session_start();
     }
 
     // Example usage:
-    echo '<div class="main-pant"><div class="pant-fabric">';
+    echo '<div class="main-div"><div class="secondary-div">';
     echo generateShirtFabricItem("Images/shirtFabric1.jpg", "Cotton Colour Plain Shirt Fabric Green", "360.00", "s1.php");
     echo generateShirtFabricItem("Images/shirtFabric7.jpg", "Cotton Grey with White Checked Shirt Fabric Galaxy", "445.00", "s7.php");
     echo generateShirtFabricItem("Images/shirtFabric3.jpg", "Cotton Striped Shirt Fabric Blue Candy Colour", "415.00", "s3.php");

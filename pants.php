@@ -31,8 +31,8 @@ session_start();
     function generatePantsFabricItem($imgSrc, $description, $price, $pageUrl)
     {
       $html = '
-    <div class="shirt">
-        <img class="shirtimg" src="' . $imgSrc . '" alt="" height="250px">
+    <div class="fabric-container">
+        <img class="fabric-img" src="' . $imgSrc . '" alt="" height="250px">
         <div class="fabric-info">
         <p>' . $description . '</p>
         <p id="price"><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(166, 50, 50);"></i>
@@ -51,7 +51,7 @@ session_start();
     }
 
     // Example usage:
-    echo '<div class="main-pant"><div class="pant-fabric">';
+    echo '<div class="main-div"><div class="secondary-div">';
     echo generatePantsFabricItem("Images/pantsFabric1.jpg", "Colour Checks Pants Fabric Black Honey Day", "545.00", "p1.php");
     echo generatePantsFabricItem("Images/pantsFabric2.jpg", "Cotton Colour Checked Grey Suiting Fabric Fun", "655.00", "p2.php");
     echo generatePantsFabricItem("Images/pantsFabric3.jpg", "Colour Off White Checks Pants Fabric Honey Day", "545.00", "p3.php");
