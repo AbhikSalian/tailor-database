@@ -212,49 +212,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <a href="<?php echo SITEURL; ?>client_edit.php?id=<?php echo $cid; ?>"><button><i class="fa-solid fa-pen-to-square" style="color: #e0e3ce;"></i></button></a>
                     </div>
                     <form action="" method="post">
-    <div class="container">
-      <span>EDIT PERSONAL DETAILS</span>
-      <div class="Credential">
-        <input type="text" placeholder="Enter your Name" name="client_name" value="<?php echo $disp_name;?>" required />
+                        <div class="container">
+                            <span>EDIT PERSONAL DETAILS</span>
+                            <div class="Credential">
+                                <input type="text" placeholder="Enter your Name" name="client_name" value="<?php echo $disp_name; ?>" required />
 
-        <input type="number" placeholder="Enter your Age" min="0" max="150" name="age" value="<?php echo $disp_age;?>" required />
-        <div class="gender">
-          <input type="radio" name="gender" value="Male" 
-          
-          <?php
-          if($disp_gender=="Male")
-          {
-            echo "checked";
-          }
-          ?>
-          
-          />Male <input type="radio" name="gender" value="Female" 
-          
-          <?php
-          if($disp_gender=="Female")
-          {
-            echo "checked";
-          }
-          ?>
-          
-          />Female
-        </div>
+                                <input type="number" placeholder="Enter your Age" min="0" max="150" name="age" value="<?php echo $disp_age; ?>" required />
+                                <div class="gender">
+                                    <input type="radio" name="gender" value="Male" <?php
+                                                                                    if ($disp_gender == "Male") {
+                                                                                        echo "checked";
+                                                                                    }
+                                                                                    ?> />Male <input type="radio" name="gender" value="Female" <?php
+                                                                                                                                                if ($disp_gender == "Female") {
+                                                                                                                                                    echo "checked";
+                                                                                                                                                }
+                                                                                                                                                ?> />Female
+                                </div>
 
-        <input type="text" placeholder="Enter your Address" name="address" value="<?php echo $disp_addr;?>" required />
+                                <input type="text" placeholder="Enter your Address" name="address" value="<?php echo $disp_addr; ?>" required />
 
-        <input type="tel" name="ph_no" pattern="[0-9]{10}" placeholder="Enter your Mobile Number" value="<?php echo $disp_phno;?>" required />
+                                <input type="tel" name="ph_no" pattern="[0-9]{10}" placeholder="Enter your Mobile Number" value="<?php echo $disp_phno; ?>" required />
 
-        <input type="email" placeholder="Enter your Email ID" name="email_id" value="<?php echo $disp_email;?>" required />
+                                <input type="email" placeholder="Enter your Email ID" name="email_id" value="<?php echo $disp_email; ?>" required />
 
-        
-        <div class="button">
-          <a href="<?php echo SITEURL;?>client_details.php"><button type="submit" value="Submit">Update</button></a>
-        </div>
 
-        
-      </div>
-    </div>
-  </form>
+                                <div class="button">
+                                    <a href="<?php echo SITEURL; ?>client_details.php"><button type="submit" value="Submit">Update</button></a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </form>
                 </div>
 
                 <div class="measurement" id="measureid">
