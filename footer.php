@@ -15,6 +15,7 @@
             list-style: none;
             color: #2b300d;
             box-sizing: border-box;
+            font-size: 62.5%;
         }
 
         footer {
