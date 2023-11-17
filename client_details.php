@@ -2,11 +2,28 @@
 @include 'config.php';
 
 session_start();
+error_reporting(0);
 //echo $_SESSION['client_id'];
 if (!isset($_SESSION['client_name'])) {
     header('location: ' . SITEURL . 'Hom.php');
 }
 $cid = $_SESSION['client_id'];
+$client_display="SELECT * FROM client WHERE client_id='$cid'";
+     $res_client=mysqli_query($conn,$client_display);
+     if($res_client)
+     {
+         $row_client=mysqli_fetch_assoc($res_client);
+         $disp_name=$row_client['client_name'];
+         $disp_age=$row_client['age'];
+         $disp_gender=$row_client['gender'];
+         $disp_addr=$row_client['address'];
+         $disp_phno=$row_client['ph_no'];
+         $disp_email=$row_client['email_id'];
+     }
+     else
+     {
+         echo "No data";
+     }
 $query1 = "select * from shirt where shirt_id in(select shirt_id from link where client_id='$cid')";
 $query2 = "select * from pant where pant_id in(select pant_id from link where client_id='$cid')";
 $order_query = "select * from orders where client_id='$cid'";
@@ -41,6 +58,43 @@ if ($result2) {
         $_SESSION['leg_opening'] = $client_pant_data['leg_opening'];
         $_SESSION['knee'] = $client_pant_data['knee'];
     }
+}
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    
+       $client_name=$_POST["client_name"];
+       $age=$_POST["age"];
+       $gender=$_POST["gender"];
+       $address=$_POST["address"];
+       $ph_no=$_POST["ph_no"];
+       $email_id=$_POST["email_id"];
+    
+         $client_update="UPDATE client SET 
+         client_name='$client_name',
+         age='$age',
+         gender='$gender',
+         address='$address',
+         ph_no='$ph_no',
+         email_id='$email_id'
+         WHERE
+         client_id='$cid'";
+         $res_client=mysqli_query($conn,$client_update) or die(mysqli_error($conn));
+         $_SESSION['client_name']=$client_name;
+         $_SESSION['age']=$age;
+         $_SESSION['gender']=$gender;
+         $_SESSION['address']=$address;
+         $_SESSION['ph_no']=$ph_no;
+         $_SESSION['email_id']=$email_id;
+         if ($res_client) {
+             
+         header('Location: '.SITEURL.'client_details.php');
+           exit;
+         } 
+         else 
+         {
+           
+           echo "Data not inserted";
+       }
+       
 }
 ?>
 
@@ -336,6 +390,106 @@ if ($result2) {
                     <div class="edit-icon">
                         <a href="<?php echo SITEURL; ?>measurement.php?id=<?php echo $cid; ?>"><button><i class="fa-solid fa-pen-to-square" style="color: #e0e3ce;"></i></button></a>
                     </div>
+                    <form action="measurement.php" method="post">
+      <div class="measurement">
+
+        <div class="shirt">
+          <h4>SHIRT</h4>
+          <ol>
+            <li>
+                
+              <label for="">Collar : </label
+              ><input type="number" id="" placeholder="in inches" name="collar" value="<?php echo $_SESSION['collar'];?>"/>
+            </li>
+            <li>
+              <label for="">Neck to Shoulder : </label
+              ><input
+                type="number"
+                placeholder="in inches"
+                id=""
+                name="neck_to_shoulder"
+                value="<?php echo $_SESSION['neck_to_shoulder'];?>"
+              />
+            </li>
+            <li>
+              <label for="">Sleeve Length : </label
+              ><input type="number" placeholder="in inches" id="" name="sleeve_length" value="<?php echo $_SESSION['sleeve_length'];?>"/>
+            </li>
+            <li>
+              <label for="">Shoulder : </label
+              ><input
+                type="number"
+                placeholder="in inches"
+                id=""
+                name="shoulder_to_shoulder"
+                value="<?php echo $_SESSION['shoulder_to_shoulder'];?>"
+              />
+            </li>
+            <li>
+              <label for="">Chest : </label
+              ><input type="number" placeholder="in inches" id="" name="chest" value="<?php echo $_SESSION['chest'];?>"/>
+            </li>
+            <li>
+              <label for="">Front Length : </label
+              ><input type="number" placeholder="in inches" id="" name="front_length" value="<?php echo $_SESSION['front_length'];?>"/>
+            </li>
+            <li>
+              <label for="">Sleeve cuff : </label
+              ><input type="number" placeholder="in inches" id="" name="sleeve_cuff" value="<?php echo $_SESSION['sleeve_cuff'];?>"/>
+            </li>
+            <li>
+              <label for="">Hem : </label
+              ><input type="number" placeholder="in inches" id="" name="hem" value="<?php echo $_SESSION['hem'];?>"/>
+            </li>
+          </ol>
+          <img class="measureimg" src="Images/shirtmeasure.png" height="300px" alt="" />
+        </div>
+  
+        <div class="pant">
+          <h4>PANT</h4>
+          <ol>
+            <li>
+              <label for="">Waist : </label
+              ><input type="number" placeholder="in inches" id="" name="waist" value="<?php echo $_SESSION['waist'];?>"/>
+            </li>
+            <li>
+              <label for="">Front Rise : </label
+              ><input type="number" placeholder="in inches" id="" name="front_rise" value="<?php echo $_SESSION['front_rise'];?>"/>
+            </li>
+            <li>
+              <label for="">Hip : </label
+              ><input type="number" placeholder="in inches" id="" name="hip" value="<?php echo $_SESSION['hip'];?>"/>
+            </li>
+            <li>
+              <label for="">Thigh : </label
+              ><input type="number" placeholder="in inches" id="" name="thigh" value="<?php echo $_SESSION['thigh'];?>"/>
+            </li>
+            <li>
+              <label for="">Length : </label
+              ><input type="number" placeholder="in inches" id="" name="length" value="<?php echo $_SESSION['length'];?>"/>
+            </li>
+            <li>
+              <label for="">Knee : </label
+              ><input type="number" placeholder="in inches" id="" name="knee" value="<?php echo $_SESSION['knee'];?>"/>
+            </li>
+            <li>
+              <label for="">Inseam : </label
+              ><input type="number" placeholder="in inches" id="" name="inseam" value="<?php echo $_SESSION['inseam'];?>"/>
+            </li>
+            <li>
+              <label for="">Leg Opening : </label
+              ><input type="number" placeholder="in inches" id="" name="leg_opening" value="<?php echo $_SESSION['leg_opening'];?>"/>
+            </li>
+          </ol>
+          <img class="measureimg" src="Images/pantmeasure.png" height="300px" alt="" />
+        </div>
+      </div>
+
+
+      <div class="submit">
+        <a href="<?php echo SITEURL;?>client_details.php"><button type="submit">Update</button></a>
+      </div>
+    </form>
                 </div>
                 <div class="order" id="orderid">
                     <h3>Orders</h3>

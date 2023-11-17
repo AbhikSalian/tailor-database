@@ -1,6 +1,6 @@
 <?php
 // Your existing PHP code
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 include ('config.php');
     session_start();
     $cl_id=$_GET['id'];

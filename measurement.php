@@ -3,43 +3,8 @@
 error_reporting(0);
 @include 'config.php';
     session_start();
-    $cl_id=$_GET['id'];
-    $shirt_display="SELECT * FROM shirt WHERE client_id='$cl_id'";
-     $res_shirt=mysqli_query($conn,$shirt_display);
-     if($res_shirt)
-     {
-         $row_shirt=mysqli_fetch_assoc($res_shirt);
-         $disp_collar=$row_shirt['collar'];
-         $disp_nts=$row_shirt['neck_to_shoulder'];
-         $disp_sl=$row_shirt['sleeve_length'];
-         $disp_chest=$row_shirt['chest'];
-         $disp_fl=$row_shirt['front_length'];
-         $disp_sc=$row_shirt['sleeve_cuff'];
-         $disp_hem=$row_shirt['hem'];
-         $disp_sts=$row_shirt['shoulder_to_shoulder'];
-     }
-     else
-     {
-         echo "No data";
-     }
-     $pant_display="SELECT * FROM pant WHERE client_id='$cl_id'";
-     $res_pant=mysqli_query($conn,$pant_display);
-     if($res_pant)
-     {
-         $row_pant=mysqli_fetch_assoc($res_pant);
-         $disp_waist=$row_pant['waist'];
-         $disp_fr=$row_pant['front_rise'];
-         $disp_hip=$row_pant['hip'];
-         $disp_thigh=$row_pant['thigh'];
-         $disp_length=$row_pant['length'];
-         $disp_knee=$row_pant['knee'];
-         $disp_inseam=$row_pant['inseam'];
-         $disp_lo=$row_pant['leg_opening'];
-     }
-     else
-     {
-         echo "No data";
-     }
+    
+    
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
      $cid=$_SESSION['client_id'];
      
@@ -87,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           $res_shirt=mysqli_query($conn,$shirt_insert) or die(mysqli_error($conn));
           $res_pant=mysqli_query($conn,$pant_insert) or die(mysqli_error($conn));
           if ($res_shirt && $res_pant) {
+            
             header('Location: '.SITEURL.'client_details.php');
             exit;
           } 
