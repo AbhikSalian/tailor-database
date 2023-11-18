@@ -15,6 +15,7 @@ main {
 table,
 th,
 td {
+  font-size: 14px;
   text-align: left;
   padding: 4px;
   border-spacing: 10px;
@@ -22,6 +23,9 @@ td {
 }
 td {
   width: min-content;
+}
+h3 {
+  font-size: 16px;
 }
 .order td {
   border-bottom: 1px solid grey;
@@ -50,6 +54,9 @@ td {
   border-radius: 10px;
   box-shadow: 0 0 3px 0px #2b300d;
 }
+.order tr,th,td {
+  text-align: center;
+}
 .details {
   background-color: #e0e3ce;
   width: min-content;
@@ -68,7 +75,6 @@ td {
 .gender {
   text-align: left;
   border: 1px solid grey;
-  font-size: 13px;
   padding: 10px;
   border-radius: 10px;
   color: #2b300d;
@@ -94,14 +100,12 @@ td {
 }
 
 .details input::placeholder {
-  font-size: 14px;
   color: #7e876d;
 }
 
 .details td,
 .measure-pants td,
 .measure-shirts td {
-  font-size: 14px;
   border-radius: 10px;
   padding: 4px 12px 4px 12px;
   background-color: #e2e2e2;
@@ -111,13 +115,11 @@ td {
 .details th,
 .measure-pants th,
 .measure-shirts th {
-  font-size: 16px;
   text-transform: uppercase;
   font-weight: normal;
 }
 
 .main-info h3 {
-  font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -146,10 +148,10 @@ td {
   opacity: 0.7;
 }
 .container span {
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 .Credential input {
-  font-size: 14px;
+  /* font-size: 14px; */
   padding: 2px;
   margin: 4px;
 }
@@ -161,15 +163,15 @@ td {
   width: 100%;
   box-shadow: 0 0 6px 0px #2b300d;
 }
-.nav-items {
+/* .nav-items {
   display: flex;
-  width: 40%;
+  width: 450px;
   height: 50px;
   position: relative;
   left: 0;
   align-items: center;
   justify-content: space-evenly;
-}
+} */
 .nav-items p {
   border: none;
   color: #2b300d;
@@ -194,7 +196,7 @@ td {
 .measurement input {
   text-align: left;
   border: 1px solid grey;
-  font-size: 13px;
+  /* font-size: 13px; */
   padding: 10px;
   border-radius: 10px;
   color: #2b300d;
