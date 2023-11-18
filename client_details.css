@@ -17,35 +17,19 @@ th,
 td {
   text-align: left;
   padding: 4px;
-  /* margin: 0 auto; */
-  border: 1px solid #2b300d;
-  border: none;
-}
-table{
   border-spacing: 10px;
-  border: 1px solid black;
-  border: none;
-  
-
+  width: max-content;
 }
 td {
   width: min-content;
 }
-
-.main-info {
-  width: 100%;
-}
-.order th{
-  border-bottom: 1px solid black;
-}
-.order td{
+.order td {
   border-bottom: 1px solid grey;
 }
 
 .measurement {
   background-color: #e0e3ce;
-  width: fit-content;
-  width: 60%;
+  width: min-content;
   padding: 20px 40px 40px 40px;
   position: relative;
   margin: 30px 40px 40px 40px;
@@ -53,7 +37,7 @@ td {
   border-radius: 10px;
   box-shadow: 0 0 3px 0px #2b300d;
 }
-.measurement-details{
+.measurement-details {
   display: flex;
   justify-content: space-evenly;
 }
@@ -68,7 +52,7 @@ td {
 }
 .details {
   background-color: #e0e3ce;
-  width: fit-content;
+  width: min-content;
   padding: 20px 40px 40px 40px;
   margin: 30px 40px 40px 40px;
   position: relative;
@@ -77,26 +61,63 @@ td {
   box-shadow: 0 0 3px 0px #2b300d;
   text-align: left;
 }
-.measurement-details{
-  margin-top: 40px;
+.details-both {
+  display: flex;
+}
+.details-edit input,
+.gender {
+  text-align: left;
+  border: 1px solid grey;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #2b300d;
+  background-color: #e2e2e2;
+  margin-top: 10px;
+  width: 250px;
+}
+.details-edit {
+  margin-top: 47.5px;
+}
+.gender {
+  height: 37.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  accent-color: #2b300d;
+}
+.gender input {
+  padding: 0%;
+  margin: 0%;
+  height: 10px;
+  width: 20px;
 }
 
-.details td, .measure-pants td,.measure-shirts td {
+.details input::placeholder {
+  font-size: 14px;
+  color: #7e876d;
+}
+
+.details td,
+.measure-pants td,
+.measure-shirts td {
+  font-size: 14px;
   border-radius: 10px;
   padding: 4px 12px 4px 12px;
-  background-color:#e2e2e2;
+  background-color: #e2e2e2;
   box-shadow: 0px 0px 1px 0px #2b300d;
   line-height: 30px;
 }
-.details th, .measure-pants th,.measure-shirts th{
+.details th,
+.measure-pants th,
+.measure-shirts th {
+  font-size: 16px;
   text-transform: uppercase;
   font-weight: normal;
 }
 
-
-
-
 .main-info h3 {
+  font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -108,7 +129,7 @@ td {
 .edit-icon {
   text-align: right;
   position: absolute;
-  top:20px;
+  top: 20px;
   right: 40px;
 }
 .edit-icon button {
@@ -123,6 +144,17 @@ td {
 }
 .edit-icon button:hover {
   opacity: 0.7;
+}
+.container span {
+  font-size: 16px;
+}
+.Credential input {
+  font-size: 14px;
+  padding: 2px;
+  margin: 4px;
+}
+.button a {
+  font-size: 16px;
 }
 
 .main-nav {
@@ -147,4 +179,47 @@ td {
 }
 .nav-items p:hover {
   border-bottom: 2px solid #2b300d;
+}
+
+.measurement-edit {
+  display: flex;
+  /* background-color: rgb(179, 162, 162); */
+  justify-content: space-evenly;
+  font-size: 100px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-radius: 10px;
+}
+
+.measurement input {
+  text-align: left;
+  border: 1px solid grey;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #2b300d;
+  background-color: #e2e2e2;
+  width: 100px;
+}
+
+input::placeholder {
+  font-size: 14px;
+  color: #7e876d;
+}
+.shirt li,
+.pant li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.measureimg {
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.shirt,
+.pant {
+  margin: 20px;
 }
