@@ -456,7 +456,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <label for="">Hem : </label><input type="number" placeholder="in inches" id="" name="hem" value="<?php echo $_SESSION['hem']; ?>" />
                                     </li>
                                 </ol>
-                                <img class="measureimg" src="Images/shirtmeasure.png" height="300px" alt="" />
+                                <img class="measureimg" src="Images/shirtmeasure.png" height="250px" alt="" />
                             </div>
 
                             <div class="pant">
@@ -487,7 +487,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <label for="">Leg Opening : </label><input type="number" placeholder="in inches" id="" name="leg_opening" value="<?php echo $_SESSION['leg_opening']; ?>" />
                                     </li>
                                 </ol>
-                                <img class="measureimg" src="Images/pantmeasure.png" height="300px" alt="" />
+                                <img class="measureimg" src="Images/pantmeasure.png" height="250px" alt="" />
                             </div>
 
 

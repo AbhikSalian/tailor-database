@@ -3,7 +3,7 @@
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
-  
+
 }
 html{
   font-size: 62.5%;
@@ -20,12 +20,12 @@ main {
 table,
 th,
 td {
-  font-size: 1.4rem;
+font-size: 1.4rem;
   text-align: left;
   padding: .4rem;
   border-spacing: 1.0rem;
   width: max-content;
-  text-wrap: wrap;
+text-wrap: wrap;
 }
 td {
   width: min-content;
@@ -76,13 +76,14 @@ h3 {
 }
 .details-edit input,
 .gender {
+  font-size: 1.4rem;
   text-align: left;
   border: .1rem solid grey;
-  padding: 1.0rem;
+  padding: 1.1rem 1.2rem 1.1rem 1.2rem;
   border-radius: 1.0rem;
   color: #2b300d;
   background-color: #e2e2e2;
-  margin-top: 1.0rem;
+  margin-top: .7rem;
   width: 25.0rem;
 }
 .details-edit {
@@ -103,14 +104,14 @@ h3 {
 }
 
 .details input::placeholder {
-  color: #7e876d;
+    color: #7e876d;
 }
 
 .details td,
 .measure-pants td,
 .measure-shirts td {
   border-radius: 1.0rem;
-  padding: .4rem 1.2rem .4rem rem2rem;
+  padding: .4rem 1.2rem .4rem 1.2rem;
   background-color: #e2e2e2;
   box-shadow: 0rem 0rem .1rem 0rem #2b300d;
   line-height: 3.0rem;
@@ -118,13 +119,13 @@ h3 {
 .details th,
 .measure-pants th,
 .measure-shirts th {
-  text-transform: uppercase;
+    text-transform: uppercase;
   font-weight: normal;
 }
 
 .main-info h3 {
-  /* text-transform: uppercase;
-  margin-bottom: 20px; */
+  text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 
 .measurement h4 {
@@ -151,10 +152,10 @@ h3 {
   opacity: 0.7;
 }
 .container span {
-  /* font-size: 16px; */
+  font-size: 16px;
 }
 .Credential input {
-  /* font-size: 14px; */
+  font-size: 1.4rem;
   padding: .2rem;
   margin: .4rem;
 }
@@ -164,7 +165,7 @@ h3 {
 
 .main-nav {
   width: 100%;
-  box-shadow: 0 0 6rem 0rem #2b300d;
+  box-shadow: 0 0 .6rem 0rem #2b300d;
 }
 .nav-items {
   display: flex;
@@ -174,7 +175,7 @@ h3 {
   left: 0;
   align-items: center;
   justify-content: space-evenly;
-} 
+}
 .nav-items p {
   border: none;
   color: #2b300d;
@@ -199,7 +200,7 @@ h3 {
 .measurement input {
   text-align: left;
   border: .1rem solid grey;
-  /* font-size: 13px; */
+  font-size: 1.3rem;
   padding: 1.0rem;
   border-radius: 1.0rem;
   color: #2b300d;
@@ -230,8 +231,9 @@ input::placeholder {
 }
 @media only screen and (max-width: 1190px) {
   .order {
-    width: auto;
-  }
+    width: auto;  
+}
+
   .order table {
     width: auto;
   }
@@ -239,9 +241,13 @@ input::placeholder {
 @media only screen and (max-width: 874px) {
   .order {
     padding: 2rem 2rem 2rem 2rem;
+    overflow-x: auto;
+  }
+  .order table,tr,th,td {
+    text-wrap: nowrap;
   }
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 735px) {
   .measurement {
     width: auto;
   }
@@ -249,6 +255,11 @@ input::placeholder {
 th,
 td {
   font-size: 1.3rem;
+}
+.details {
+  max-width: 90%;
+  width: fit-content;
+  overflow-x: auto;
 }
 }
 @media only screen and (max-width: 570px) {
@@ -258,6 +269,9 @@ td {
 .measurement {
   width: fit-content;
   padding: 1rem;
+}
+.measurement-edit {
+  flex-direction: column;
 }
 }
 @media only screen and (max-width: 410px) {
