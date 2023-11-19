@@ -5,21 +5,24 @@
   box-sizing: border-box;
   /* font-size: 62.5%; */
 }
+html{
+  font-size: 62.5%;
+}
 body {
   background-color: rgb(189, 189, 189);
 }
 .main-heading{
-  font-size: 40px;
-  height: 60px;
+  font-size: 4.0rem;
+  height: 6.0rem;
   /* background-color: #000000; */
   display: flex;
   align-items: center;
-  padding-left: 70px;
+  padding-left: 7.0rem;
 }
 
 .main-div {
   position: relative;
-  padding: 30px;
+  padding: 3.0rem;
   width: 100%;
 }
 .secondary-div{
@@ -29,28 +32,27 @@ body {
   justify-content: left;
   background-color: rgb(189, 189, 189);
   flex-wrap:wrap;
-  padding: 7.5px;
-  border-radius: 5px;
+  padding: .75rem;
+  border-radius: .5rem;
 }
 
 .fabric-container {
   background-color: #e2e2e2;
-  padding: 10px;
   width: min-content;
   color: #2b300d;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 2.0rem;
+  border-radius: .5rem;
   text-align: left;
   transition: 0.4s;
-  line-height: 30px;
-  margin: 5px;
-  box-shadow: 0 0 2px 0px #000000;
-
-  
+  line-height: 3.0rem;
+  margin: .5rem;
+  box-shadow: 0 0 .2rem 0rem #000000;
+}
+.fabric-info {
+    margin: 10px;
 }
 .fabric-container p{
-  font-size: 1.6rem;
-
+    font-size: 1.6rem;
 }
 
 #price{
@@ -58,23 +60,21 @@ body {
   /* text-align: center; */
 }
 .fabric-img {
-  border-radius: 5px;
+  border-radius: .5rem;
 }
 .placeorder{
-  
-  display: flex;
-  justify-content: right;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 .placeorder button {
-  padding: 10px 12px 10px 12px;
+  padding: 1.0rem 1.2rem 1.0rem 1.2rem;
   border: none;
   outline: none;
   color: #2b300d;
-  border-radius: 21px;
+  border-radius: 2.1rem;
   background-color: #7e876d;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 1.5rem;
   transition: 0.3s;
 
 }
@@ -82,3 +82,57 @@ body {
   opacity: 0.7;
 
 }
+@media only screen and (max-width: 1280px) {
+    .fabric-container {
+        width: 24%;
+    }
+    .fabric-img {
+        width: 100%;
+    }
+}
+@media only screen and (max-width:1092px){
+    html{
+        font-size: 58%;
+    }
+}
+@media only screen and (max-width:1014px){
+    .fabric-container {
+        width: 31%;
+    }
+}
+@media only screen and (width<=762px)
+{
+    html{
+        font-size:57.5% ;
+    }
+    .fabric-img{
+        height: 20rem;
+    }
+}
+@media only screen and (width<=626px){
+    .fabric-container {
+        width: 47%;
+    }
+}
+@media only screen and (width<=504px){
+    html{
+        font-size: 55.3%;
+    }
+    .fabric-container{
+        padding: 1.2rem;
+    }
+    .main-div {
+        padding: 1.8rem;
+    }
+}
+@media only screen and (width<=375px){
+    .fabric-img{
+        height: 18rem;
+    }
+}
+@media only screen and (width<=375px){
+    .fabric-container{
+        width: 98%;
+    }
+}
+

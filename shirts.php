@@ -32,13 +32,17 @@ session_start();
     <img class="fabric-img" src="' . $imgSrc . '" alt="" height="250px">
     <div class="fabric-info">
     <p>' . $description . '</p>
-    <p id="price"><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(166, 50, 50);"></i>
-        <Rs class="money"></Rs>' . $price . '
-    </p>
+   
     <div class="placeorder">
+    <div>
+    <p id="price"><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(166, 50, 50);"></i>
+    <Rs class="money"></Rs>' . $price . '
+</p></div>
+<div>
         <form action="' . SITEURL . $pageUrl . '" method="post">
             <a href="' . SITEURL . $pageUrl . '"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #2b300d;"></i></button></a>
         </form>
+        </div>
     </div>
     </div>
 
