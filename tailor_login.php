@@ -1,37 +1,36 @@
-<!DOCTYPE html>
+<?php
+include ('config.php');
+if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+{
+    $psswd=$_POST['tailor_password'];
+    if($psswd==1234)
+    {
+        header('location:'.SITEURL.'tailor_interface.php');
+    }
+    else
+    {
+        echo "<script type='text/javascript'>alert('Incorrect password')</script>";
+    }
+    
+}
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartStitch-TailorLoginPassword</title>
     <link rel="stylesheet" href="tailor_login.css">
-    <script>
-        function verify()
-        {
-            var password=document.getElementById('pass').value;
-            if(password==0)
-            {
-                alert("Enter password");
-                
-            }
-            else if(password==1234)
-            window.open("<?php echo SITEURL;?>tailor_interface.php")
-        else
-    alert ("Incorrect Password");
-
-           
-
-        }
-    </script>
 </head>
 <body>
+    <form action="" method="post">
     <div class="container">
        <h3>TAILOR LOGIN</h3>
-            <input type="password" id="pass" placeholder="Password" required/>
-            <button type="submit" onclick="verify()" >Login</button>
+            <input type="password" id="pass" placeholder="Password" name="tailor_password" required/>
+            <button type="submit">Login</button>
 
     </div>
-    
+    </form>
     
 </body>
 </html>
