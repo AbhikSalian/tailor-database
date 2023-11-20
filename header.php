@@ -79,7 +79,7 @@
             opacity: 0.5;
         }
 
-        .nav-logo:hover {
+        .nav-logo a:hover {
             opacity: 0.5;
         }
 

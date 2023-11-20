@@ -149,8 +149,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (detailseditid.style.display != 'none') {
 
                 detailseditid.style.display = 'none';
+                // btn4.style.display = 'none';
             } else {
                 detailseditid.style.display = 'block';
+                btn4.style.display = 'none';
             }
         }
 
