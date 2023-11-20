@@ -1,31 +1,192 @@
 <?php
 include('config.php');
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width= , initial-scale=1.0" />
   <title>SmartStitch-Welcome</title>
-  <link rel="stylesheet" href="index.css" />
+  <!-- <link rel="stylesheet" href="index.css" /> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      box-sizing: border-box;
+      list-style: none;
+    }
+
+    .nav-div {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #7e876d;
+      border-bottom: 8px solid #2b300d;
+    }
+
+    .nav-logo {
+      display: flex;
+      justify-content: center;
+      width: 30%;
+      transition: 0.3s;
+    }
+
+    .nav-logo a {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-list {
+      width: 30%;
+    }
+
+    .list-ul {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .list-ul li a {
+      transition: 0.2s;
+      font-size: 18px;
+      color: #2b300d;
+      /* padding: 4px 8px 4px 8px; */
+    }
+
+    .signout {
+      padding: 8px 15px 8px 15px;
+      border-radius: 10px;
+      border: none;
+      background-color: #2b300d;
+      color: #e0e3ce;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .list-ul li a:hover {
+      color: #2b300d;
+      background-color: #e0e3ce;
+      border-radius: 4px;
+      opacity: 0.5;
+    }
+
+    .nav-logo a:hover {
+      opacity: 0.5;
+    }
+
+    .nav-menuicon {
+      display: none;
+    }
+
+    a.active {
+      color: #2b300d;
+      background-color: #e0e3ce;
+      padding: 4px 8px 4px 8px;
+      border-radius: 4px;
+
+    }
+
+    @media only screen and (max-width: 700px) {
+      .nav-div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .nav-logo {
+        width: 60%;
+        position: absolute;
+
+      }
+
+      .nav-logo a {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-list {
+        display: block;
+        z-index: 10;
+
+      }
+
+      .list-ul {
+        background-color: #7e876d;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        height: 20%;
+        width: fit-content;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-bottom-left-radius: 10px;
+
+      }
+
+      .nav-menuicon {
+        display: flex;
+        position: absolute;
+        right: 30px;
+        cursor: pointer;
+        padding: 4px;
+
+      }
+
+      .nav-menuicon:hover {
+        background-color: #e0e3ce;
+        border-radius: 2px;
+
+      }
+
+      .list-ul li a:hover {
+        color: #e0e3ce;
+      }
+
+      .nav-list {
+        display: none;
+      }
+
+      .nav-list.displayactive {
+        display: block;
+      }
+
+    }
+  </style>
+
 </head>
 
 <body>
+
   <header>
-    <nav class="navbar">
-      <div class="navdiv">
-        <div class="logo">
-          <a href="<?php echo SITEURL;?>index.php"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px" /></a>
-        </div>
-        <div class="sign">
-          <a href="<?php echo SITEURL;?>tailor_login.php"><button class="b1">Tailor Login</button></a>
-          <a href="<?php echo SITEURL;?>sign_up.php"><button class="b1">Sign Up</button></a>
-          <a href="<?php echo SITEURL;?>sign_in.php"><button class="b2">Sign In</button></a>
-        </div>
+    <div class="nav-div">
+      <div class="nav-logo">
+        <a href="Home.html">
+          <img src="SmartStitchLogo.png" alt="SmartStitch" width="180px ">
+        </a>
       </div>
-    </nav>
+      <div class="nav-menuicon" onclick="toggle()">
+        <i class="fa-solid fa-bars" style="color: #2b300d;"></i>
+      </div>
+      <div class="nav-list" id="display">
+        <ul class="list-ul">
+          <li> <a href="<?php echo SITEURL; ?>tailor_login.php"><button class="signout">Tailor Login</button></a>
+          </li>
+          <li> <a href="<?php echo SITEURL; ?>sign_up.php"><button class="signout">Sign Up</button></a>
+          </li>
+          <li> <a href="<?php echo SITEURL; ?>sign_in.php"><button class="signout">Sign In</button></a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
   <main>
 

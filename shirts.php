@@ -23,7 +23,7 @@ session_start();
   <main>
     <?php
 
-    define('SITEURL', 'your_site_url_here'); // Replace 'your_site_url_here' with the actual URL
+    // define('SITEURL', 'your_site_url_here'); // Replace 'your_site_url_here' with the actual URL
 
     function generateShirtFabricItem($imgSrc, $description, $price, $pageUrl)
     {
@@ -35,7 +35,7 @@ session_start();
    
     <div class="placeorder">
     <div>
-    <p id="price"><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(166, 50, 50);"></i>
+    <p id="price"><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(205, 35, 35);"></i>
     <Rs class="money"></Rs>' . $price . '
 </p></div>
 <div>
