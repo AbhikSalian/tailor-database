@@ -243,12 +243,6 @@ input::placeholder {
     padding: 2rem 2rem 2rem 2rem;
     overflow-x: auto;
   }
-  .order table,
-  tr,
-  th,
-  td {
-    /* text-wrap: nowrap; */
-  }
 }
 @media only screen and (max-width: 735px) {
   .measurement {
