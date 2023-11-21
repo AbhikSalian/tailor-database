@@ -80,10 +80,7 @@ echo $pant_type[2];
     //echo "<script>var name='$description';      alert(name);
     //</script>";
     ?>
-
-
   </main>
-
   <?php
   include('footer.php');
   ?>
