@@ -8,11 +8,10 @@ $shirt_type = $_GET['shirt_type'];
 $order_total = $_GET['shirt_price'];
 $cid = $_SESSION['client_id'];
 $delivery_date = $_POST['delivery_date'];
-$today=date("Y-m-d");
-//echo $today;
+$today = date("Y-m-d");
 
 
-if (!empty($cid) and !empty($delivery_date) and ($delivery_date>$today)) {
+if (!empty($cid) and !empty($delivery_date) and ($delivery_date > $today)) {
 
     if (mysqli_connect_errno()) {
         die('Connect Error : ' . mysqli_connect_error());
@@ -48,7 +47,7 @@ VALUES('$cid','$shirt_type','$delivery_date','$order_total')";
                         <img src="Images/SmartStitchLogo.png" alt="SmartStitch" width="180px ">
                     </a>
                 </div>
-                <p class="home">PLACE ORDER</p>
+                <p class="heading">PLACE ORDER</p>
             </div>
         </nav>
     </header>
@@ -90,18 +89,25 @@ VALUES('$cid','$shirt_type','$delivery_date','$order_total')";
     <script>
         const delivery_date = document.getElementById('delivery_date');
         const alertMessage = document.getElementById('alertMessage');
-        function message() {
-            if (delivery_date.value.length != 0)
-                alert("Order placed Successfully");
+        const today = new Date();
 
-            if (delivery_date.value.length == 0)
+        function message() {
+            if (delivery_date.value.length != 0) {
+                const selectedDate = new Date(delivery_date.value);
+
+                if (selectedDate > today) {
+                    alert("Order placed Successfully");
+                } else {
+                    alert("Please select a future date for delivery");
+                }
+            } else {
                 alert("Please enter Date");
+            }
         }
+
 
         delivery_date.addEventListener('change', function() {
             const selectedDate = new Date(this.value);
-            const today = new Date();
-            
 
             if (selectedDate < today) {
                 alertMessage.style.display = 'block';

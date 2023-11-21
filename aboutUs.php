@@ -168,7 +168,7 @@ include('config.php');
         <div class="us-contact">
           <h3>Contact Us</h3>
           <p>Have questions or want to schedule a consultation? We're just a phone call or email away. Reach out to us anytime, and we'll be delighted to assist you. <br><br>
-            <i class="fa-solid fa-phone" style="color: black;"></i> 7760447896 <br><i class="fa-solid fa-envelope" style="color: black;"></i> akashacharya2003@gmail.com <br><br>
+            <i class="fa-solid fa-phone" style="color: black;"></i> +91 9999999999 <br><i class="fa-solid fa-envelope" style="color: black;"></i> smartstitch@gmail.com <br><br>
             Thank you for choosing SmartStitch. We look forward to being your trusted partner in creating exceptional clothing that reflects your style and personality.
           </p>
         </div>
