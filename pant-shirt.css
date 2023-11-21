@@ -106,9 +106,6 @@ body {
   html {
     font-size: 57.5%;
   }
-  .fabric-img {
-    /* height: 20rem; */
-  }
 }
 @media only screen and (width<=626px) {
   .fabric-container {
