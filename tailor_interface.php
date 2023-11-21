@@ -84,7 +84,7 @@ $result4 = mysqli_query($conn, $query_orders);
     <header>
         <nav class="navbar">
             <div class="nav-div">
-                <div class="logo"><a href="<?php echo SITEURL; ?>tailor_interface.php"><img src="Images/SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
+                <div class="logo"><a href="<?php echo SITEURL; ?>tailor_interface.php"><img src="Images/SmartStitchLogo.png" alt="SmartStitch" width="180px"></a></div>
                 <div class="heading">TAILOR DATABASE</div>
                 <div class="logout"><a href="<?php echo SITEURL; ?>logout.php"><button>Logout</button></a></div>
 
