@@ -33,7 +33,8 @@ h3 {
   font-size: 1.6rem;
 }
 .order td {
-  border-bottom: 0.1rem solid grey;
+  border-right: 0.1rem solid grey;
+  /* border-left: 0.1rem solid grey; */
 }
 
 .measurement {

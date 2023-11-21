@@ -11,6 +11,28 @@ include('config.php');
   <!-- <link rel="stylesheet" href="index.css" /> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    const toggle = () => {
+      document.getElementById('display').classList.toggle('displayactive');
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const activePage = window.location.pathname;
+      // console.log(activePage);
+
+      const navLinks = document.querySelectorAll('.list-ul li a');
+      navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        // console.log('/'+linkHref);
+        linkH = '/' + linkHref;
+
+
+        if (linkH === activePage) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
   <style>
     * {
       margin: 0;
@@ -92,6 +114,14 @@ include('config.php');
       border-radius: 4px;
 
     }
+
+    @media only screen and (max-width: 1000px) {
+      .nav-list {
+      width: 50%;
+    }
+
+    }
+
 
     @media only screen and (max-width: 700px) {
       .nav-div {
