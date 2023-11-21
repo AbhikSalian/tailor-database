@@ -1,5 +1,5 @@
 <?php
-@include 'config.php';
+include ('config.php');
 error_reporting(0);
 session_start();
 ?>
@@ -11,10 +11,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SmartSticth-Pants</title>
   <link rel="stylesheet" href="pant-shirt.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <script>
-
-  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /> 
 </head>
 
 <body>

@@ -233,11 +233,11 @@ include('config.php');
     </div>
   </header>
   <main>
-    <video autoplay muted loop id="myVideo" width="100%">
+    <video autoplay muted id="myVideo" width="100%">
       <source src="Images/A gentleman never talks about his tailor..mp4" type="video/mp4">
       
     </video>
-    <video class="welcomeing" autoplay muted loop width="100%">
+    <video class="welcomeing" autoplay muted width="100%">
       <source src="Images/Brown And White Modern Thank You Video.mp4" type="video/mp4">
       
     </video>

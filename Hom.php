@@ -63,14 +63,15 @@ include('config.php');
   ?>
 
   <main>
-    <img class="welcomeimg" src="Images/welcome.jpg" alt="" width="100%" >
-    <div class="quote">
-      <div class="homebutton">
-        <h1>We make clothes that suits you</h1>
-        <a href="<?php echo SITEURL;?>shirts.php"><input type="submit" value="SHIRTS"></a><br>
-        <a href="<?php echo SITEURL;?>pants.php"><input type="submit" value="PANTS"></a>
-      </div>
-    </div>
+  <!-- <video autoplay muted loop id="myVideo" width="100%">
+      <source src="Images/Cream and Green Modern Coming Soon Mobile Video.mp4" type="video/mp4">
+      
+    </video> -->
+  <video class="welcomeing" autoplay loop muted width="100%">
+      <source src="Images/Brown Simple Animated Massage & Spa Logo Intro Video.mp4" type="video/mp4">
+      
+    </video>
+    
   </main>
 
   <?php

@@ -1,14 +1,19 @@
 <?php
 //For local use
-define('SITEURL','');
-    
+// In config.php
+if (!defined('SITEURL')) {
+    define('SITEURL', '');
+}
+
 $dbname= "tailor"; 
 $host= "localhost";
 $user = "root";
 $psswd = "";
 
 //For online use
-/*define('SITEURL','https://smartstitchh.000webhostapp.com/');
+/*if (!defined('SITEURL')) {
+    define('SITEURL', 'https://smartstitchh.000webhostapp.com/');
+}
 
 $dbname= "id21513501_smartstitch"; 
 $host= "localhost";
