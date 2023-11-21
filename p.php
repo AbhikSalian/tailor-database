@@ -1,13 +1,10 @@
 <?php 
 @include 'config.php';
 error_reporting(0);
-                            
-
 session_start();
-
+$pant_type=$_GET['pant_type'];
+$order_total=$_GET['pant_price'];
 $cid = $_SESSION['client_id'];
-$pant_type = $_SESSION['pant_type'];
-$order_total = 545;
 $delivery_date = $_POST['delivery_date'];
 if (!empty($cid) and !empty($delivery_date)) {
     if (mysqli_connect_errno()) {
@@ -25,8 +22,6 @@ VALUES('$cid','$pant_type','$delivery_date','$order_total')";
     }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,8 +46,8 @@ VALUES('$cid','$pant_type','$delivery_date','$order_total')";
             <h3>ORDER DETAILS:</h3>
             <p>Client ID : <?php echo $_SESSION['client_id']; ?></p>
             <p>Client name : <?php echo $_SESSION['client_name']; ?></p>
-            <p>Pant type : Colour Checks Pants Fabric Black Honey Day</p>
-            <p>Order value : Rs. 545.00<br>
+            <p>Pant type : <?php echo $pant_type;?></p>
+            <p>Order value : Rs. <?php echo $order_total;?><br>
             <form action="" method="post">
                 <label for="delivery_date">Expected delivery date:</label>
                 <input class="date" type="date" id="delivery_date" name="delivery_date"><br>

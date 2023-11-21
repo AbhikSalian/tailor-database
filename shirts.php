@@ -37,9 +37,9 @@ session_start();
     <Rs class="money"></Rs>' . $price . '
 </p></div>
 <div>
-        <form action="' . SITEURL . $pageUrl . '" method="post">
-            <a href="' . SITEURL . $pageUrl . '"><button type="submit"><i class="fa-solid fa-cart-shopping" style="color: #2b300d;"></i></button></a>
-        </form>
+        
+            <a href="' . SITEURL . $pageUrl . '?shirt_type='.$description.'&shirt_price='.$price.'"><button><i class="fa-solid fa-cart-shopping" style="color: #2b300d;"></i></button></a>
+        
         </div>
     </div>
     </div>
@@ -51,14 +51,14 @@ session_start();
 
     // Example usage:
     echo '<div class="main-div"><div class="secondary-div">';
-    echo generateShirtFabricItem("Images/shirtFabric1.jpg", "Cotton Colour Plain Shirt Fabric Green", "360.00", "s1.php");
-    echo generateShirtFabricItem("Images/shirtFabric7.jpg", "Cotton Grey with White Checked Shirt Fabric Galaxy", "445.00", "s7.php");
-    echo generateShirtFabricItem("Images/shirtFabric3.jpg", "Cotton Striped Shirt Fabric Blue Candy Colour", "415.00", "s3.php");
-    echo generateShirtFabricItem("Images/shirtFabric5.jpg", "Cotton Colour Checked Shirt Fabric Sky Blue Galaxy Art", "445.00", "s5.php");
-    echo generateShirtFabricItem("Images/shirtFabric6.jpg", "Cotton Colour Plain Shirt Fabric Grey Galaxy Art", "445.00", "s6.php");
-    echo generateShirtFabricItem("Images/shirtFabric2.jpg", "Cotton Grey Colour Plain Shirt Fabric Candy Colour", "415.00", "s2.php");
-    echo generateShirtFabricItem("Images/shirtFabric4.jpg", "Cotton Mixed Plain Shirt Fabric Black Flat", "425.00", "s4.php");
-    echo generateShirtFabricItem("Images/shirtFabric8.jpg", "Cotton White Checked Shirt Fabric Galaxy Art", "445.00", "s8.php");
+    echo generateShirtFabricItem("Images/shirtFabric1.jpg", "Cotton Colour Plain Shirt Fabric Green", "360.00", "s.php");
+    echo generateShirtFabricItem("Images/shirtFabric7.jpg", "Cotton Grey with White Checked Shirt Fabric Galaxy", "445.00", "s.php");
+    echo generateShirtFabricItem("Images/shirtFabric3.jpg", "Cotton Striped Shirt Fabric Blue Candy Colour", "415.00", "s.php");
+    echo generateShirtFabricItem("Images/shirtFabric5.jpg", "Cotton Colour Checked Shirt Fabric Sky Blue Galaxy Art", "445.00", "s.php");
+    echo generateShirtFabricItem("Images/shirtFabric6.jpg", "Cotton Colour Plain Shirt Fabric Grey Galaxy Art", "445.00", "s.php");
+    echo generateShirtFabricItem("Images/shirtFabric2.jpg", "Cotton Grey Colour Plain Shirt Fabric Candy Colour", "415.00", "s.php");
+    echo generateShirtFabricItem("Images/shirtFabric4.jpg", "Cotton Mixed Plain Shirt Fabric Black Flat", "425.00", "s.php");
+    echo generateShirtFabricItem("Images/shirtFabric8.jpg", "Cotton White Checked Shirt Fabric Galaxy Art", "445.00", "s.php");
     echo '</div></div>';
 
     ?>

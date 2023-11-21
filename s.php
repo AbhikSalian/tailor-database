@@ -1,27 +1,20 @@
-<?php error_reporting(0); ?><?php
-
-
+<?php 
 @include 'config.php';
-
+error_reporting(0); 
 session_start();
-
-$cid=$_SESSION['client_id'];
-$pant_type="Cotton Colour Checked Pant Fabric Sandal Chronicle";
-$order_total=625;
-$delivery_date=$_POST['delivery_date'];
-if(!empty($cid) and !empty($delivery_date))
-{
-    if(mysqli_connect_errno())
-                {
-                    die('Connect Error : '.mysqli_connect_error());
-                }
-    else
-    {  
-        $order_insert="INSERT INTO orders(client_id,pant_type,delivery_date,order_total)
-        VALUES('$cid','$pant_type','$delivery_date','$order_total')";
-        $stmt=mysqli_stmt_init($conn);
+$shirt_type=$_GET['shirt_type'];
+$order_total=$_GET['shirt_price'];
+$cid = $_SESSION['client_id'];
+$delivery_date = $_POST['delivery_date'];
+if (!empty($cid) and !empty($delivery_date)) {
+    if (mysqli_connect_errno()) {
+        die('Connect Error : ' . mysqli_connect_error());
+    } else {
+        $order_insert = "INSERT INTO orders(client_id,shirt_type,delivery_date,order_total)
+VALUES('$cid','$shirt_type','$delivery_date','$order_total')";
+        $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $order_insert)) {
-          die(mysqli_error($conn));
+            die(mysqli_error($conn));
         }
         mysqli_stmt_execute($stmt);
         //echo "<script type='text/javascript'>alert('Order placed successfully')</script>";
@@ -29,7 +22,6 @@ if(!empty($cid) and !empty($delivery_date))
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,22 +33,22 @@ if(!empty($cid) and !empty($delivery_date))
 </head>
 
 <body>
-<header>
-      <nav class="navbar">
-        <div class="navdiv">
-          <p class="home">PLACE ORDER</p>
-        </div>
-      </nav>
+    <header>
+        <nav class="navbar">
+            <div class="navdiv">
+                <p class="home">PLACE ORDER</p>
+            </div>
+        </nav>
     </header>
     <main>
-    <div class="order">
+        <div class="order">
 
-    <h3>ORDER DETAILS:</h3>
-    <p>Client ID : <?php echo $_SESSION['client_id']; ?></p>
-    <p>Client name : <?php echo $_SESSION['client_name']; ?></p>
-    <p>Pant type : Cotton Colour Checked Pant Fabric Sandal Chronicle</p>
-    <p>Order value : Rs. 625.00<br>
-    <form action="" method="post">
+            <h3>ORDER DETAILS:</h3>
+            <p>Client ID : <?php echo $_SESSION['client_id']; ?></p>
+            <p>Client name : <?php echo $_SESSION['client_name']; ?></p>
+            <p>Shirt type : <?php echo $pant_type;?></p>
+            <p>Order value : Rs. <?php echo $pant_price;?><br>
+            <form action="" method="post">
                 <label for="delivery_date">Expected delivery date:</label>
                 <input class="date" type="date" id="delivery_date" name="delivery_date"><br>
                 <p id="alertMessage">NOTE: Please select a date on or after today.</p>
@@ -64,7 +56,7 @@ if(!empty($cid) and !empty($delivery_date))
                     <button type="submit" onclick="message()">Place order</button>
                 </div>
             </form>
-    </div>
+        </div>
     </main>
     <script>
         function message() {
