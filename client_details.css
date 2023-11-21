@@ -33,8 +33,13 @@ h3 {
   font-size: 1.6rem;
 }
 .order td {
-  border-right: 0.1rem solid grey;
+  border-right: 0.1rem dotted grey;
+  border-bottom: 0.1rem dotted grey;
   /* border-left: 0.1rem solid grey; */
+}
+.order th{
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .measurement {
@@ -266,7 +271,7 @@ input::placeholder {
     display: block;
   }
 }
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 650px) {
   .measurement-details {
     display: block;
   }

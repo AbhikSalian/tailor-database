@@ -6,7 +6,11 @@ $pant_type = $_GET['pant_type'];
 $order_total = $_GET['pant_price'];
 $cid = $_SESSION['client_id'];
 $delivery_date = $_POST['delivery_date'];
-if (!empty($cid) and !empty($delivery_date)) {
+$today = date("Y-m-d");
+
+
+if (!empty($cid) and !empty($delivery_date) and ($delivery_date > $today)) {
+
     if (mysqli_connect_errno()) {
         die('Connect Error : ' . mysqli_connect_error());
     } else {
@@ -71,7 +75,7 @@ VALUES('$cid','$pant_type','$delivery_date','$order_total')";
                     <td>Rs. <?php echo $order_total; ?></td>
                 </tr>
             </table>
-            
+
             <form action="" method="post">
                 <div class="expecteddelivery">
 
@@ -86,26 +90,33 @@ VALUES('$cid','$pant_type','$delivery_date','$order_total')";
         </div>
     </main>
     <script>
-        function message() {
-            if (delivery_date.value.length != 0)
-                alert("Order placed Successfully");
-
-            if (delivery_date.value.length == 0)
-                alert("Please enter Date");
-        }
         const delivery_date = document.getElementById('delivery_date');
         const alertMessage = document.getElementById('alertMessage');
+        const today = new Date();
+
+        function message() {
+            if (delivery_date.value.length != 0) {
+                const selectedDate = new Date(delivery_date.value);
+
+                if (selectedDate > today) {
+                    alert("Order placed Successfully");
+                } else {
+                    alert("Please select a future date for delivery");
+                }
+            } else {
+                alert("Please enter Date");
+            }
+        }
+
 
         delivery_date.addEventListener('change', function() {
             const selectedDate = new Date(this.value);
-            const today = new Date();
 
             if (selectedDate < today) {
                 alertMessage.style.display = 'block';
 
             } else {
                 alertMessage.style.display = 'none';
-
             }
         });
     </script>

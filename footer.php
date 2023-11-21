@@ -41,10 +41,16 @@
         .footer-contact li,
         .footer-business li {
             text-align: left;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
         }
         .footer-contact li a {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
+        }
+
+        .footer-business,.footer-contact,.footer-logo{
+            width: 200px;
+            display: flex;
+            justify-content: center;
         }
 
         .footer-copyright {
@@ -73,16 +79,19 @@
             .footer {
                 display: flex;
                 flex-direction: column;
+                justify-content: space-around;
                 height: fit-content;
                 text-align: center;
+                /* font-size: 0.8rem; */
             }
-
+            
             .footer-logo {
                 display: none;
             }
-
+            
             .footer-contact,
             .footer-business {
+                width: fit-content;
                 margin: 12px;
             }
         }
@@ -99,9 +108,11 @@
                 <ul>
                     <h4>CONTACT</h4>
 
-                    <li><i class="fa-solid fa-phone" style="color: #2b300d;"></i>7760447896/7411328238</li>
+                    <!-- <li><i class="fa-solid fa-phone" style="color: #2b300d;"></i>7760447896/7411328238</li>
                     <li><a href="mailto: abhiksalian0728@gmail.com"><i class="fa-solid fa-envelope" style="color: #2b300d;"></i> abhiksalian0728@gmail.com</li></a>
-                    <li><a href="mailto: akashacharya2003@gmail.com"><i class="fa-solid fa-envelope" style="color: #2b300d;"></i> akashacharya2003@gmail.com</li></a>
+                    <li><a href="mailto: akashacharya2003@gmail.com"><i class="fa-solid fa-envelope" style="color: #2b300d;"></i> akashacharya2003@gmail.com</li></a> -->
+                    <li><i class="fa-solid fa-phone" style="color: #2b300d;"></i>+91 9999999999</li>
+                    <li><a href="#"><i class="fa-solid fa-envelope" style="color: #2b300d;"></i> smartstitch@gmail.com</li></a>
                 </ul>
             </div>
             <div class="footer-business">
