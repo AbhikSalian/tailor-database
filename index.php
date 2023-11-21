@@ -115,12 +115,26 @@ include('config.php');
 
     }
 
-    @media only screen and (max-width: 1000px) {
-      .nav-list {
-      width: 50%;
+    #myVideo{
+      display: none;
     }
 
+    @media only screen and (max-width: 1000px) {
+      .nav-list {
+        width: 50%;
+      }
+
     }
+    @media only screen and (max-width: 768px) {
+      #myVideo{
+        display: block;
+      }
+      .welcomeimg{
+        display: none;
+      }
+
+    }
+
 
 
     @media only screen and (max-width: 700px) {
@@ -219,11 +233,15 @@ include('config.php');
     </div>
   </header>
   <main>
+    <video autoplay muted loop id="myVideo" width="100%">
+      <source src="Images/A gentleman never talks about his tailor..mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
 
     <img class="welcomeimg" src="Images/welcome.jpg" alt="" width="100%">
-    <div class="quote">
+    <!-- <div class="quote">
       <h1>We Visit you instead of making you Travel</h1>
-    </div>
+    </div> -->
 
   </main>
   <?php

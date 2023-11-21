@@ -173,13 +173,13 @@
 
         document.addEventListener("DOMContentLoaded", function() {
             const activePage = window.location.pathname;
-            // console.log(activePage);
+            console.log(activePage);
 
             const navLinks = document.querySelectorAll('.list-ul li a');
             navLinks.forEach(link => {
                 const linkHref = link.getAttribute('href');
                 // console.log('/'+linkHref);
-                linkH = '/' + linkHref;
+                linkH = '/WPL_tailorDatabase/' + linkHref;
 
 
                 if (linkH === activePage) {
