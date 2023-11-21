@@ -204,3 +204,8 @@ td {
 
   }
 }
+@media only screen and (max-width: 700px) {
+  .details{
+    overflow-x: auto;
+  }
+}
