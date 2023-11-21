@@ -1,7 +1,6 @@
 <?php
-@include 'config.php';
+include ('config.php');
 include('login_check.php');
-
 error_reporting(0);
 session_start();
 $shirt_type = $_GET['shirt_type'];
@@ -9,10 +8,7 @@ $order_total = $_GET['shirt_price'];
 $cid = $_SESSION['client_id'];
 $delivery_date = $_POST['delivery_date'];
 $today = date("Y-m-d");
-
-
 if (!empty($cid) and !empty($delivery_date) and ($delivery_date > $today)) {
-
     if (mysqli_connect_errno()) {
         die('Connect Error : ' . mysqli_connect_error());
     } else {

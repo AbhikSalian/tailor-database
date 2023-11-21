@@ -235,10 +235,14 @@ include('config.php');
   <main>
     <video autoplay muted loop id="myVideo" width="100%">
       <source src="Images/A gentleman never talks about his tailor..mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
+      
+    </video>
+    <video class="welcomeing" autoplay muted loop width="100%">
+      <source src="Images/Brown And White Modern Thank You Video.mp4" type="video/mp4">
+      
     </video>
 
-    <img class="welcomeimg" src="Images/welcome.jpg" alt="" width="100%">
+    <!-- <img class="welcomeimg" src="Images/welcome.jpg" alt="" width="100%"> -->
     <!-- <div class="quote">
       <h1>We Visit you instead of making you Travel</h1>
     </div> -->
