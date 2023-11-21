@@ -190,7 +190,7 @@
         <div class="nav-div">
             <div class="nav-logo">
                 <a href="Home.html">
-                    <img src="SmartStitchLogo.png" alt="SmartStitch" width="180px ">
+                    <img src="Images/SmartStitchLogo.png" alt="SmartStitch" width="180px ">
                 </a>
             </div>
             <div class="nav-menuicon" onclick="toggle()">

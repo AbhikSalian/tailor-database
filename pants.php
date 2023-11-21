@@ -58,13 +58,14 @@ echo $pant_type[2];
         </div>
         </div>
         </div>';
-      $_SESSION['pant_type'] = $description;
-      $pant_type=array($i => $_SESSION['pant_type']);
+      $pant_type=array($i => $description);
+      echo $pant_type[$i];
       $i=+1;
       return $html;
     }
 
     // Example usage:
+    echo "Hello";
     echo '<div class="main-div"><div class="secondary-div">';
     echo generatePantsFabricItem("Images/pantsFabric1.jpg", "Colour Checks Pants Fabric Black Honey Day", "545.00", "p.php");
     echo generatePantsFabricItem("Images/pantsFabric2.jpg", "Cotton Colour Checked Grey Suiting Fabric Fun", "655.00", "p.php");
@@ -75,8 +76,6 @@ echo $pant_type[2];
     echo generatePantsFabricItem("Images/pantsFabric7.jpg", "Wrinkle Free Cotton White Plain Pants Fabric Romantic", "695.00", "p.php");
     echo generatePantsFabricItem("Images/pantsFabric8.jpg", "Cotton Colour Checked Pant Fabric Navy ICLE Stretch", "740.00", "p.php");
     echo '</div></div>';
-    echo $pant_type[2];
-    echo "hi";
     //echo "<script>var name='$description';      alert(name);
     //</script>";
     ?>
