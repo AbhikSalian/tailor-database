@@ -46,8 +46,8 @@ VALUES('$cid','$shirt_type','$delivery_date','$order_total')";
             <h3>ORDER DETAILS:</h3>
             <p>Client ID : <?php echo $_SESSION['client_id']; ?></p>
             <p>Client name : <?php echo $_SESSION['client_name']; ?></p>
-            <p>Shirt type : <?php echo $pant_type;?></p>
-            <p>Order value : Rs. <?php echo $pant_price;?><br>
+            <p>Shirt type : <?php echo $shirt_type;?></p>
+            <p>Order value : Rs. <?php echo $order_total;?><br>
             <form action="" method="post">
                 <label for="delivery_date">Expected delivery date:</label>
                 <input class="date" type="date" id="delivery_date" name="delivery_date"><br>

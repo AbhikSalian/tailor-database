@@ -37,9 +37,7 @@ session_start();
     <Rs class="money"></Rs>' . $price . '
 </p></div>
 <div>
-        
             <a href="' . SITEURL . $pageUrl . '?shirt_type='.$description.'&shirt_price='.$price.'"><button><i class="fa-solid fa-cart-shopping" style="color: #2b300d;"></i></button></a>
-        
         </div>
     </div>
     </div>
