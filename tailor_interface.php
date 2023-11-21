@@ -1,7 +1,16 @@
 <?php
 @include 'config.php';
-
 session_start();
+if(!isset($_SESSION['tailor_login']))
+{
+    ?>
+    <html>
+    <script type='text/javascript'>alert('Please login to access the page');
+        window.location.href = '<?php echo SITEURL; ?>index.php';</script>
+    </html>
+    <?php
+    exit();
+}
 $query_client = "SELECT * FROM client";
 $query_shirt = "SELECT * FROM shirt";
 $query_pant = "SELECT * FROM pant";
@@ -77,7 +86,7 @@ $result4 = mysqli_query($conn, $query_orders);
             <div class="nav-div">
                 <div class="logo"><a href="<?php echo SITEURL; ?>tailor_interface.php"><img src="Images/SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
                 <div class="heading">TAILOR DATABASE</div>
-                <div class="logout"><a href="<?php echo SITEURL; ?>index.php"><button>Logout</button></a></div>
+                <div class="logout"><a href="<?php echo SITEURL; ?>logout.php"><button>Logout</button></a></div>
 
             </div>
         </nav>

@@ -1,7 +1,9 @@
-<!-- <?php
+<?php
+        error_reporting(0);
         include('config.php');
-        //include('login_check.php');
-        ?> -->
+        include('login_check.php');
+        
+        ?> 
 <!DOCTYPE html>
 <html lang="en">
 

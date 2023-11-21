@@ -1,5 +1,7 @@
 <?php
 @include 'config.php';
+include('login_check.php');
+
 error_reporting(0);
 session_start();
 $pant_type = $_GET['pant_type'];
