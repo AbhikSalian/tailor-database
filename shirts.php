@@ -21,10 +21,8 @@ session_start();
 
 
   <main>
+
     <?php
-
-    // define('SITEURL', 'your_site_url_here'); // Replace 'your_site_url_here' with the actual URL
-
     function generateShirtFabricItem($imgSrc, $description, $price, $pageUrl)
     {
       $html = '
@@ -64,6 +62,7 @@ session_start();
     echo '</div></div>';
 
     ?>
+    
   </main>
 
   <?php
