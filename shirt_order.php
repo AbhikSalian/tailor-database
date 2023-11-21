@@ -1,12 +1,17 @@
-<?php 
+<?php
 @include 'config.php';
-error_reporting(0); 
+error_reporting(0);
 session_start();
-$shirt_type=$_GET['shirt_type'];
-$order_total=$_GET['shirt_price'];
+$shirt_type = $_GET['shirt_type'];
+$order_total = $_GET['shirt_price'];
 $cid = $_SESSION['client_id'];
 $delivery_date = $_POST['delivery_date'];
-if (!empty($cid) and !empty($delivery_date)) {
+$today=date("Y-m-d");
+echo $today;
+
+
+if (!empty($cid) and !empty($delivery_date) and ($delivery_date>$today)) {
+
     if (mysqli_connect_errno()) {
         die('Connect Error : ' . mysqli_connect_error());
     } else {
@@ -18,7 +23,7 @@ VALUES('$cid','$shirt_type','$delivery_date','$order_total')";
         }
         mysqli_stmt_execute($stmt);
         //echo "<script type='text/javascript'>alert('Order placed successfully')</script>";
-        header("Location: ".SITEURL."Hom.php");
+        header("Location: " . SITEURL . "Hom.php");
     }
 }
 ?>
@@ -29,13 +34,18 @@ VALUES('$cid','$shirt_type','$delivery_date','$order_total')";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartStitch-Orders</title>
-    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="place_order.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <div class="navdiv">
+                <div class="nav-logo">
+                    <a href="<?php echo SITEURL; ?>hom.php">
+                        <img src="Images/SmartStitchLogo.png" alt="SmartStitch" width="180px ">
+                    </a>
+                </div>
                 <p class="home">PLACE ORDER</p>
             </div>
         </nav>
@@ -44,13 +54,30 @@ VALUES('$cid','$shirt_type','$delivery_date','$order_total')";
         <div class="order">
 
             <h3>ORDER DETAILS:</h3>
-            <p>Client ID : <?php echo $_SESSION['client_id']; ?></p>
-            <p>Client name : <?php echo $_SESSION['client_name']; ?></p>
-            <p>Shirt type : <?php echo $shirt_type;?></p>
-            <p>Order value : Rs. <?php echo $order_total;?><br>
+            <table>
+                <tr>
+                    <th>Client ID</th>
+                    <td><?php echo $_SESSION['client_id']; ?></td>
+                </tr>
+                <tr>
+                    <th>Client Name</th>
+                    <td><?php echo $_SESSION['client_name']; ?></td>
+                </tr>
+                <tr>
+                    <th>Shirt Type</th>
+                    <td><?php echo $shirt_type; ?></td>
+                </tr>
+                <tr>
+                    <th>Order Value</th>
+                    <td>Rs. <?php echo $order_total; ?></td>
+                </tr>
+            </table>
             <form action="" method="post">
-                <label for="delivery_date">Expected delivery date:</label>
-                <input class="date" type="date" id="delivery_date" name="delivery_date"><br>
+                <div class="expecteddelivery">
+
+                    <label for="delivery_date">Expected delivery date :</label>
+                    <input class="date" type="date" id="delivery_date" name="delivery_date"><br>
+                </div>
                 <p id="alertMessage">NOTE: Please select a date on or after today.</p>
                 <div class="submit">
                     <button type="submit" onclick="message()">Place order</button>
@@ -59,6 +86,8 @@ VALUES('$cid','$shirt_type','$delivery_date','$order_total')";
         </div>
     </main>
     <script>
+        const delivery_date = document.getElementById('delivery_date');
+        const alertMessage = document.getElementById('alertMessage');
         function message() {
             if (delivery_date.value.length != 0)
                 alert("Order placed Successfully");
@@ -66,19 +95,17 @@ VALUES('$cid','$shirt_type','$delivery_date','$order_total')";
             if (delivery_date.value.length == 0)
                 alert("Please enter Date");
         }
-        const delivery_date = document.getElementById('delivery_date');
-        const alertMessage = document.getElementById('alertMessage');
 
-        delivery_date.addEventListener('change', function () {
+        delivery_date.addEventListener('change', function() {
             const selectedDate = new Date(this.value);
             const today = new Date();
+            
 
             if (selectedDate < today) {
                 alertMessage.style.display = 'block';
-            
+
             } else {
                 alertMessage.style.display = 'none';
-                
             }
         });
     </script>

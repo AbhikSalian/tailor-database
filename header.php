@@ -195,7 +195,7 @@
     <header>
         <div class="nav-div">
             <div class="nav-logo">
-                <a href="Home.html">
+                <a href="<?php echo SITEURL; ?>Hom.php">
                     <img src="Images/SmartStitchLogo.png" alt="SmartStitch" width="180px ">
                 </a>
             </div>

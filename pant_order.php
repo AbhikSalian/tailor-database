@@ -1,9 +1,9 @@
-<?php 
+<?php
 @include 'config.php';
 error_reporting(0);
 session_start();
-$pant_type=$_GET['pant_type'];
-$order_total=$_GET['pant_price'];
+$pant_type = $_GET['pant_type'];
+$order_total = $_GET['pant_price'];
 $cid = $_SESSION['client_id'];
 $delivery_date = $_POST['delivery_date'];
 if (!empty($cid) and !empty($delivery_date)) {
@@ -18,7 +18,7 @@ VALUES('$cid','$pant_type','$delivery_date','$order_total')";
         }
         mysqli_stmt_execute($stmt);
         //echo "<script type='text/javascript'>alert('Order placed successfully')</script>";
-        header("Location: ".SITEURL."Hom.php");
+        header("Location: " . SITEURL . "Hom.php");
     }
 }
 ?>
@@ -29,14 +29,19 @@ VALUES('$cid','$pant_type','$delivery_date','$order_total')";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartStitch-Orders</title>
-    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="place_order.css">
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <div class="navdiv">
-                <p class="home">PLACE ORDER</p>
+                <div class="nav-logo">
+                    <a href="<?php echo SITEURL; ?>Hom.php">
+                        <img src="Images/SmartStitchLogo.png" alt="SmartStitch" width="180px ">
+                    </a>
+                </div>
+                <div class="heading">PLACE ORDER</div>
             </div>
         </nav>
     </header>
@@ -44,13 +49,35 @@ VALUES('$cid','$pant_type','$delivery_date','$order_total')";
         <div class="order">
 
             <h3>ORDER DETAILS:</h3>
-            <p>Client ID : <?php echo $_SESSION['client_id']; ?></p>
-            <p>Client name : <?php echo $_SESSION['client_name']; ?></p>
-            <p>Pant type : <?php echo $pant_type;?></p>
-            <p>Order value : Rs. <?php echo $order_total;?><br>
+            <table>
+                <tr>
+                    <th>Client ID</th>
+                    <th>:</th>
+                    <td><?php echo $_SESSION['client_id']; ?></td>
+                </tr>
+                <tr>
+                    <th>Client Name</th>
+                    <th>:</th>
+                    <td><?php echo $_SESSION['client_name']; ?></td>
+                </tr>
+                <tr>
+                    <th>Pant Type</th>
+                    <th>:</th>
+                    <td><?php echo $pant_type; ?></td>
+                </tr>
+                <tr>
+                    <th>Order Total</th>
+                    <th>:</th>
+                    <td>Rs. <?php echo $order_total; ?></td>
+                </tr>
+            </table>
+            
             <form action="" method="post">
-                <label for="delivery_date">Expected delivery date:</label>
-                <input class="date" type="date" id="delivery_date" name="delivery_date"><br>
+                <div class="expecteddelivery">
+
+                    <label for="delivery_date">Expected delivery date : </label>
+                    <input class="date" type="date" id="delivery_date" name="delivery_date"><br>
+                </div>
                 <p id="alertMessage">NOTE: Please select a date on or after today.</p>
                 <div class="submit">
                     <button type="submit" onclick="message()">Place order</button>
@@ -69,16 +96,16 @@ VALUES('$cid','$pant_type','$delivery_date','$order_total')";
         const delivery_date = document.getElementById('delivery_date');
         const alertMessage = document.getElementById('alertMessage');
 
-        delivery_date.addEventListener('change', function () {
+        delivery_date.addEventListener('change', function() {
             const selectedDate = new Date(this.value);
             const today = new Date();
 
             if (selectedDate < today) {
                 alertMessage.style.display = 'block';
-            
+
             } else {
                 alertMessage.style.display = 'none';
-                
+
             }
         });
     </script>
