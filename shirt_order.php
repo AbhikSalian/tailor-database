@@ -9,7 +9,7 @@ $order_total = $_GET['shirt_price'];
 $cid = $_SESSION['client_id'];
 $delivery_date = $_POST['delivery_date'];
 $today=date("Y-m-d");
-echo $today;
+//echo $today;
 
 
 if (!empty($cid) and !empty($delivery_date) and ($delivery_date>$today)) {
