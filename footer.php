@@ -93,7 +93,7 @@
     <footer>
         <div class="footer">
             <div class="footer-logo">
-                <img src="SmartStitchLogo.png" alt="" height="40px">
+                <img src="Images/SmartStitchLogo.png" alt="" height="40px">
             </div>
             <div class="footer-contact">
                 <ul>

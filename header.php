@@ -95,6 +95,12 @@
 
         }
 
+        @media only screen and (max-width: 850px) {
+            .nav-list {
+                width: 60%;
+            }
+        }
+
         @media only screen and (max-width: 700px) {
             .nav-div {
                 width: 100%;
@@ -173,7 +179,7 @@
             navLinks.forEach(link => {
                 const linkHref = link.getAttribute('href');
                 // console.log('/'+linkHref);
-                linkH='/'+linkHref;
+                linkH = '/' + linkHref;
 
 
                 if (linkH === activePage) {
@@ -190,7 +196,7 @@
         <div class="nav-div">
             <div class="nav-logo">
                 <a href="Home.html">
-                    <img src="SmartStitchLogo.png" alt="SmartStitch" width="180px ">
+                    <img src="Images/SmartStitchLogo.png" alt="SmartStitch" width="180px ">
                 </a>
             </div>
             <div class="nav-menuicon" onclick="toggle()">

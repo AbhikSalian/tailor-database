@@ -21,108 +21,50 @@ $result4 = mysqli_query($conn, $query_orders);
     <link rel="stylesheet" href="tailordatabase.css">
 
     <script>
+        function hideElement(element, activeButton) {
+            const elements = ['clientdata', 'shirtdata', 'pantdata','orderdata'];
+            const buttons = ['btn1', 'btn2', 'btn3','btn4'];
+
+            elements.forEach(el => {
+                const currentElement = document.getElementById(el);
+                if (el === element) {
+                    currentElement.style.display = 'block';
+                } else {
+                    currentElement.style.display = 'none';
+                }
+            });
+
+            buttons.forEach(btn => {
+                const currentButton = document.getElementById(btn);
+                if (btn === activeButton) {
+                    currentButton.style.borderBottom = '2px solid #2b300d';
+                } else {
+                    currentButton.style.borderBottom = null;
+                }
+            });
+        }
+
         function clienthide() {
-
-            let clientdata = document.getElementById('clientdata');
-            let btn1 = document.getElementById('btn1');
-            let btn2 = document.getElementById('btn2');
-            let btn3 = document.getElementById('btn3');
-            let btn4 = document.getElementById('btn4');
-            if (clientdata.style.display != 'none') {
-
-                clientdata.style.display = 'none';
-                btn1.style.opacity = null;
-            } else {
-                clientdata.style.display = 'block';
-                shirtdata.style.display = 'none';
-                pantdata.style.display = 'none';
-                orderdata.style.display = 'none';
-                btn1.style.opacity = 0.7;
-                btn2.style.opacity = null;
-                btn3.style.opacity = null;
-                btn4.style.opacity = null;
-            }
+            hideElement('clientdata', 'btn1');
         }
 
         function shirthide() {
-            let shirtdata = document.getElementById('shirtdata');
-
-
-            if (shirtdata.style.display != 'none') {
-
-                shirtdata.style.display = 'none';
-                btn2.style.opacity = null;
-
-
-            } else {
-
-                shirtdata.style.display = 'block';
-                clientdata.style.display = 'none';
-                pantdata.style.display = 'none';
-                orderdata.style.display = 'none';
-
-                btn1.style.opacity = null;
-                btn2.style.opacity = 0.7;
-                btn3.style.opacity = null;
-                btn4.style.opacity = null;
-            }
+            hideElement('shirtdata', 'btn2');
         }
 
         function panthide() {
-            let pantdata = document.getElementById('pantdata');
-
-            if (pantdata.style.display != 'none') {
-                pantdata.style.display = 'none';
-                btn3.style.opacity = null;
-
-            } else {
-                pantdata.style.display = 'block';
-                orderdata.style.display = 'none';
-                clientdata.style.display = 'none';
-                shirtdata.style.display = 'none';
-
-                btn1.style.opacity = null;
-                btn2.style.opacity = null;
-                btn3.style.opacity = 0.7;
-                btn4.style.opacity = null;
-
-            }
+            hideElement('pantdata', 'btn3');
         }
-
         function orderhide() {
-
-            let orderdata = document.getElementById('orderdata');
-            if (orderdata.style.display != 'none') {
-                orderdata.style.display = 'none';
-
-                btn4.style.opacity = null;
-            } else {
-                orderdata.style.display = 'block';
-                pantdata.style.display = 'none';
-                clientdata.style.display = 'none';
-                shirtdata.style.display = 'none';
-
-                btn4.style.opacity = 0.7;
-                btn1.style.opacity = null;  
-                btn2.style.opacity = null;
-                btn3.style.opacity = null;
-
-            }
-
+            hideElement('orderdata', 'btn4');
         }
-
         function hide() {
-            let clientdata = document.getElementById('clientdata');
-
-
-            clientdata.style.display = 'none';
+            btn1.style.borderBottom = '2px solid #2b300d';
+            clientdata.style.display = 'block';
             shirtdata.style.display = 'none';
             pantdata.style.display = 'none';
 
             orderdata.style.display = 'none';
-
-
-
 
         }
     </script>
@@ -132,16 +74,26 @@ $result4 = mysqli_query($conn, $query_orders);
 <body onload="hide()">
     <header>
         <nav class="navbar">
-            <div class="navdiv">
-                <div class="logo"><a href="<?php echo SITEURL;?>tailor_interface.php"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
+            <div class="nav-div">
+                <div class="logo"><a href="<?php echo SITEURL; ?>tailor_interface.php"><img src="SmartStitchLogo.png" alt="SmartStitch" height="40px"></a></div>
+                <div class="heading">TAILOR DATABASE</div>
+                <div class="logout"><a href="<?php echo SITEURL; ?>index.php"><button>Logout</button></a></div>
+
             </div>
-            <p class="home">TAILOR DATABASE</p>
-            <span><a href="<?php echo SITEURL;?>index.php"><button>Logout</button></a></span>
         </nav>
     </header>
     <main>
         <div class="main">
-            <div class="buttons">
+            <div class="main-nav">
+                <div class="nav-items">
+                    <p id="btn1" onclick="clienthide()">Client Database</p>
+                    <p id="btn2" onclick="shirthide()">Shirt Database</p>
+                    <p id="btn3" onclick="panthide()">Pant Database</p>
+                    <p id="btn4" onclick="orderhide()">Orders Database</p>
+                </div>
+            </div>
+
+            <!-- <div class="buttons">
 
                 <div class="button"><button id="btn1" onclick="clienthide()">Client Database</button></div>
 
@@ -149,7 +101,7 @@ $result4 = mysqli_query($conn, $query_orders);
                 <div class="button"><button id="btn3" onclick="panthide()">Pant Database</button></div>
 
                 <div class="button"><button id="btn4" onclick="orderhide()">Orders Database</button></div><br>
-            </div>
+            </div> -->
 
             <div class="data">
 

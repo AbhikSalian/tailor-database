@@ -54,7 +54,7 @@ if (!empty($email_id) and !empty($password)) {
       //mysqli_stmt_execute($stmt3);
 
 
-      header("Location: ".SITEURL."Hom.php");
+      header("Location: " . SITEURL . "Hom.php");
       //echo"<script type='text/javascript'>alert('Login successful')</script>";
 
     } else {
@@ -74,22 +74,112 @@ if (!empty($email_id) and !empty($password)) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SmartStitch-SignIn</title>
-  <link rel="stylesheet" href="SignIn.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+    body {
+      background-color: #e0e3ce;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      justify-content: center;
+      background-color: #7e876d;
+      width: 300px;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom-right-radius: 30px;
+      border-top-right-radius: 30px;
+      border-left: 20px solid #2b300d;
+      box-shadow: 0px 0px 12px 2px #2b300d;
+      box-sizing: border-box;
+    }
+
+    span {
+      color: #2b300d;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 25px;
+    }
+
+    .Credential {
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      justify-content: center;
+    }
+
+    .button {
+      margin: 30px;
+    }
+
+    .Credential button {
+      font-weight: bold;
+      padding: 15px 50px;
+      border: none;
+      outline: none;
+      border-radius: 60px;
+      background-color: #2b300d;
+      color: #e0e3ce;
+      cursor: pointer;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .Credential input {
+      text-align: left;
+      border-radius: 10px;
+      border: none;
+      padding: 10px;
+      margin: 10px;
+      background-color: #e0e3ce;
+      color: #2b300d;
+      letter-spacing: 1px;
+      border-radius: 40px;
+      background-size: 20px;
+      background-position: 15px;
+    }
+
+    .Credential input::placeholder {
+      font-size: 14px;
+      color: #2b300d;
+    }
+
+    .Noac a {
+      text-decoration: none;
+      color: #e0e3ce;
+    }
+
+    .Noac {
+      color: #2b300d;
+    }
+
+    .Credential button:hover {
+      box-shadow: 0px 0px 0px 1px #2b300d;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 
 <body>
-  <form action="<?php echo SITEURL;?>sign_in.php" method="post">
+  <form action="<?php echo SITEURL; ?>sign_in.php" method="post">
     <div class="container">
       <span>SIGN IN</span>
       <div class="Credential">
         <input type="text" placeholder="Email ID" name="email_id" required />
         <input type="password" placeholder="Password" name="password" required />
         <div class="button">
-          <a href="<?php echo SITEURL;?>Hom.php"><button type="submit">Sign In</button></a>
+          <a href="<?php echo SITEURL; ?>Hom.php"><button type="submit">Sign In</button></a>
         </div>
         <div class="Noac">
-          Don't have an account?/ <a href="<?php echo SITEURL;?>sign_up.php"> Sign up</a>
+          Don't have an account?/ <a href="<?php echo SITEURL; ?>sign_up.php"> Sign up</a>
         </div>
       </div>
     </div>

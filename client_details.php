@@ -30,7 +30,6 @@ $order_result = mysqli_query($conn, $order_query);
 if ($result1) {
     if ($result1 && mysqli_num_rows($result1) > 0) {
         $client_shirt_data = mysqli_fetch_assoc($result1);
-
         $_SESSION['collar'] = $client_shirt_data['collar'];
         $_SESSION['neck_to_shoulder'] = $client_shirt_data['neck_to_shoulder'];
         $_SESSION['sleeve_length'] = $client_shirt_data['sleeve_length'];
@@ -289,14 +288,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
 
                 <div class="measurement" id="measureid">
-                    <div id="btn5" onclick="measurementtoggle()" class="edit-icon">
-                        <a href="<?php echo SITEURL; ?>client_details.php"><button type="submit"><i class="fa-solid fa-upload" style="color: #e0e3ce;"></i></button></a>
-                    </div>
+
                     <div id="btn6" onclick="measurementtoggle()" class="edit-icon">
                         <a><button><i class="fa-solid fa-pen-to-square" style="color: #e0e3ce;"></i></button></a>
                     </div>
-                    <form action="measurement.php" method="post">
-
+                    <form action="<?php echo SITEURL; ?>measurement.php" method="post">
+                        <div id="btn5" onclick="measurementtoggle()" class="edit-icon">
+                            <a href="<?php echo SITEURL; ?>client_details.php"><button type="submit"><i class="fa-solid fa-upload" style="color: #e0e3ce;"></i></button></a>
+                        </div>
                         <h3>Measurements</h3>
                         <div class="measurement-details">
 
