@@ -24,7 +24,7 @@ VALUES('$cid','$pant_type','$delivery_date','$order_total')";
         }
         mysqli_stmt_execute($stmt);
         //echo "<script type='text/javascript'>alert('Order placed successfully')</script>";
-        header("Location: " . SITEURL . "Hom.php");
+        header("Location: " . SITEURL . "pants.php");
     }
 }
 ?>

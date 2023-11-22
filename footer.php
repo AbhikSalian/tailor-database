@@ -41,7 +41,7 @@
         .footer-contact li,
         .footer-business li {
             text-align: left;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
         .footer-contact li a {
@@ -68,7 +68,7 @@
         }
 
         h4 {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             margin-bottom: 15px;
             text-align: center;
         }
@@ -96,6 +96,7 @@
             .footer-business {
                 width: fit-content;
                 margin: 12px;
+
             }
         }
     </style>
