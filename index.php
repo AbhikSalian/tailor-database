@@ -115,7 +115,7 @@ include('config.php');
 
     }
 
-    #myVideo{
+    #myVideo {
       display: none;
     }
 
@@ -125,11 +125,13 @@ include('config.php');
       }
 
     }
+
     @media only screen and (max-width: 768px) {
-      #myVideo{
+      #myVideo {
         display: block;
       }
-      .welcomeimg{
+
+      .welcomeimg {
         display: none;
       }
 
@@ -235,11 +237,12 @@ include('config.php');
   <main>
     <video autoplay muted loop id="myVideo" width="100%">
       <source src="Images/A gentleman never talks about his tailor..mp4" type="video/mp4">
-      
+
     </video>
-    <video class="welcomeing" autoplay muted loop width="100%">
-      <source src="Images/Brown And White Modern Thank You Video.mp4" type="video/mp4">
-      
+    
+    <video class="welcomeimg" autoplay muted  width="100%">
+      <source src="Images/Untitled design (1).mp4" type="video/mp4">
+
     </video>
 
     <!-- <img class="welcomeimg" src="Images/welcome.jpg" alt="" width="100%"> -->

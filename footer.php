@@ -48,7 +48,7 @@
         }
 
         .footer-business,.footer-contact,.footer-logo{
-            width: 200px;
+            width: fit-content;
             display: flex;
             justify-content: center;
         }
