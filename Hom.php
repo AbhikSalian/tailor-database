@@ -1,5 +1,7 @@
 <?php
 include('config.php');
+error_reporting(0);
+session_start();
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +69,7 @@ include('config.php');
       <source src="Images/Cream and Green Modern Coming Soon Mobile Video.mp4" type="video/mp4">
       
     </video> -->
-  <video class="welcomeing" autoplay loop muted width="100%">
+  <video class="welcomeing" autoplay muted width="100%">
       <source src="Images/Brown Simple Animated Massage & Spa Logo Intro Video.mp4" type="video/mp4">
       
     </video>

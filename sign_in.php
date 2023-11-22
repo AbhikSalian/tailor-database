@@ -3,7 +3,7 @@
 @include 'config.php';
 session_start();
 $email_id = $_POST["email_id"];
-$password = $_POST["password"];
+$password = md5($_POST["password"]);
 
 if (!empty($email_id) and !empty($password)) {
 
