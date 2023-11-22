@@ -104,20 +104,24 @@ table,
 th,
 td {
   /* border: 1px solid #2b300d; */
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   text-align: center;
   padding: 5px;
   margin: 0 auto;
   font-size: 1.4rem;
+  border-spacing: .5rem;
+  
 }
 
 .details td {
   width: 120px;
   border-bottom: 1px dotted #2b300d;
+  border-right: 1px dotted #2b300d;
 }
 
 .details th {
   border-bottom: 1px solid #2b300d;
+  border-right: 1px solid #2b300d;
 }
 
 .details {

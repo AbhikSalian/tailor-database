@@ -8,10 +8,13 @@ include('login_check.php');
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="Images/Favicon.png">
+
     <style>
         @font-face {
             font-family: 'hii';
@@ -184,11 +187,11 @@ include('login_check.php');
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-            const activePage ='https://smartstitchh.000webhostapp.com'+ window.location.pathname;
+            const activePage = 'https://smartstitchh.000webhostapp.com' + window.location.pathname;
             const navLinks = document.querySelectorAll('.list-ul li a');
             navLinks.forEach(link => {
                 const linkHref = link.getAttribute('href');
-                linkH = '<?php echo SITEURL;?>' + linkHref;
+                linkH = '<?php echo SITEURL; ?>' + linkHref;
 
                 if (linkHref === activePage) {
                     link.classList.add('active');

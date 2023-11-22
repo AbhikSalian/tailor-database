@@ -12,6 +12,8 @@ session_start();
   <title>SmartSticth-Shirts</title>
   <link rel="stylesheet" href="pant-shirt.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="icon" type="image/x-icon" href="Images/Favicon.png">
+
 </head>
 
 <body>

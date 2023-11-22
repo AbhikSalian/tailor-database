@@ -83,7 +83,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <title>SmartStitch-Sign Up</title>
   <link rel="stylesheet" href="SignUp.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <style>
+  <link rel="icon" type="image/x-icon" href="Images/Favicon.png">
+
+ <style>
     @font-face {
       font-family: "hii";
       src: url("fonts/TT-Norms-sv/TT Norms sv/TTNorms-Regular.otf");

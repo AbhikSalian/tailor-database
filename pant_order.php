@@ -34,9 +34,10 @@ VALUES('$cid','$pant_type','$delivery_date','$order_total')";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartStitch-Orders</title>
+    <title>Pants-Place Order</title>
     <link rel="stylesheet" href="place_order.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="icon" type="image/x-icon" href="Images/Favicon.png">
 
 </head>
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="icon" type="image/x-icon" href="Images/Favicon.png">
 
     <style>
         * {
@@ -41,7 +42,7 @@
         .footer-contact li,
         .footer-business li {
             text-align: left;
-            font-size: 1.3rem;
+            font-size: 1.6rem;
         }
 
         .footer-contact li a {
@@ -68,7 +69,7 @@
         }
 
         h4 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 15px;
             text-align: center;
         }

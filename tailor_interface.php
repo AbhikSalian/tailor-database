@@ -30,6 +30,7 @@ $result4 = mysqli_query($conn, $query_orders);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartStitch-TailorsDatabase</title>
     <link rel="stylesheet" href="tailordatabase.css">
+    <link rel="icon" type="image/x-icon" href="Images/Favicon.png">
 
     <script>
         function hideElement(element, activeButton) {

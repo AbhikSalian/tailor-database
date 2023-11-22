@@ -17,8 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartStitch-TailorLoginPassword</title>
+    <title>SmartStitch-Tailor Login</title>
     <link rel="stylesheet" href="tailor_login.css">
+    <link rel="icon" type="image/x-icon" href="Images/Favicon.png">
+
     <style>
         @font-face {
             font-family: "hii";

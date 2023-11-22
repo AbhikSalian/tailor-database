@@ -73,8 +73,10 @@ if (!empty($email_id) and !empty($password)) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SmartStitch-SignIn</title>
+  <title>SmartStitch-Sign In</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="icon" type="image/x-icon" href="Images/Favicon.png">
+
   <style>
     @font-face {
       font-family: "hii";

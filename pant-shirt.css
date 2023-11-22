@@ -48,6 +48,7 @@ body {
   margin: 0.5rem;
   box-shadow: 0 0 0.2rem 0rem #000000;
   position: relative;
+  /* padding-bottom: 6rem; */
 }
 .fabric-info {
   margin: 10px;
@@ -96,6 +97,7 @@ body {
   }
   .fabric-img {
     width: 100%;
+    max-height: 70%;
   }
 }
 @media only screen and (max-width: 1092px) {
@@ -112,6 +114,11 @@ body {
   html {
     font-size: 57.5%;
   }
+  .fabric-container {
+    padding: 1.2rem;
+      padding-bottom: 6rem;
+
+  }
 }
 @media only screen and (width<=626px) {
   .fabric-container {
@@ -124,9 +131,14 @@ body {
   }
   .fabric-container {
     padding: 1.2rem;
+      padding-bottom: 6rem;
+
   }
   .main-div {
     padding: 1.8rem;
+  }
+  .fabric-img {
+    max-height: 22rem;
   }
 }
 @media only screen and (width<=375px) {
