@@ -3,6 +3,7 @@ include ('config.php');
 include('login_check.php');
 error_reporting(0);
 session_start();
+
 $shirt_type = $_GET['shirt_type'];
 $order_total = $_GET['shirt_price'];
 $cid = $_SESSION['client_id'];

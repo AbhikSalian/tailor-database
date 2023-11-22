@@ -11,8 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $address = $_POST["address"];
   $ph_no = $_POST["mobile"];
   $email_id = $_POST["email_id"];
-  $password1 = $_POST["p1"];
-  $password2 = $_POST["p2"];
+  $password1 = md5($_POST["p1"]);
+  $password2 = md5($_POST["p2"]);
   $exist_email = "select * from client where email_id='$email_id'";
   $result = mysqli_query($conn, $exist_email);
 
