@@ -184,17 +184,13 @@ include('login_check.php');
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-            const activePage = window.location.pathname;
-            console.log(activePage);
-
+            const activePage ='https://smartstitchh.000webhostapp.com'+ window.location.pathname;
             const navLinks = document.querySelectorAll('.list-ul li a');
             navLinks.forEach(link => {
                 const linkHref = link.getAttribute('href');
-                // console.log('/'+linkHref);
-                linkH = '/' + linkHref;
+                linkH = '<?php echo SITEURL;?>' + linkHref;
 
-
-                if (linkH === activePage) {
+                if (linkHref === activePage) {
                     link.classList.add('active');
                 }
             });
