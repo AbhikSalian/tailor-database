@@ -84,6 +84,12 @@ body {
 .placeorder button:hover {
   opacity: 0.7;
 }
+
+.placeorder .jyo {
+  line-height: 1rem;
+  font-size: 1.2rem;
+  color: grey;
+}
 @media only screen and (max-width: 1280px) {
   .fabric-container {
     width: 24%;

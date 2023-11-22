@@ -1,9 +1,9 @@
 <?php
-        error_reporting(0);
-        include('config.php');
-        include('login_check.php');
-        
-        ?> 
+error_reporting(0);
+include('config.php');
+include('login_check.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +13,11 @@
     <title>Header</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        @font-face{
+        @font-face {
             font-family: 'hii';
             src: url('fonts/TT-Norms-sv/TT Norms sv/TTNorms-Regular.otf');
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -87,7 +88,7 @@
             background-color: #e0e3ce;
             border-radius: 4px;
             opacity: 0.5;
-            
+
         }
 
         .nav-logo a:hover {
@@ -190,7 +191,7 @@
             navLinks.forEach(link => {
                 const linkHref = link.getAttribute('href');
                 // console.log('/'+linkHref);
-                linkH = '/WPL_tailorDatabase/' + linkHref;
+                linkH = '/' + linkHref;
 
 
                 if (linkH === activePage) {

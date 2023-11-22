@@ -2,7 +2,8 @@
 include('config.php');
 error_reporting(0);
 session_start();
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -69,10 +70,12 @@ session_start();
       /* border: 2px solid black; */
 
     }
+
     .about-us {
-      margin-left:2.5rem;
+      margin-left: 2.5rem;
     }
-    .about-story{
+
+    .about-story {
       margin-right: 2.5rem;
     }
 
@@ -80,56 +83,65 @@ session_start();
       display: flex;
       flex-direction: column;
     }
-    @media only screen and (max-width: 910px) {
-      .about-us,
-    .about-story {
-      margin: 4rem;
-      margin-top: 3rem;
-      /* border: 2px solid black; */
 
-    }
-    .about-us {
-      margin-left:2rem;
-    }
-    .about-story{
-      margin-right: 2rem;
-    }
-      
+    @media only screen and (max-width: 910px) {
+
+      .about-us,
+      .about-story {
+        margin: 4rem;
+        margin-top: 3rem;
+        /* border: 2px solid black; */
+
+      }
+
+      .about-us {
+        margin-left: 2rem;
+      }
+
+      .about-story {
+        margin-right: 2rem;
+      }
+
     }
 
     @media only screen and (max-width: 700px) {
-      *{
+      * {
         font-size: 59%;
       }
-      .about{
+
+      .about {
         display: flex;
         flex-direction: column;
       }
-      .about-us{
+
+      .about-us {
         margin-top: 0;
-        margin-left:4rem;
-    }
-    .about-story{
-      margin-right: 4rem;
-    }
+        margin-left: 4rem;
+      }
+
+      .about-story {
+        margin-right: 4rem;
+      }
 
     }
+
     @media only screen and (max-width: 400px) {
-      *{
+      * {
         font-size: 56%;
       }
-      .about-us,
-    .about-story {
-      margin: 2.5rem;
-      margin-top: 1.5rem;
-      /* border: 2px solid black; */
-    }
-    .heading{
-      margin-left: 1.4625rem;
-      margin-right: 1.4625rem;
-    }
-    }
 
+      .about-us,
+      .about-story {
+        margin: 2.5rem;
+        margin-top: 1.5rem;
+        /* border: 2px solid black; */
+      }
+
+      .heading {
+        margin-left: 1.4625rem;
+        margin-right: 1.4625rem;
+      }
+    }
   </style>
 </head>
 
@@ -177,7 +189,7 @@ session_start();
         <div class="us-visit">
           <h3>Visit Us</h3>
           <p>We invite you to visit our store and experience the world of custom tailoring firsthand. Our friendly team is ready to assist you in creating the wardrobe of your dreams.</p>
-          <iframe class="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1224.6114296462883!2d74.87806279974642!3d12.978301287459594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba356c9c075667f%3A0xf5f0b9641d6a136c!2sStitch%20Well!5e0!3m2!1sen!2sin!4v1693242046570!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9521174925308!2d74.8961023750754!3d12.910799087399017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba359dfac132663%3A0xa7bf228838232d32!2sSt%20Joseph%20Engineering%20College!5e0!3m2!1sen!2sin!4v1700657077958!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>

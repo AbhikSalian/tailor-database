@@ -5,8 +5,8 @@ if (!defined('SITEURL')) {
     define('SITEURL', '');
 }
 
-$dbname= "tailor"; 
-$host= "localhost";
+$dbname = "tailor";
+$host = "localhost";
 $user = "root";
 $psswd = "";
 
@@ -19,5 +19,4 @@ $dbname= "id21513501_smartstitch";
 $host= "localhost";
 $user = "id21513501_abhiksalian0728";
 $psswd = "khfbeivu97&^G";*/
-    $conn = mysqli_connect($host,$user,$psswd,$dbname);
-?>
+$conn = mysqli_connect($host, $user, $psswd, $dbname);

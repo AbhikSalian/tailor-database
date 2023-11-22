@@ -1,5 +1,5 @@
 <?php
-include ('config.php');
+include('config.php');
 error_reporting(0);
 session_start();
 ?>
@@ -11,7 +11,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SmartSticth-Pants</title>
   <link rel="stylesheet" href="pant-shirt.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
 <body>
@@ -35,12 +35,14 @@ session_start();
             <div class="placeorder">
                 <div>
                     <p id="price"><i class="fa-solid fa-indian-rupee-sign" style="color: rgb(205, 35, 35);"></i>
-                        <Rs class="money"></Rs>' . $price . '
+                       ' . $price . '<span>/pant</span>
+                        <p class="jyo">incl. of stitching charges</p>
+
                     </p>
                 </div>
                 <div>
                     
-                        <a href="' . SITEURL . $pageUrl . '?pant_type='.$description.'&pant_price='.$price.'">
+                        <a href="' . SITEURL . $pageUrl . '?pant_type=' . $description . '&pant_price=' . $price . '">
                             <button><i class="fa-solid fa-cart-shopping" style="color: #2b300d;"></i></button>
                         </a>
                    
@@ -56,14 +58,14 @@ session_start();
     echo '<div class="main-div"><div class="secondary-div">';
 
     // Call the function for each pant fabric item
-    generatePantsFabricItem("Images/pantsFabric1.jpg", "Colour Checks Pants Fabric Black Honey Day", "545.00", "pant_order.php");
-    generatePantsFabricItem("Images/pantsFabric2.jpg", "Cotton Colour Checked Grey Suiting Fabric Fun", "655.00", "pant_order.php");
-    generatePantsFabricItem("Images/pantsFabric3.jpg", "Colour Off White Checks Pants Fabric Honey Day", "545.00", "pant_order.php");
-    generatePantsFabricItem("Images/pantsFabric4.jpg", "Cotton Colour Checked Pant Fabric Sandal Chronicle", "625.00", "pant_order.php");
-    generatePantsFabricItem("Images/pantsFabric5.jpg", "Cotton Colour Plain Pants Fabric Navy Style Craft", "660.00", "pant_order.php");
-    generatePantsFabricItem("Images/pantsFabric6.jpg", "Cotton Colour Checked Pants Fabric Grayish Blue", "670.00", "pant_order.php");
-    generatePantsFabricItem("Images/pantsFabric7.jpg", "Wrinkle Free Cotton White Plain Pants Fabric Romantic", "695.00", "pant_order.php");
-    generatePantsFabricItem("Images/pantsFabric8.jpg", "Cotton Colour Checked Pant Fabric Navy ICLE Stretch", "740.00", "pant_order.php");
+    generatePantsFabricItem("Images/pantsFabric1.jpg", "Colour Checks Pants Fabric Black Honey Day", "1228.00", "pant_order.php");
+    generatePantsFabricItem("Images/pantsFabric2.jpg", "Cotton Colour Checked Grey Suiting Fabric Fun", "1081.00", "pant_order.php");
+    generatePantsFabricItem("Images/pantsFabric3.jpg", "Colour Off White Checks Pants Fabric Honey Day", "1062.00", "pant_order.php");
+    generatePantsFabricItem("Images/pantsFabric4.jpg", "Cotton Colour Checked Pant Fabric Sandal Chronicle", "820.00", "pant_order.php");
+    generatePantsFabricItem("Images/pantsFabric5.jpg", "Cotton Colour Plain Pants Fabric Navy Style Craft", "1044.00", "pant_order.php");
+    generatePantsFabricItem("Images/pantsFabric6.jpg", "Cotton Colour Checked Pants Fabric Grayish Blue", "1308.00", "pant_order.php");
+    generatePantsFabricItem("Images/pantsFabric7.jpg", "Wrinkle Free Cotton White Plain Pants Fabric Romantic", "959.00", "pant_order.php");
+    generatePantsFabricItem("Images/pantsFabric8.jpg", "Cotton Colour Checked Pant Fabric Navy ICLE Stretch", "945.00", "pant_order.php");
     // Add more calls to generatePantsFabricItem as needed for each fabric item
 
     echo '</div></div>';

@@ -1,9 +1,13 @@
+@font-face {
+  font-family: "hii";
+  src: url("fonts/TT-Norms-sv/TT Norms sv/TTNorms-Regular.otf");
+}
 * {
   text-decoration: none;
   margin: 0;
   box-sizing: border-box;
   font-size: 62.5%;
-
+  font-family: "hii";
 }
 
 body {
@@ -13,7 +17,7 @@ body {
 .logo a:hover {
   opacity: 0.5;
 }
-.logo a{
+.logo a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +67,6 @@ body {
 
 .button button:hover {
   opacity: 0.3s;
-
 }
 
 .navbar button:hover {
@@ -128,9 +131,7 @@ td {
   /* border-right:  20px solid #2b300d; */
   box-shadow: 0px 0px 4px 0px #2b300d;
   box-sizing: border-box;
-  margin:30px
-
-
+  margin: 30px;
 }
 
 .details h3 {
@@ -139,8 +140,6 @@ td {
   margin-bottom: 20px;
   font-size: 1.6rem;
 }
-
-
 
 .main-nav {
   width: 100%;
@@ -185,11 +184,12 @@ td {
   .nav-items {
     width: 100%;
   }
-  table,td,th{
+  table,
+  td,
+  th {
     font-size: 1.1rem;
     padding-left: 0;
     padding-right: 0;
-
   }
 
   .details {
@@ -200,12 +200,5 @@ td {
     margin-left: auto;
     /* border-radius:0; */
     /* box-shadow: none; */
-
-
-  }
-}
-@media only screen and (max-width: 700px) {
-  .details{
-    overflow-x: auto;
   }
 }

@@ -1,14 +1,16 @@
 <?php
 @include 'config.php';
 session_start();
-if(!isset($_SESSION['tailor_login']))
-{
-    ?>
+if (!isset($_SESSION['tailor_login'])) {
+?>
     <html>
-    <script type='text/javascript'>alert('Please login to access the page');
-        window.location.href = '<?php echo SITEURL; ?>index.php';</script>
+    <script type='text/javascript'>
+        alert('Please login to access the page');
+        window.location.href = '<?php echo SITEURL; ?>index.php';
+    </script>
+
     </html>
-    <?php
+<?php
     exit();
 }
 $query_client = "SELECT * FROM client";
@@ -31,8 +33,8 @@ $result4 = mysqli_query($conn, $query_orders);
 
     <script>
         function hideElement(element, activeButton) {
-            const elements = ['clientdata', 'shirtdata', 'pantdata','orderdata'];
-            const buttons = ['btn1', 'btn2', 'btn3','btn4'];
+            const elements = ['clientdata', 'shirtdata', 'pantdata', 'orderdata'];
+            const buttons = ['btn1', 'btn2', 'btn3', 'btn4'];
 
             elements.forEach(el => {
                 const currentElement = document.getElementById(el);
@@ -64,9 +66,11 @@ $result4 = mysqli_query($conn, $query_orders);
         function panthide() {
             hideElement('pantdata', 'btn3');
         }
+
         function orderhide() {
             hideElement('orderdata', 'btn4');
         }
+
         function hide() {
             btn1.style.borderBottom = '2px solid #2b300d';
             clientdata.style.display = 'block';

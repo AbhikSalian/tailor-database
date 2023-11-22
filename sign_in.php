@@ -76,6 +76,16 @@ if (!empty($email_id) and !empty($password)) {
   <title>SmartStitch-SignIn</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <style>
+    @font-face {
+      font-family: "hii";
+      src: url("fonts/TT-Norms-sv/TT Norms sv/TTNorms-Regular.otf");
+    }
+
+    * {
+      font-family: "hii";
+
+    }
+
     body {
       background-color: #e0e3ce;
       background-size: cover;

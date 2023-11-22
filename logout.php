@@ -6,6 +6,4 @@ session_start();
 session_unset();
 session_destroy();
 
-header('location: '.SITEURL.'index.php');
-
-?>
+header('location: ' . SITEURL . 'index.php');

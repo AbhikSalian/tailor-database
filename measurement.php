@@ -2,6 +2,7 @@
 // Your existing PHP code
 error_reporting(0);
 @include 'config.php';
+@include 'login_check.php';
 session_start();
 
 

@@ -2,7 +2,8 @@
 include('config.php');
 error_reporting(0);
 session_start();
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,6 +15,7 @@ session_start();
     * {
       text-decoration: none;
       margin: 0;
+      padding: 0%;
     }
 
     body {
@@ -38,21 +40,19 @@ session_start();
       opacity: 0.7;
     }
 
-    .quote {
-      position: absolute;
-      right: 143px;
-      top: 240px;
-      font-size: larger;
-      font-weight: bolder;
-      width: 287px;
-      font-size: 20px;
-      text-transform: uppercase;
-      text-align: center;
-      color: #7e876d;
+    #myVideo {
+      display: none;
     }
 
-    @media only screen and (max-width: 700px) {
-      
+    @media only screen and (max-width: 768px) {
+      #myVideo {
+        display: block;
+      }
+
+      .welcomeimg {
+        display: none;
+      }
+
     }
   </style>
 
@@ -61,19 +61,17 @@ session_start();
 <body>
   <?php
   include('header.php');
-  
+
   ?>
 
   <main>
-  <!-- <video autoplay muted loop id="myVideo" width="100%">
-      <source src="Images/Cream and Green Modern Coming Soon Mobile Video.mp4" type="video/mp4">
-      
-    </video> -->
-  <video class="welcomeing" autoplay muted width="100%">
-      <source src="Images/Brown Simple Animated Massage & Spa Logo Intro Video.mp4" type="video/mp4">
-      
+    <video class="welcomeimg" autoplay muted width="100%">
+      <source src="Images/Home-Landscape.mp4" type="video/mp4">
     </video>
-    
+    <video id="myVideo" autoplay muted width="100%">
+      <source src="Images/Home-Portrait.mp4" type="video/mp4">
+    </video>
+
   </main>
 
   <?php

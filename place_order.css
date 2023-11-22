@@ -1,8 +1,13 @@
+@font-face {
+  font-family: "hii";
+  src: url("fonts/TT-Norms-sv/TT Norms sv/TTNorms-Regular.otf");
+}
 * {
   text-decoration: none;
   margin: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  font-family: "hii";
 }
 body {
   background-color: #e0e3ce;
@@ -142,5 +147,4 @@ input::placeholder {
   .order {
     width: auto;
   }
-    
 }

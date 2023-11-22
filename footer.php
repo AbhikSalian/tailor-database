@@ -43,11 +43,14 @@
             text-align: left;
             font-size: 1.5rem;
         }
+
         .footer-contact li a {
             font-size: 1.5rem;
         }
 
-        .footer-business,.footer-contact,.footer-logo{
+        .footer-business,
+        .footer-contact,
+        .footer-logo {
             width: fit-content;
             display: flex;
             justify-content: center;
@@ -84,11 +87,11 @@
                 text-align: center;
                 /* font-size: 0.8rem; */
             }
-            
+
             .footer-logo {
                 display: none;
             }
-            
+
             .footer-contact,
             .footer-business {
                 width: fit-content;

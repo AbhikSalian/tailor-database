@@ -36,6 +36,8 @@ VALUES('$cid','$pant_type','$delivery_date','$order_total')";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartStitch-Orders</title>
     <link rel="stylesheet" href="place_order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
 </head>
 
 <body>
@@ -76,6 +78,11 @@ VALUES('$cid','$pant_type','$delivery_date','$order_total')";
                     <th>:</th>
                     <td>Rs. <?php echo $order_total; ?></td>
                 </tr>
+                <tr>
+                    <th>Mode of Payment</th>
+                    <th>:</th>
+                    <td>Cash on Delivery</td>
+                </tr>
             </table>
 
             <form action="" method="post">
@@ -84,7 +91,7 @@ VALUES('$cid','$pant_type','$delivery_date','$order_total')";
                     <label for="delivery_date">Expected delivery date : </label>
                     <input class="date" type="date" id="delivery_date" name="delivery_date"><br>
                 </div>
-                <p id="alertMessage">NOTE: Please select a date on or after today.</p>
+                <p id="alertMessage"><i class="fa-solid fa-triangle-exclamation" style="color: #2b300d; font-size:16px"></i> Please select a date on or after today.</p>
                 <div class="submit">
                     <button type="submit" onclick="message()">Place order</button>
                 </div>

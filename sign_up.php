@@ -84,12 +84,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="stylesheet" href="SignUp.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <style>
+    @font-face {
+      font-family: "hii";
+      src: url("fonts/TT-Norms-sv/TT Norms sv/TTNorms-Regular.otf");
+    }
+
     * {
       margin: 0;
       padding: 0;
       text-decoration: none;
       box-sizing: border-box;
       /* font-size: 62.5%; */
+      font-family: "hii";
+
     }
 
     body {

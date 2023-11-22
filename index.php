@@ -34,12 +34,19 @@ include('config.php');
     });
   </script>
   <style>
+    @font-face {
+      font-family: 'hii';
+      src: url('fonts/TT-Norms-sv/TT Norms sv/TTNorms-Regular.otf');
+    }
+
     * {
       margin: 0;
       padding: 0;
       text-decoration: none;
       box-sizing: border-box;
       list-style: none;
+      font-family: 'hii';
+
     }
 
     .nav-div {
@@ -236,12 +243,12 @@ include('config.php');
   </header>
   <main>
     <video autoplay muted id="myVideo" width="100%">
-      <source src="Images/A gentleman never talks about his tailor..mp4" type="video/mp4">
+      <source src="Images/Index-portrait.mp4" type="video/mp4">
 
     </video>
-    
-    <video class="welcomeimg" autoplay muted  width="100%">
-      <source src="Images/Untitled design (1).mp4" type="video/mp4">
+
+    <video class="welcomeimg" autoplay muted width="100%">
+      <source src="Images/Index-landscape.mp4" type="video/mp4">
 
     </video>
 
