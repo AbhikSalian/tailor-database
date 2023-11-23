@@ -12,6 +12,7 @@ session_start();
   <title>SmartStitch-About Us</title>
   <link rel="stylesheet" href="aboutUs.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="icon" type="image/x-icon" href="Images/Favicon.png">
   <style>
     * {
       margin: 0;
