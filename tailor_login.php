@@ -2,8 +2,8 @@
 include('config.php');
 session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $psswd = $_POST['tailor_password'];
-    if ($psswd == 1234) {
+    $psswd = md5($_POST['tailor_password']);
+    if ($psswd == '4e678b004e41b4023faac8fd282a48d5') {
         $_SESSION['tailor_login'] = "Logged in";
         header('location:' . SITEURL . 'tailor_interface.php');
     } else {
