@@ -8,6 +8,20 @@ session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $cid = $_SESSION['client_id'];
+  // Check if any required field is empty
+  $required_fields = [
+    "collar", "neck_to_shoulder", "sleeve_length", "shoulder_to_shoulder",
+    "chest", "front_length", "sleeve_cuff", "hem", "waist", "front_rise", "hip", "thigh", "length",
+    "knee", "inseam", "leg_opening"
+  ];
+
+  foreach ($required_fields as $field) {
+    if (empty($_POST[$field])) {
+      echo "Error: $field is empty.";
+      exit;
+    }
+  }
+
 
   $collar = $_POST["collar"];
   $neck_to_shoulder = $_POST["neck_to_shoulder"];
@@ -49,7 +63,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           leg_opening='$leg_opening'
           WHERE
           client_id='$cid'";
-
   $res_shirt = mysqli_query($conn, $shirt_insert) or die(mysqli_error($conn));
   $res_pant = mysqli_query($conn, $pant_insert) or die(mysqli_error($conn));
   if ($res_shirt && $res_pant) {
