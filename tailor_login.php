@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartStitch-Tailor Login</title>
+    <title>SmartStitch-Admin Login</title>
     <link rel="stylesheet" href="tailor_login.css">
     <link rel="icon" type="image/x-icon" href="Images/Favicon.png">
 
@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <form action="" method="post">
         <div class="container">
-            <h3>TAILOR LOGIN</h3>
+            <h3>ADMIN LOGIN</h3>
             <input type="password" id="pass" placeholder="Password" name="tailor_password" required />
             <button type="submit">Login</button>
 

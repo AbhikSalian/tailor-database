@@ -233,7 +233,7 @@ include('config.php');
       </div>
       <div class="nav-list" id="display">
         <ul class="list-ul">
-          <li> <a href="<?php echo SITEURL; ?>tailor_login.php"><button class="signout">Tailor Login</button></a>
+          <li> <a href="<?php echo SITEURL; ?>tailor_login.php"><button class="signout">Admin Login</button></a>
           </li>
           <li> <a href="<?php echo SITEURL; ?>sign_up.php"><button class="signout">Sign Up</button></a>
           </li>
