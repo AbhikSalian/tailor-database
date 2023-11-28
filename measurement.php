@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   ];
 
   foreach ($required_fields as $field) {
-    if (empty($_POST[$field])) {
+    if (empty($_POST[$field]) and $_POST[$field]!=0) {
       echo "Error: $field is empty.";
       exit;
     }
