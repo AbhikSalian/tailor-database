@@ -12,6 +12,7 @@ SmartStitch is an innovative web platform designed to streamline the process of 
 - [Contributing](#contributing)
 - [Acknowledgments](#acknowledgments)
 - [Contact](#contact)
+- [Contributors](#contributors)
 
 ### Getting Started
 
@@ -74,3 +75,8 @@ We would like to express our gratitude to the following:
 ### Contact
 
 For questions or feedback, please reach out to us at abhiksalian0728@gmail.com
+
+### Contributors
+
+- @AbhikSalian
+- @AkashAcharya
