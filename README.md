@@ -78,5 +78,5 @@ For questions or feedback, please reach out to us at abhiksalian0728@gmail.com
 
 ### Contributors
 
-- @AbhikSalian
-- @AkashAcharya
+- @Abhik Salian
+- @Akash Acharya
